@@ -7,14 +7,14 @@ using UnityEngine.TestTools;
 namespace CaptainCoder.Dice
 {
 
-    public class DiceSetTest
+    public class DiceGroupTest
     {
         public const int TRIALS = 1_000;
 
         [Test, Timeout(5000)]
         public void TestParse3D6()
         {
-            DiceSet dice = DiceSet.Parse("3d6");
+            DiceGroup dice = DiceGroup.Parse("3d6");
             Assert.AreEqual(3, dice.Amount);
             Assert.AreEqual(6, dice.Sides);
             Assert.AreEqual(3, dice.Min);
@@ -40,7 +40,7 @@ namespace CaptainCoder.Dice
         [Test, Timeout(5000)]
         public void TestParse1D20()
         {
-            DiceSet dice = DiceSet.Parse("1d20");
+            DiceGroup dice = DiceGroup.Parse("1d20");
             Assert.AreEqual(1, dice.Amount);
             Assert.AreEqual(20, dice.Sides);
             Assert.AreEqual(1, dice.Min);
@@ -66,22 +66,22 @@ namespace CaptainCoder.Dice
         [Test, Timeout(5000)]
         public void TestIsParseable()
         {
-            Assert.True(DiceSet.IsParseable("1d4"));
-            Assert.True(DiceSet.IsParseable("3d6"));
-            Assert.True(DiceSet.IsParseable("20d8"));
-            Assert.True(DiceSet.IsParseable("2d12"));
-            Assert.True(DiceSet.IsParseable("7d20"));
-            Assert.True(DiceSet.IsParseable("1d17"));
+            Assert.True(DiceGroup.IsParseable("1d4"));
+            Assert.True(DiceGroup.IsParseable("3d6"));
+            Assert.True(DiceGroup.IsParseable("20d8"));
+            Assert.True(DiceGroup.IsParseable("2d12"));
+            Assert.True(DiceGroup.IsParseable("7d20"));
+            Assert.True(DiceGroup.IsParseable("1d17"));
 
-            Assert.False(DiceSet.IsParseable("d4"));
-            Assert.False(DiceSet.IsParseable("d6"));
-            Assert.False(DiceSet.IsParseable("d8"));
+            Assert.False(DiceGroup.IsParseable("d4"));
+            Assert.False(DiceGroup.IsParseable("d6"));
+            Assert.False(DiceGroup.IsParseable("d8"));
 
-            Assert.False(DiceSet.IsParseable("1d-6"));
-            Assert.False(DiceSet.IsParseable("0d1"));
-            Assert.False(DiceSet.IsParseable("-1d5"));
-            Assert.False(DiceSet.IsParseable("banana"));
-            Assert.False(DiceSet.IsParseable("d5"));
+            Assert.False(DiceGroup.IsParseable("1d-6"));
+            Assert.False(DiceGroup.IsParseable("0d1"));
+            Assert.False(DiceGroup.IsParseable("-1d5"));
+            Assert.False(DiceGroup.IsParseable("banana"));
+            Assert.False(DiceGroup.IsParseable("d5"));
         }
 
     }

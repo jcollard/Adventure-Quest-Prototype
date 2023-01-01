@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace CaptainCoder.Dice
 {
-    public class DiceSet
+    public class DiceGroup
     {
         /// <summary>
         /// The number of dice
         /// </summary>
         public int Amount => _dice.Count;
         /// <summary>
-        /// The minimum value that can be rolled by this <see cref="DiceSet"/>.
+        /// The minimum value that can be rolled by this <see cref="DiceGroup"/>.
         /// </summary>
         public int Min => Amount;
         /// <summary>
-        /// The maximum value that can be rolled by this <see cref="DiceSet"/>.
+        /// The maximum value that can be rolled by this <see cref="DiceGroup"/>.
         /// </summary>
         public int Max => Sides * Amount;
         /// <summary>
@@ -28,7 +28,7 @@ namespace CaptainCoder.Dice
         /// Instantiates a DiceSet containing <paramref name="amount"/> dice
         /// each with the specified number of <paramref name="sides"/>.
         /// </summary>
-        public DiceSet(int amount, int sides)
+        public DiceGroup(int amount, int sides)
         {
             if (amount < 1) throw new System.ArgumentException($"DiceSet must contain at least 1 die but was {amount}.");
             if (sides < 2) throw new System.ArgumentException($"DiceSet must have at least 2 sides but was {sides}.");
@@ -71,11 +71,11 @@ namespace CaptainCoder.Dice
         /// Parses <paramref name="toParse"/> as a DiceSet. If the string is
         /// not in the correct format, a FormatException is thrown.
         /// </summary>
-        public static DiceSet Parse(string toParse)
+        public static DiceGroup Parse(string toParse)
         {
             if (!IsParseable(toParse)) throw new System.FormatException($"Could not parse \"{toParse}\" as a DiceSet. Expected format {{amount}}d{{sides}}.");
             string[] tokens = toParse.Trim().Split('d');
-            return new DiceSet(int.Parse(tokens[0]), int.Parse(tokens[1]));
+            return new DiceGroup(int.Parse(tokens[0]), int.Parse(tokens[1]));
         }
 
         /// <summary>

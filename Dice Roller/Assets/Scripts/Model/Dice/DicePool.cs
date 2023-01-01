@@ -5,19 +5,19 @@ namespace CaptainCoder.Dice
     public class DicePool
     {
 
-        private readonly List<DiceSet> _dice;
+        private readonly List<DiceGroup> _dice;
 
         /// <summary>
-        /// A List containing all of the <see cref="DiceSet"/>s in this <see
+        /// A List containing all of the <see cref="DiceGroup"/>s in this <see
         /// cref="DicePool"/>. Modifying the returned list does not modify this
         /// <see cref="DicePool"/>.
         /// </summary>
-        public List<DiceSet> Dice
+        public List<DiceGroup> Dice
         {
             get
             {
-                List<DiceSet> dice = new();
-                foreach (DiceSet set in _dice)
+                List<DiceGroup> dice = new();
+                foreach (DiceGroup set in _dice)
                 {
                     dice.Add(set);
                 }
@@ -33,7 +33,7 @@ namespace CaptainCoder.Dice
             get
             {
                 int min = 0;
-                foreach (DiceSet set in _dice)
+                foreach (DiceGroup set in _dice)
                 {
                     min += set.Min;
                 }
@@ -49,7 +49,7 @@ namespace CaptainCoder.Dice
             get
             {
                 int max = 0;
-                foreach (DiceSet set in _dice)
+                foreach (DiceGroup set in _dice)
                 {
                     max += set.Max;
                 }
@@ -61,13 +61,13 @@ namespace CaptainCoder.Dice
         /// 
         /// </summary>
         /// <param name="dice"></param>
-        public DicePool(List<DiceSet> dice)
+        public DicePool(List<DiceGroup> dice)
         {
             if (dice == null) throw new System.ArgumentNullException($"DicePool must contain at least 1 dice set.");
             if (dice.Count < 1) throw new System.ArgumentException($"DicePool must have at least 1 dice set.");
 
-            _dice = new List<DiceSet>();
-            foreach (DiceSet set in dice)
+            _dice = new List<DiceGroup>();
+            foreach (DiceGroup set in dice)
             {
                 _dice.Add(set);
             }
@@ -79,7 +79,7 @@ namespace CaptainCoder.Dice
         public int Roll()
         {
             int sum = 0;
-            foreach (DiceSet set in _dice)
+            foreach (DiceGroup set in _dice)
             {
                 sum += set.Roll();
             }
@@ -92,7 +92,7 @@ namespace CaptainCoder.Dice
         public List<int> LastRoll()
         {
             List<int> rolls = new();
-            foreach (DiceSet set in _dice)
+            foreach (DiceGroup set in _dice)
             {
                 rolls.AddRange(set.LastRoll());
             }
@@ -110,10 +110,10 @@ namespace CaptainCoder.Dice
         {
             if (!IsParseable(toParse)) throw new System.FormatException($"Could not parse \"{toParse}\" as a DiceSet.");
             string[] tokens = toParse.Split("+");
-            List<DiceSet> dice = new();
+            List<DiceGroup> dice = new();
             foreach (string token in tokens)
             {
-                dice.Add(DiceSet.Parse(token));
+                dice.Add(DiceGroup.Parse(token));
             }
             return new DicePool(dice);
         }
@@ -127,7 +127,7 @@ namespace CaptainCoder.Dice
             if (tokens.Length < 1) return false;
             foreach (string token in tokens)
             {
-                if (!DiceSet.IsParseable(token))
+                if (!DiceGroup.IsParseable(token))
                 {
                     return false;
                 }
