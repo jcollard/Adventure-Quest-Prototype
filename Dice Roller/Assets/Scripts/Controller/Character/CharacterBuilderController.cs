@@ -9,9 +9,26 @@ namespace AdventureQuest.Character
     {
 
         private Abilities _abilities;
+        private string _name = string.Empty;
 
         [field: SerializeField]
         public UnityEvent<Abilities> OnChange { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<string> OnError { get; private set; }
+        
+        public string Name { 
+            get => _name; 
+            set
+            {
+                if (value == null || value.Length < 3)
+                {
+                    OnError.Invoke("Character name must be at least 3 characters.");
+                    return;
+                }
+                _name = value;
+            }
+            
+        }
 
         public Abilities Abilities
         {
