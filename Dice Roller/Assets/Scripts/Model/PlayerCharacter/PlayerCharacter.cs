@@ -11,5 +11,15 @@ namespace AdventureQuest.Character
 
         public Abilities Abilities { get; private set; }
 
+        public PlayerCharacter(string name, Abilities abilities)
+        {
+            if (name == null || abilities == null)
+            {
+                throw new System.ArgumentNullException();
+            } 
+            Name = name;
+            Abilities = abilities;
+        }
+
     }
 }

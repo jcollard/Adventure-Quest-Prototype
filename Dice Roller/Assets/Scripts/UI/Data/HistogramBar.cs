@@ -21,7 +21,7 @@ namespace CaptainCoder.Data
         public void Render(Histogram histogram, int value)
         {
             Value = value;
-            Chance = histogram.ChanceOf(value);
+            Chance = (float)System.Math.Round(histogram.ChanceOf(value), 3);
             // Exagerates the histogram such that the largest element is ~1
             float scale = 1 / histogram.ChanceOf(histogram.MostLikelyElement);
             float yScale = Chance * scale;

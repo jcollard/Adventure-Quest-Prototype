@@ -5,5 +5,6 @@ public enum Ability
     Agility, 
     Diplomacy, 
     Perception, 
-    Intelligence
+    Intelligence,
+    Constitution
 }
