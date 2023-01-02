@@ -13,6 +13,26 @@ namespace AdventureQuest.UI
         private readonly List<AbilityScoreLabel> _labels = new ();
         protected void Start()
         {
+            Initialize();
+        }
+
+        public void Render(PlayerCharacter playerCharacter) => Render(playerCharacter.Abilities);
+
+        public void Render(Abilities abilities)
+        {
+            Initialize();
+            foreach (AbilityScoreLabel child in _labels)
+            {
+                child.Render(abilities);
+            }
+        }
+
+        private void Initialize()
+        {
+            if (_labels.Count > 0)
+            {
+                return;
+            }
             foreach (Transform child in transform)
             {
                 if (child.name == "Top Row") { continue; }
@@ -23,16 +43,6 @@ namespace AdventureQuest.UI
             {
                 AbilityScoreLabel label = _labelTemplate.Instantiate(ability, transform);
                 _labels.Add(label);
-            }
-        }
-
-        public void Render(PlayerCharacter playerCharacter) => Render(playerCharacter.Abilities);
-
-        public void Render(Abilities abilities)
-        {
-            foreach (AbilityScoreLabel child in _labels)
-            {
-                child.Render(abilities);
             }
         }
     }

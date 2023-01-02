@@ -16,7 +16,7 @@ namespace AdventureQuest.Character
             if (name == null || abilities == null)
             {
                 throw new System.ArgumentNullException();
-            } 
+            }
             Name = name;
             Abilities = abilities;
         }
