@@ -10,6 +10,7 @@ namespace AdventureQuest.Character
 
         private Abilities _abilities;
         private string _name = string.Empty;
+        private string _portraitSpriteKey = string.Empty;
 
         [field: SerializeField]
         public UnityEvent<Abilities> OnChange { get; private set; }
@@ -20,14 +21,23 @@ namespace AdventureQuest.Character
             get => _name; 
             set
             {
-                if (value == null || value.Length < 3)
+                if (!IsValidName(value))
                 {
                     OnError.Invoke("Character name must be at least 3 characters.");
                     return;
                 }
                 _name = value;
+            }   
+        }
+
+        public string PortraitSpriteKey
+        {
+            get => _portraitSpriteKey;
+            set
+            {
+                if (value == null) { throw new System.ArgumentException("Cannot set portrait to null."); }
+                _portraitSpriteKey = value;                
             }
-            
         }
 
         public Abilities Abilities
@@ -43,16 +53,33 @@ namespace AdventureQuest.Character
                 OnChange.Invoke(_abilities);
             }
         }
-
-        protected void Start()
-        {
-            Abilities = Abilities.Roll();
-        }
         
         public void ReRollAbilities()
         {
             Abilities = Abilities.Roll();
         }
+
+        public void CreateCharacter()
+        {
+            if (!IsValidName(Name))
+            {
+                OnError.Invoke("You must name your character.");
+                return;
+            }
+            PlayerCharacter character = new (Name, Abilities, PortraitSpriteKey);
+            string asJson = JsonUtility.ToJson(character);
+            Debug.Log(asJson);
+        }
+
+        protected void Start()
+        {
+            Abilities = Abilities.Roll();
+        }
+
+        private static bool IsValidName(string name)
+        {
+            return name != null && name.Length >= 3;
+        }        
 
     }
 }

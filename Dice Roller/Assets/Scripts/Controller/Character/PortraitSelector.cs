@@ -12,22 +12,28 @@ public class PortraitSelector : MonoBehaviour
 
     [field: SerializeField]
     public UnityEvent<Sprite> OnChange { get; private set; }
+    [field: SerializeField]
+    public UnityEvent<string> OnKeyChange { get; private set; }
+
+    private int CurrentIx
+    {
+        get => _currentIx;
+        set
+        {
+            int count = _portraitDatabase.Count;
+            _currentIx = ((value % count) + count) % count;
+            SpriteEntry entry = _portraitDatabase.Get(_currentIx);
+            OnChange.Invoke(entry.Sprite);
+            OnKeyChange.Invoke(entry.Name);
+        }
+    }
 
     protected void Start()
     {
-        OnChange.Invoke(_portraitDatabase.Get(_currentIx));
+        CurrentIx = 0;
     }
 
-    public void Next()
-    {
-        _currentIx = (_currentIx + 1) % _portraitDatabase.Count;
-        OnChange.Invoke(_portraitDatabase.Get(_currentIx));
-    }
-
-    public void Prev()
-    {
-        _currentIx = _currentIx <= 0 ? _portraitDatabase.Count - 1 : _currentIx - 1;
-        OnChange.Invoke(_portraitDatabase.Get(_currentIx));
-    }
+    public void Next() => CurrentIx++;
+    public void Prev() => CurrentIx--;
 }
 

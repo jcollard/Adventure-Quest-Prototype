@@ -26,8 +26,7 @@ namespace AdventureQuest.Character
 
         protected void Start()
         {
-            PlayerCharacter = new PlayerCharacter("Bob", Abilities.Roll());
-            
+            PlayerCharacter = new PlayerCharacter("Bob", Abilities.Roll(), string.Empty);
         }
 
     }
