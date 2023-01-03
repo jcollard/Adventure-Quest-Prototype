@@ -1,35 +1,29 @@
 using System.Collections.Generic;
 using CaptainCoder.Dice;
+using UnityEngine;
 
 namespace AdventureQuest.Character
 {
-    public class Abilities
+    [System.Serializable]
+    public class Abilities : ISerializationCallbackReceiver
     {
-        private readonly Dictionary<Ability, AbilityScore> _abilities = new ();
-        private Abilities(Dictionary<Ability, int> scores)
+        private Dictionary<Ability, AbilityScore> _abilities = new();
+        [SerializeField]
+        private List<AbilityScore> _abilityScores;
+        private Abilities(List<AbilityScore> scores)
         {
-            Total = 0;
-            TotalModifiers = 0;
-            foreach (Ability ability in scores.Keys)
-            {
-                AbilityScore score = new AbilityScore(ability, scores[ability]);
-                _abilities[ability] = score;
-                Total += score.Score;
-                TotalModifiers += score.Modifier;
-            }
+            // In initial version, there will be no init / _abilityScores
+            Init(scores);
         }
 
-        public int Total { get; }
-        public int TotalModifiers { get; }
-
+        public int Total { get; private set; }
+        public int TotalModifiers { get; private set; }
         public AbilityScore Score(Ability ability) => _abilities[ability];
-        
-
         public static Ability[] Types => (Ability[])System.Enum.GetValues(typeof(Ability));
 
         public static Abilities Roll()
         {
-            Builder builder = new Builder();
+            Builder builder = new ();
             DicePool pool = DicePool.Parse("3d6");
             foreach (Ability ability in Types)
             {
@@ -38,9 +32,32 @@ namespace AdventureQuest.Character
             return builder.Build();
         }
 
+        public void OnBeforeSerialize(){}
+
+        public void OnAfterDeserialize()
+        {
+            if (_abilityScores == null) return;
+            Init(_abilityScores);
+        }
+
+        private void Init(List<AbilityScore> scores)
+        {
+            if (scores == null) { throw new System.ArgumentNullException("Cannot to set Scores to null list."); }
+            Total = 0;
+            TotalModifiers = 0;
+            _abilities = new ();
+            _abilityScores = scores;
+            foreach (AbilityScore score in scores)
+            {
+                _abilities[score.Ability] = score;
+                Total += score.Score;
+                TotalModifiers += score.Modifier;
+            }
+        }
+
         public class Builder
         {
-            private readonly Dictionary<Ability, int> _scores = new ();
+            private readonly Dictionary<Ability, int> _scores = new();
 
             public Builder()
             {
@@ -66,7 +83,12 @@ namespace AdventureQuest.Character
 
             public Abilities Build()
             {
-                Abilities abilities = new (_scores);
+                List<AbilityScore> scores = new();
+                foreach (KeyValuePair<Ability, int> entry in _scores)
+                {
+                    scores.Add(new AbilityScore(entry.Key, entry.Value));
+                }
+                Abilities abilities = new(scores);
                 return abilities;
             }
         }

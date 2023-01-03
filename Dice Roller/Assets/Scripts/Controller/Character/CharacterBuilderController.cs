@@ -7,7 +7,7 @@ namespace AdventureQuest.Character
 {
     public class CharacterBuilderController : MonoBehaviour
     {
-
+        private string _saved;
         private Abilities _abilities;
         private string _name = string.Empty;
         private string _portraitSpriteKey = string.Empty;
@@ -67,8 +67,14 @@ namespace AdventureQuest.Character
                 return;
             }
             PlayerCharacter character = new (Name, Abilities, PortraitSpriteKey);
-            string asJson = JsonUtility.ToJson(character);
-            Debug.Log(asJson);
+            
+            _saved = JsonUtility.ToJson(character);
+        }
+
+        public void LoadCharacter()
+        {
+            PlayerCharacter loaded = JsonUtility.FromJson<PlayerCharacter>(_saved);
+            OnChange.Invoke(loaded.Abilities);
         }
 
         protected void Start()

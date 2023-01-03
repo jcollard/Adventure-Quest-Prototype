@@ -1,7 +1,8 @@
 using System.Collections.Generic;
-
+using UnityEngine;
 namespace AdventureQuest.Character
 {
+    [System.Serializable]
     public class AbilityScore
     {
         // Fields
@@ -13,7 +14,9 @@ namespace AdventureQuest.Character
         }
 
         public string Name => Ability.ToString();
-        public Ability Ability { get; }
+        [field: SerializeField]
+        public Ability Ability { get; private set; }
+        [field: SerializeField]
         public int Score { get; private set; }
 
         // 1     = -5
