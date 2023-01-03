@@ -9,16 +9,16 @@ namespace AdventureQuest.UI
     public class AbilityScoreLabel : MonoBehaviour
     {
         [field: SerializeField]
-        private TextMeshProUGUI _nameLabel;
+        protected TextMeshProUGUI _nameLabel;
         [field: SerializeField]
-        private TextMeshProUGUI _scoreLabel;
+        protected TextMeshProUGUI _scoreLabel;
         [field: SerializeField]
-        private TextMeshProUGUI _modifierLabel;
+        protected TextMeshProUGUI _modifierLabel;
 
         [field: SerializeField]
         public Ability Ability { get; private set; }  
 
-        public void Render(Abilities abilities)
+        public virtual void Render(Abilities abilities)
         {
             AbilityScore score = abilities.Score(Ability);
             _nameLabel.text = score.Name;

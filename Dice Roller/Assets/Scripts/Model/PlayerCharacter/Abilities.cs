@@ -8,13 +8,22 @@ namespace AdventureQuest.Character
         private readonly Dictionary<Ability, AbilityScore> _abilities = new ();
         private Abilities(Dictionary<Ability, int> scores)
         {
+            Total = 0;
+            TotalModifiers = 0;
             foreach (Ability ability in scores.Keys)
             {
-                _abilities[ability] = new AbilityScore(ability, scores[ability]);
+                AbilityScore score = new AbilityScore(ability, scores[ability]);
+                _abilities[ability] = score;
+                Total += score.Score;
+                TotalModifiers += score.Modifier;
             }
         }
 
+        public int Total { get; }
+        public int TotalModifiers { get; }
+
         public AbilityScore Score(Ability ability) => _abilities[ability];
+        
 
         public static Ability[] Types => (Ability[])System.Enum.GetValues(typeof(Ability));
 

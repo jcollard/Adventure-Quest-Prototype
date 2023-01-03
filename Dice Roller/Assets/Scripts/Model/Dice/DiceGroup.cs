@@ -5,29 +5,15 @@ namespace CaptainCoder.Dice
 {
     public class DiceGroup
     {
-        /// <summary>
-        /// The number of dice
-        /// </summary>
-        public int Amount => _dice.Count;
-        /// <summary>
-        /// The minimum value that can be rolled by this <see cref="DiceGroup"/>.
-        /// </summary>
-        public int Min => Amount;
-        /// <summary>
-        /// The maximum value that can be rolled by this <see cref="DiceGroup"/>.
-        /// </summary>
-        public int Max => Sides * Amount;
-        /// <summary>
-        /// The number of sides on each die.
-        /// </summary>
-        public int Sides => _dice[0].Sides;
-
         private readonly List<Die> _dice;
 
         /// <summary>
         /// Instantiates a DiceSet containing <paramref name="amount"/> dice
         /// each with the specified number of <paramref name="sides"/>.
         /// </summary>
+        /// <exception cref="System.ArgumentException">
+        /// If amount is less than 1 or sides is less than 2.
+        /// </exception>
         public DiceGroup(int amount, int sides)
         {
             if (amount < 1) throw new System.ArgumentException($"DiceSet must contain at least 1 die but was {amount}.");
@@ -38,6 +24,24 @@ namespace CaptainCoder.Dice
                 _dice.Add(new Die(sides));
             }
         }
+
+        /// <summary>
+        /// The number of dice
+        /// </summary>
+        public int Amount => _dice.Count;
+        /// <summary>
+        /// The number of sides on each die.
+        /// </summary>
+        public int Sides => _dice[0].Sides;
+        /// <summary>
+        /// The minimum value that can be rolled by this <see cref="DiceGroup"/>.
+        /// </summary>
+        public int Min => Amount;
+        /// <summary>
+        /// The maximum value that can be rolled by this <see cref="DiceGroup"/>.
+        /// </summary>
+        public int Max => Sides * Amount;
+        
 
         /// <summary>
         /// Rolls all of the dice and returns the sum.
