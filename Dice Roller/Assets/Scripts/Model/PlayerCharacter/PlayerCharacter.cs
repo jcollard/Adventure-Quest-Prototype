@@ -8,7 +8,7 @@ namespace AdventureQuest.Character
     {
         
         public string Name { get; private set; }
-
+        public string PortraitSpriteKey { get; private set; }
         public Abilities Abilities { get; private set; }
 
         public PlayerCharacter(string name, Abilities abilities)

@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2c86f9ffe685f9ff
-      m_LastClickedID: -424474
-      m_ExpandedIDs: 4279f9ff5c7bf9ffe485f9ff3286f9ff0087f9fff09bf9ff88a6f9fff2b1f9ff9eb7f9ff68cbf9ff6ecbf9fffed0f9ff60fef9ff9660faffbc60faffe468faff2a81fafffc84faffc886faff0287faffb089faff84a1feff86a1feffa2a1feffb2a5feffe0bbfeff9abffeffa0bffeff1cf5feffbe7cffffae7dffff12e1ffff34e1ffff6ee4ffffaae8ffff44ecffff64ecffff4eedffffc8edffff20eeffff0cefffffb2efffffb6f4ffff06f5fffff6f8ffff50f9ffff2cfbffff62610000ec62000020d400002ad40000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1c8ff8ffc490f8ffb4f1f8ff5c7bf9ffe485f9ff3286f9fff09bf9ff88a6f9ff9eb7f9ff68cbf9ff60fef9ff9660faffbc60faffe468faff2a81fafffc84faffc886faff0287faffb089faff84a1feff86a1feffa2a1feffb2a5feffe0bbfeff9abffeffa0bffeff1cf5feffbe7cffffae7dffff12e1ffff34e1ffff6ee4ffffaae8ffff44ecffff64ecffff4eedffffc8edffff20eeffff0cefffffb2efffffb6f4ffff06f5fffff6f8ffff50f9ffff2cfbffff62610000ec62000020d400002ad40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 240.9794, y: 288.17786, z: -3.0459268}
+    m_Target: {x: 450.9838, y: 266.54883, z: -1.8506218}
     speed: 2
-    m_Value: {x: 242.71387, y: 287.0388, z: -2.9133828}
+    m_Value: {x: 450.9838, y: 266.54883, z: -1.8506218}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 307.79822
+    m_Target: 246.34128
     speed: 2
-    m_Value: 294.54376
+    m_Value: 246.34128
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -734,22 +734,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Fonts/Raw
+    - Assets/Sprites/Dialogs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Fonts/Raw
-  m_LastFoldersGridSize: -1
+  - Assets/Sprites/Dialogs
+  m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\git\jcollard\Unity-2021-DiceRoller\Dice Roller
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 64600100
-    m_LastClickedID: 90212
-    m_ExpandedIDs: 00000000be600000c2600000d8600000dc6000004c8800004c60010000ca9a3b
+    scrollPos: {x: 0, y: 88}
+    m_SelectedIDs: 5e6e0100
+    m_LastClickedID: 93790
+    m_ExpandedIDs: 00000000be600000c2600000d8600000dc6000004c880000508800004c60010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -802,24 +802,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2c86f9ffe685f9ff
-    m_LastClickedInstanceID: -424404
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Character
+      m_OriginalName: Character
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 75250
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -830,7 +830,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 190
 --- !u!114 &12

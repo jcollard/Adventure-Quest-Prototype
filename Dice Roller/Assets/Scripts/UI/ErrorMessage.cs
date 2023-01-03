@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
 public class ErrorMessage : MonoBehaviour
 {
+    [field: SerializeField]
+    private TextMeshProUGUI _textField;
     [field: SerializeField]
     public int HideDelay { get; private set; } = 2;
 
     public void DisplayError(string message)
     {
-        GetComponent<TextMeshProUGUI>().text = message;
+        _textField.text = message;
         gameObject.SetActive(true);
         Invoke(nameof(Hide), HideDelay);
     }
