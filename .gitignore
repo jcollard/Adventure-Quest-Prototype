@@ -1,39 +1,4 @@
-Build/Dice Analyzer/index.html
-Build/Dice Analyzer/Build/Dice Analyzer.data
-Build/Dice Analyzer/Build/Dice Analyzer.framework.js
-Build/Dice Analyzer/Build/Dice Analyzer.loader.js
-Build/Dice Analyzer/Build/Dice Analyzer.wasm
-Build/Dice Analyzer/StreamingAssets/UnityServicesProjectConfiguration.json
-Dice Roller/Assets/Scripts/Model/PlayerCharacter/Abilities.cs
-AI Art/dwarf.png
-AI Art/dwarf2.png
-AI Art/dwarf3.png
-AI Art/dwarf4.png
-AI Art/female-monk.png
-AI Art/female-monk3.png
-AI Art/halforc.png
-AI Art/halforc2.png
-AI Art/halforc3.png
-AI Art/halforc4.png
-AI Art/Helmet.png
-AI Art/sorcerous.png
-AI Art/sorcerous3.png
-AI Art/tavern-background.png
-AI Art/Finished/Digital Grin.png
-AI Art/Finished/Digital Grin2.png
-AI Art/Finished/female-monk2-cropped.png
-AI Art/Finished/female-monk2.png
-AI Art/Finished/female-monk4.png
-AI Art/Finished/sorcerous2.png
-Fonts/adventure-request/Adventure ReQuest.otf
-Fonts/adventure-request/Adventure ReQuest.woff
-Fonts/adventure-request/FSLA_NonCommercial_License.html
-Fonts/adventure-request/Get Commercial License.url
-Fonts/deutsch-gothic/Deutsch.ttf
-Fonts/deutsch-gothic/DEUTSCH.TXT
-Fonts/great-adventure/Font License - Please Read.txt
-Fonts/great-adventure/GREAT ADVENTURE.ttf
-Fonts/knights-quest/Knights Quest Callig.ttf
-Fonts/knights-quest/Knights Quest Shielded.ttf
-Fonts/knights-quest/Knights Quest.ttf
-Possible Assets/RPGui_free.png
+Build/
+AI Art/
+Fonts/
+Possible Assets/
