@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace AdventureQuest.Character
 {
+    [System.Serializable]
     public class PlayerCharacter
     {
         [field: SerializeField]
@@ -24,8 +25,27 @@ namespace AdventureQuest.Character
             PortraitSpriteKey = portraitSpriteKey;
         }
 
-        public static string ToJson(PlayerCharacter character) => JsonUtility.ToJson(character);
-        public static PlayerCharacter FromJson(string json)
+        public static bool Store(PlayerCharacter character)
+        {
+            string encoded = Encode(character);
+            PlayerPrefs.SetString("character", encoded);
+            return true;
+        }
+
+        public static PlayerCharacter Restore()
+        {
+            if (!PlayerPrefs.HasKey("character")) { throw new System.InvalidOperationException("No Player Character found."); }
+            string encoded = PlayerPrefs.GetString("character");
+            return Decode(encoded);
+        }
+
+        public static string Encode(PlayerCharacter character)
+        {
+            string asJson = JsonUtility.ToJson(character);
+            return asJson;
+        }
+
+        public static PlayerCharacter Decode(string json)
         {
             try
             {

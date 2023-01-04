@@ -7,9 +7,8 @@ namespace AdventureQuest.Character
 {
     public class PlayerCharacterController : MonoBehaviour
     {
-        private PlayerCharacter _playerCharacter;
         [field: SerializeField]
-        public UnityEvent<PlayerCharacter> OnChange { get; private set; }
+        private PlayerCharacter _playerCharacter;
         public PlayerCharacter PlayerCharacter 
         { 
             get => _playerCharacter; 
@@ -24,9 +23,18 @@ namespace AdventureQuest.Character
             }
         }
 
+        [field: SerializeField]
+        public bool LoadFromStorageOnLoad { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<PlayerCharacter> OnChange { get; private set; }
+
         protected void Start()
         {
-            PlayerCharacter = new PlayerCharacter("Bob", Abilities.Roll(), string.Empty);
+            if (LoadFromStorageOnLoad)
+            {
+                PlayerCharacter = PlayerCharacter.Restore();
+                return;
+            }
         }
 
     }
