@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace AdventureQuest.Character
 {
@@ -74,6 +75,9 @@ namespace AdventureQuest.Character
                 return;
             }
             PlayerCharacter character = new (Name, Abilities, PortraitSpriteKey);
+            PlayerCharacter.Store(character);
+            // TODO: Consider loading scene without "stringly" types
+            SceneManager.LoadScene("Town");
         }
 
         protected void Start()
