@@ -33,9 +33,9 @@ namespace CaptainCoder.Dice
             get
             {
                 int min = 0;
-                foreach (DiceGroup set in _dice)
+                foreach (DiceGroup group in _dice)
                 {
-                    min += set.Min;
+                    min += group.Min;
                 }
                 return min;
             }
