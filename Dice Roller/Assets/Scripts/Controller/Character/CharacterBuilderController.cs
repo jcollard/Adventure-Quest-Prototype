@@ -7,7 +7,6 @@ namespace AdventureQuest.Character
 {
     public class CharacterBuilderController : MonoBehaviour
     {
-        private string _saved;
         private Abilities _abilities;
         private string _name = string.Empty;
         private string _portraitSpriteKey = string.Empty;
@@ -16,6 +15,10 @@ namespace AdventureQuest.Character
         public UnityEvent<Abilities> OnChange { get; private set; }
         [field: SerializeField]
         public UnityEvent<string> OnError { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<string> OnNameChange { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<string> OnPortraitChange { get; private set; }
         
         public string Name { 
             get => _name; 
@@ -24,9 +27,11 @@ namespace AdventureQuest.Character
                 if (!IsValidName(value))
                 {
                     OnError.Invoke("Character name must be at least 3 characters.");
+                    OnNameChange.Invoke(_name);
                     return;
                 }
                 _name = value;
+                OnNameChange.Invoke(_name);
             }   
         }
 
@@ -36,7 +41,9 @@ namespace AdventureQuest.Character
             set
             {
                 if (value == null) { throw new System.ArgumentException("Cannot set portrait to null."); }
-                _portraitSpriteKey = value;                
+                if (_portraitSpriteKey == value) { return ; }
+                _portraitSpriteKey = value;
+                OnPortraitChange.Invoke(_portraitSpriteKey);            
             }
         }
 
@@ -67,14 +74,6 @@ namespace AdventureQuest.Character
                 return;
             }
             PlayerCharacter character = new (Name, Abilities, PortraitSpriteKey);
-            
-            _saved = JsonUtility.ToJson(character);
-        }
-
-        public void LoadCharacter()
-        {
-            PlayerCharacter loaded = JsonUtility.FromJson<PlayerCharacter>(_saved);
-            OnChange.Invoke(loaded.Abilities);
         }
 
         protected void Start()

@@ -10,6 +10,16 @@ public class PortraitSelector : MonoBehaviour
     [field: SerializeField]
     private SpriteDatabase _portraitDatabase;
 
+    public string PortraitKey {
+        set
+        {
+            if (value == null) { throw new System.ArgumentNullException($"Cannot set portrait to null."); }
+            SpriteEntry entry = _portraitDatabase.Get(value);
+            OnChange.Invoke(entry.Sprite);
+            OnKeyChange.Invoke(entry.Name);
+        }
+    }
+
     [field: SerializeField]
     public UnityEvent<Sprite> OnChange { get; private set; }
     [field: SerializeField]
