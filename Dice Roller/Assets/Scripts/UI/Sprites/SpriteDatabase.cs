@@ -10,24 +10,29 @@ namespace AdventureQuest.UI
     {
         private readonly Dictionary<string, SpriteEntry> _database = new();
 
-        [field: SerializeField]
-        private List<SpriteEntry> _entries;
-
-        protected void Start()
+        // Lazily loads the database when it is accessed.
+        private Dictionary<string, SpriteEntry> Database
         {
-            foreach (SpriteEntry entry in _entries)
+            get
             {
-                if (_database.ContainsKey(entry.Name)) { throw new System.ArgumentException($"Duplicate key found {entry.Name}."); }
-                _database[entry.Name] = entry;
+                if (_database.Count == 0)
+                {
+                    foreach (SpriteEntry entry in _entries)
+                    {
+                        if (_database.ContainsKey(entry.Name)) { throw new System.ArgumentException($"Duplicate key found {entry.Name}."); }
+                        _database[entry.Name] = entry;
+                    }
+                }
+                return _database;
             }
         }
 
+        [field: SerializeField]
+        private List<SpriteEntry> _entries;
         public int Count => _entries.Count;
-        public List<string> Keys => _database.Keys.ToList();
-        public SpriteEntry Get(string key) => _database[key];
+        public List<string> Keys => Database.Keys.ToList();
+        public SpriteEntry Get(string key) => Database[key];
         public SpriteEntry Get(int ix) => _entries[ix];
-
-
     }
 
     [System.Serializable]
