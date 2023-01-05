@@ -1,6 +1,6 @@
 using AdventureQuest.Character;
 
-namespace AdventureQuest.Equipment
+namespace AdventureQuest.Equipment.Requirement
 {
     public interface IRequirement
     {
