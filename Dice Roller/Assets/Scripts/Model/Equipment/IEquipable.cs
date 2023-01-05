@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using AdventureQuest.Character;
+using AdventureQuest.Equipment.Requirement;
 
 namespace AdventureQuest.Equipment
 {
