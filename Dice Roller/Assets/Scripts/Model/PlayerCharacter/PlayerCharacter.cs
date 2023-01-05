@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AdventureQuest.Character
 {
     [System.Serializable]
-    public class PlayerCharacter
+    public class PlayerCharacter : ICharacter
     {
         [field: SerializeField]
         public string Name { get; private set; }
