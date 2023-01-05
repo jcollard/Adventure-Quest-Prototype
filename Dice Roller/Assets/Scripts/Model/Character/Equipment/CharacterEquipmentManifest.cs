@@ -6,8 +6,14 @@ namespace AdventureQuest.Character.Equipment
     public class CharacterEquipmentManifest : IEquipmentManifest
     {
 
-        private ICharacter _character;
+        private readonly ICharacter _character;
         private Dictionary<EquipmentSlot, IEquipable> _equipment = new ();
+
+        public CharacterEquipmentManifest(ICharacter character)
+        {
+            if (character == null) { throw new System.ArgumentNullException($"CharacterEquipmentManifest must be registered to a character."); }
+            _character = character;
+        }
         
         public virtual bool Equip(IEquipable toEquip, List<EquipmentSlot> slots)
         {
