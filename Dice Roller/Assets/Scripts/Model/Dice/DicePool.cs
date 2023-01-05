@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace CaptainCoder.Dice
+namespace AdventureQuest.Dice
 {
-    public class DicePool
+    public class DicePool : IRollable
     {
 
         private readonly List<DiceGroup> _dice;

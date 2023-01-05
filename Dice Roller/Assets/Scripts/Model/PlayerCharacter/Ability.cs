@@ -1,10 +1,13 @@
-public enum Ability
+namespace AdventureQuest.Character
 {
-    Strength, 
-    Dexterity, 
-    Agility, 
-    Diplomacy, 
-    Perception, 
-    Intelligence,
-    Constitution
+    public enum Ability
+    {
+        Strength,
+        Dexterity,
+        Agility,
+        Diplomacy,
+        Perception,
+        Intelligence,
+        Constitution
+    }
 }

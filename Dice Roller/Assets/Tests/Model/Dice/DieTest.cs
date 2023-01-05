@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace CaptainCoder.Dice
+namespace AdventureQuest.Dice
 {
 
     public class DieTest

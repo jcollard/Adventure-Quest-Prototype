@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace CaptainCoder.Dice
+namespace AdventureQuest.Dice
 {
 
     public class DiceGroupTest

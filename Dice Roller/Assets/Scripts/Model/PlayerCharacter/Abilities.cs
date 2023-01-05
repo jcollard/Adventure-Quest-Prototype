@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using CaptainCoder.Dice;
+using AdventureQuest.Dice;
 using UnityEngine;
 
 namespace AdventureQuest.Character

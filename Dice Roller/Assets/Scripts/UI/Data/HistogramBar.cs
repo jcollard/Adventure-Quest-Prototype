@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace CaptainCoder.Data
+namespace AdventureQuest.Data
 {
     public class HistogramBar : MonoBehaviour
     {

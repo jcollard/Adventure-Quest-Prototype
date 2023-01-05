@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using CaptainCoder.Dice;
+using AdventureQuest.Dice;
 
-namespace CaptainCoder.Data
+namespace AdventureQuest.Data
 {
     public static class HistogramExtensions
     {

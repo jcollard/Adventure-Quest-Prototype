@@ -1,7 +1,7 @@
 
 using System.Collections.Generic;
 
-namespace CaptainCoder.Data
+namespace AdventureQuest.Data
 {
     /// <summary>
     /// A <see cref="Histogram"/> represents a probability distribution over a set of elements.

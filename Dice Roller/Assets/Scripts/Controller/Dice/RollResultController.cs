@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using CaptainCoder.Dice;
+using AdventureQuest.Dice;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class RollResultController : MonoBehaviour

@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CaptainCoder.Data;
+using AdventureQuest.Data;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using CaptainCoder.Dice;
+using AdventureQuest.Dice;
 
-namespace CaptainCoder.UI
+namespace AdventureQuest.UI
 {
     public class HistogramViewer : MonoBehaviour
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using System.Linq;
 
-namespace CaptainCoder.Data
+namespace AdventureQuest.Data
 {
 
     public class HistogramTest

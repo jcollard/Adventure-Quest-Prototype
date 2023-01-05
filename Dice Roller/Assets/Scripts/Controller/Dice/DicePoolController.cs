@@ -1,5 +1,5 @@
-using CaptainCoder.Data;
-using CaptainCoder.Dice;
+using AdventureQuest.Data;
+using AdventureQuest.Dice;
 using UnityEngine;
 using UnityEngine.Events;
 

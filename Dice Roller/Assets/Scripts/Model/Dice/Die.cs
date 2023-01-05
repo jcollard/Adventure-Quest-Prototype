@@ -1,21 +1,10 @@
 using UnityEngine;
 
-namespace CaptainCoder.Dice
+namespace AdventureQuest.Dice
 {
     [System.Serializable]
-    public class Die
+    public class Die : IRollable
     {
-        /// <summary>
-        /// The number of sides on this <see cref="Die"/>
-        /// </summary>
-        public int Sides { get; private set; }
-
-        /// <summary>
-        /// The last value that was rolled on this die. If this <see cref="Die"/>
-        /// has not been rolled, the last rolled value is 1.
-        /// </summary>
-        public int LastRoll { get; private set; } = 1;
-
         /// <summary>
         /// Instantiate a "fair" <see cref="Die"/> with the specified number of sides. Sides must be
         /// a value greater than 1.
@@ -25,6 +14,19 @@ namespace CaptainCoder.Dice
             if (sides < 2) throw new System.ArgumentException("A die must have at least 2 sides.");
             this.Sides = sides;
         }
+
+        /// <summary>
+        /// The number of sides on this <see cref="Die"/>
+        /// </summary>
+        public int Sides { get; private set; }
+        public int Min => 1;
+        public int Max => Sides;
+
+        /// <summary>
+        /// The last value that was rolled on this die. If this <see cref="Die"/>
+        /// has not been rolled, the last rolled value is 1.
+        /// </summary>
+        public int LastRoll { get; private set; } = 1;
 
         /// <summary>
         /// Rolls this Die and selects a side uniformly at random.

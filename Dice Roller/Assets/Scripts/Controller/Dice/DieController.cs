@@ -1,5 +1,5 @@
 using UnityEngine;
-using CaptainCoder.Dice;
+using AdventureQuest.Dice;
 using UnityEngine.Events;
 
 public class DieController : MonoBehaviour

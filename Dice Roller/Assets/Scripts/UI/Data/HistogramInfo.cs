@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CaptainCoder.Data;
+using AdventureQuest.Data;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 
-namespace CaptainCoder.UI
+namespace AdventureQuest.UI
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class HistogramInfo : MonoBehaviour

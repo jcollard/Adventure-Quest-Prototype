@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using System.Linq;
 
-namespace CaptainCoder.Dice
+namespace AdventureQuest.Dice
 {
 
     public class DicePoolTest

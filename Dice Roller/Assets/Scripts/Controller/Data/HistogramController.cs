@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using CaptainCoder.Dice;
+using AdventureQuest.Dice;
 
-namespace CaptainCoder.Data
+namespace AdventureQuest.Data
 {    
     public class HistogramController : MonoBehaviour {
         

@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CaptainCoder.Data;
-using CaptainCoder.Dice;
+using AdventureQuest.Data;
+using AdventureQuest.Dice;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 
-namespace CaptainCoder.UI
+namespace AdventureQuest.UI
 {
     public class DicePoolFormula : MonoBehaviour
     {

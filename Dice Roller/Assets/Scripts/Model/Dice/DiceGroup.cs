@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CaptainCoder.Dice
+namespace AdventureQuest.Dice
 {
-    public class DiceGroup
+    public class DiceGroup : IRollable
     {
         private readonly List<Die> _dice;
 
