@@ -1,6 +1,7 @@
 # TODO List
 
 1. Equipment / related classes should be Serializable
+2. Shop needs to be Serializable
 
 # Known Bugs
 
