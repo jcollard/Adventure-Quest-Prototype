@@ -11,6 +11,8 @@ namespace AdventureQuest.Equipment
     public class InventoryRenderer : MonoBehaviour
     {
         [SerializeField]
+        private InventoryObservable _defaultController;
+        [SerializeField]
         private TextMeshProUGUI _name;
         [SerializeField]
         private InventoryItemRenderer _itemTemplate;
@@ -19,27 +21,25 @@ namespace AdventureQuest.Equipment
 
         [field: SerializeField]
         public UnityEvent<IItem> OnSelectItem { get; private set; }
+        
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
-            // IInventory shopInventory = new Inventory
-            IInventory shopInventory = new Inventory("Wilfred's Weapons");
-            shopInventory.Add(new Weapon("Dagger", 3, AbilityRoll.Parse($"1d4 + {Ability.Dexterity}")));
-            shopInventory.Add(new Weapon("Sword", 6, AbilityRoll.Parse($"1d6 + {Ability.Strength}")));
-
-            // Shop testShop = new("Wilfred's Weapons", shopInventory);
-            Render(shopInventory);
+            if (_defaultController != null)
+            {
+                _defaultController.OnChange.AddListener(Render);
+            }
         }
 
-        public void Render(IInventory inventory)
+        public void Render(IHasInventory hasInventory)
         {
             foreach (Transform child in _itemList)
             {
                 Destroy(child.gameObject);
             }
-            _name.text = inventory.Name;
-            foreach (IItem item in inventory.Items)
+            _name.text = hasInventory.Inventory.Name;
+            foreach (IItem item in hasInventory.Inventory.Items)
             {
                 InventoryItemRenderer entry = Instantiate(_itemTemplate, _itemList);
                 entry.Render(item);
