@@ -2526,7 +2526,7 @@ PrefabInstance:
       objectReference: {fileID: 1970629158554270699}
     - target: {fileID: 8570420122247433050, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
       propertyPath: m_text
-      value: Abdul's Armor
+      value: Shop Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 8576874489296544632, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
       propertyPath: m_AnchorMax.y
