@@ -9,6 +9,8 @@ namespace AdventureQuest.Character
     [System.Serializable]
     public class PlayerCharacter : ICharacter
     {
+        [field: SerializeField]
+        private int _gold;
         
         public PlayerCharacter(string name, Abilities abilities, string portraitSpriteKey)
         {
@@ -20,7 +22,7 @@ namespace AdventureQuest.Character
             Abilities = abilities;
             PortraitSpriteKey = portraitSpriteKey;
             Equipment = new CharacterEquipmentManifest(this);
-
+            Inventory = new CharacterInventory();
         }
 
         [field: SerializeField]
@@ -31,6 +33,21 @@ namespace AdventureQuest.Character
         public Abilities Abilities { get; private set; }
         [field: SerializeField]
         public IEquipmentManifest Equipment { get; private set; }
+        [field: SerializeField]
+        public IInventory Inventory { get; private set; }
+        
+        public int Gold 
+        { 
+            get => _gold; 
+            set 
+            {
+                if (value < 0) 
+                {  
+                    Debug.Assert(value >= 0, $"Attempted to set PlayerCharacter.Gold to a value less than 0. {value}");
+                }
+                _gold = Mathf.Max(value, 0);
+            }
+        }
 
         public static bool Store(PlayerCharacter character)
         {

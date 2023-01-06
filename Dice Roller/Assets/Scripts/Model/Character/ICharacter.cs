@@ -7,5 +7,7 @@ namespace AdventureQuest.Character
         public string PortraitSpriteKey { get; }
         public Abilities Abilities { get; }
         public IEquipmentManifest Equipment { get; }
+        public IInventory Inventory { get; }
+        public int Gold { get; set; }
     }
 }
