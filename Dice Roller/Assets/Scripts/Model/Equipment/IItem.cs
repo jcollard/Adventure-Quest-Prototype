@@ -5,5 +5,6 @@ namespace AdventureQuest.Equipment
     {
         public string Name { get; }
         public int Cost { get; }
+        public IItem Duplicate();
     }
 }

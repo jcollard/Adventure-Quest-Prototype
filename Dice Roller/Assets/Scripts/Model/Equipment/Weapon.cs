@@ -29,5 +29,6 @@ namespace AdventureQuest.Equipment
         public HashSet<EquipmentSlot> Slots => new() { EquipmentSlot.LeftHand, EquipmentSlot.RightHand };
         public List<IRequirement> Requirements => _requirements.ToList();
 
+        public virtual IItem Duplicate() => new Weapon(Name, Cost, Damage, Requirements);
     }
 }
