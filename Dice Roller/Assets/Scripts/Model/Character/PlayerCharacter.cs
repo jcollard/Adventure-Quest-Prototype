@@ -22,7 +22,7 @@ namespace AdventureQuest.Character
             Abilities = abilities;
             PortraitSpriteKey = portraitSpriteKey;
             Equipment = new CharacterEquipmentManifest(this);
-            Inventory = new CharacterInventory();
+            Inventory = new Inventory($"{name}'s Inventory");
         }
 
         [field: SerializeField]
