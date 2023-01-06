@@ -3,17 +3,19 @@ using AdventureQuest.Result;
 using AdventureQuest.Equipment;
 using System.Linq;
 
-namespace AdventureQuest.Character.Equipment
+namespace AdventureQuest.Equipment
 {
-    public class CharacterInventory : IInventory
+    public class Inventory : IInventory
     {
         private List<IItem> _items;
 
-        public CharacterInventory()
+        public Inventory(string name)
         {
             _items = new ();
+            Name = name;
         }
 
+        public string Name { get; }
         public List<IItem> Items => _items.ToList();
         public IResult Add(IItem toAdd)
         {
