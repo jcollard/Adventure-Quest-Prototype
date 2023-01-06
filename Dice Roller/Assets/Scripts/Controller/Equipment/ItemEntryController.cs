@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
-using AdventureQuest.Equipment;
 using TMPro;
 
-namespace AdventureQuest.Shop
+namespace AdventureQuest.Equipment
 {
 
     public class ItemEntryController : MonoBehaviour

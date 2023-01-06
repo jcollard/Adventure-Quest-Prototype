@@ -1,14 +1,11 @@
-using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-using AdventureQuest.Equipment;
 using AdventureQuest.Character.Dice;
 using AdventureQuest.Character;
 
-namespace AdventureQuest.Shop
+namespace AdventureQuest.Equipment
 {
 
     public class InventoryController : MonoBehaviour
