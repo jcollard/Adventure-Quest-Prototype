@@ -19,8 +19,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1600
-    height: 916
+    width: 1532
+    height: 902
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
@@ -45,10 +45,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2350
+    x: 2406
     y: 83
-    width: 919
-    height: 538
+    width: 650
+    height: 529
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 919, y: 517}
+  m_TargetSize: {x: 650, y: 366}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -74,10 +74,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -459.5
-    m_HBaseRangeMax: 459.5
-    m_VBaseRangeMin: -258.5
-    m_VBaseRangeMax: 258.5
+    m_HBaseRangeMin: -325
+    m_HBaseRangeMax: 325
+    m_VBaseRangeMin: -183
+    m_VBaseRangeMax: 183
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -95,23 +95,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 919
-      height: 517
+      width: 650
+      height: 508
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 459.5, y: 258.5}
+    m_Translation: {x: 325, y: 254}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -459.5
-      y: -258.5
-      width: 919
-      height: 517
+      x: -325
+      y: -254
+      width: 650
+      height: 508
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 919, y: 538}
+  m_LastWindowPixelSize: {x: 650, y: 529}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -136,8 +136,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1200
-    height: 916
+    width: 1005
+    height: 902
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -161,8 +161,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1200
-    height: 559
+    width: 1005
+    height: 550
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -184,10 +184,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 279
-    height: 559
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 353
+    height: 550
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -213,10 +213,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2071
+    x: 2053
     y: 83
-    width: 278
-    height: 538
+    width: 352
+    height: 529
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ea600000
       m_LastClickedID: 0
-      m_ExpandedIDs: 1c8ff8ffc490f8ffb4f1f8ff5c7bf9ffe485f9ff3286f9fff09bf9ff88a6f9ff9eb7f9ff68cbf9ff60fef9ff9660faffbc60faffe468faff2a81fafffc84faffc886faff0287faffb089faff84a1feff86a1feffa2a1feffb2a5feffe0bbfeff9abffeffa0bffeff1cf5feffbe7cffffae7dffff12e1ffff34e1ffff6ee4ffffaae8ffff44ecffff64ecffff4eedffffc8edffff20eeffff0cefffffb2efffffb6f4ffff06f5fffff6f8ffff50f9ffff2cfbffff62610000ec62000020d400002ad40000
+      m_ExpandedIDs: 326bffff10ddffff66eefffffaf0ffff32f1ffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 279
+    x: 353
     y: 0
-    width: 921
-    height: 559
+    width: 652
+    height: 550
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
@@ -298,10 +298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2350
+    x: 2406
     y: 83
-    width: 919
-    height: 538
+    width: 650
+    height: 529
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -377,9 +377,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: -44.5, y: 86}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 1
       id: Orientation
       index: 0
       layout: 4
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 450.9838, y: 266.54883, z: -1.8506218}
+    m_Target: {x: 274.46637, y: 242.20088, z: 0.35456395}
     speed: 2
-    m_Value: {x: 450.9838, y: 266.54883, z: -1.8506218}
+    m_Value: {x: 274.46637, y: 242.20088, z: 0.35456395}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 246.34128
+    m_Target: 327.3149
     speed: 2
-    m_Value: 246.34128
+    m_Value: 327.3149
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -682,9 +682,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 559
-    width: 1200
-    height: 357
+    y: 550
+    width: 1005
+    height: 352
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 11}
@@ -713,10 +713,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2071
-    y: 642
-    width: 1199
-    height: 336
+    x: 2053
+    y: 633
+    width: 1004
+    height: 331
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -734,22 +734,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Dialogs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Sprites/Dialogs
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\git\jcollard\Unity-2021-DiceRoller\Dice Roller
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 88}
-    m_SelectedIDs: 5e6e0100
-    m_LastClickedID: 93790
-    m_ExpandedIDs: 00000000be600000c2600000d8600000dc6000004c880000508800004c60010000ca9a3b
+    scrollPos: {x: 0, y: 60}
+    m_SelectedIDs: 8a600000
+    m_LastClickedID: 24714
+    m_ExpandedIDs: 000000003e60000042600000446000004660000078600000886000008c60000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -777,7 +777,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be600000c2600000d86000004c88000000ca9a3b
+    m_ExpandedIDs: 00000000386000003a6000003c6000003e60000040600000426000004460000046600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -802,21 +802,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: ea600000
+    m_LastClickedInstanceID: 24810
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Character
-      m_OriginalName: Character
+      m_Name: ShopInventoryController
+      m_OriginalName: ShopInventoryController
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 75250
+      m_UserData: 32062
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -853,10 +853,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2071
+    x: 2087
     y: 642
-    width: 1199
-    height: 336
+    width: 1004
+    height: 331
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -876,10 +876,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1200
+    x: 1005
     y: 0
-    width: 400
-    height: 916
+    width: 527
+    height: 902
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -908,10 +908,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3271
+    x: 3058
     y: 83
-    width: 399
-    height: 895
+    width: 526
+    height: 881
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -949,31 +949,31 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3428
-    y: 73
-    width: 539
-    height: 926
+    x: 3092
+    y: 92
+    width: 526
+    height: 881
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 128
-    splitterInitialOffset: 0
+    ID: 115
+    splitterInitialOffset: 456
     currentActiveSplitter: -1
     realSizes:
-    - 642
-    - 214
+    - 446
+    - 365
     relativeSizes:
-    - 0.75
-    - 0.25
+    - 0.54985756
+    - 0.45014244
     minSizes:
     - 32
     - 32
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 856
+    lastTotalSize: 811
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1025,7 +1025,7 @@ MonoBehaviour:
       name: Untitled 2D Project
       fullName: Untitled 2D Project
       resultStatus: 1
-      duration: 0.1630864
+      duration: 0.8727422
       messages: 
       output: 
       stacktrace: 
@@ -1041,7 +1041,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: D:/git/jcollard/Unity-2021-DiceRoller/Dice Roller/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.1308148
+      duration: 0.8265898
       messages: 
       output: 
       stacktrace: 
@@ -1052,28 +1052,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Untitled 2D Project][suite]'
-    - id: 1015
-      uniqueId: Tests.dll/[CaptainCoder][suite]
-      name: CaptainCoder
-      fullName: CaptainCoder
-      resultStatus: 1
-      duration: 0.1287067
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1014
-      parentUniqueId: '[Tests.dll][suite]'
     - id: 1026
-      uniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.Data][suite]
-      name: Data
-      fullName: CaptainCoder.Data
+      uniqueId: Tests.dll/[AdventureQuest][suite]
+      name: AdventureQuest
+      fullName: AdventureQuest
       resultStatus: 1
-      duration: 0.1701632
+      duration: 0.8254419
       messages: 
       output: 
       stacktrace: 
@@ -1082,14 +1066,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1024
-      parentUniqueId: Tests.dll/[CaptainCoder][suite]
-    - id: 1018
-      uniqueId: Tests.dll/CaptainCoder/Data/[Tests][CaptainCoder.Data.HistogramTest][suite]
-      name: HistogramTest
-      fullName: CaptainCoder.Data.HistogramTest
+      parentId: 1025
+      parentUniqueId: '[Tests.dll][suite]'
+    - id: 1029
+      uniqueId: Tests.dll/AdventureQuest/[Character][suite]
+      name: Character
+      fullName: AdventureQuest.Character
       resultStatus: 1
-      duration: 0.1652325
+      duration: 0.0899205
       messages: 
       output: 
       stacktrace: 
@@ -1099,13 +1083,94 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentId: 1026
-      parentUniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.Data][suite]
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1030
+      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
+      name: Equipment
+      fullName: AdventureQuest.Character.Equipment
+      resultStatus: 1
+      duration: 0.0871394
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1029
+      parentUniqueId: Tests.dll/AdventureQuest/[Character][suite]
+    - id: 1023
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
+      name: CharacterEquipmentManifestTest
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest
+      resultStatus: 1
+      duration: 0.0810443
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
+    - id: 1024
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon]
+      name: TestEquipWeapon
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon
+      resultStatus: 1
+      duration: 0.0590298
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Test Character can only have 1 weapon equipped.
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
+    - id: 1028
+      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Data][suite]
+      name: Data
+      fullName: AdventureQuest.Data
+      resultStatus: 1
+      duration: 0.0311485
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1026
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1018
+      uniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+      name: HistogramTest
+      fullName: AdventureQuest.Data.HistogramTest
+      resultStatus: 1
+      duration: 0.0141464
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1028
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Data][suite]
     - id: 1022
-      uniqueId: Tests.dll/CaptainCoder/Data/HistogramTest/[Tests][CaptainCoder.Data.HistogramTest.TestChanceOf]
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestChanceOf]
       name: TestChanceOf
-      fullName: CaptainCoder.Data.HistogramTest.TestChanceOf
+      fullName: AdventureQuest.Data.HistogramTest.TestChanceOf
       resultStatus: 1
-      duration: 0.0826611
+      duration: 0.0037558
       messages: 
       output: 
       stacktrace: 
@@ -1116,13 +1181,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1018
-      parentUniqueId: Tests.dll/CaptainCoder/Data/[Tests][CaptainCoder.Data.HistogramTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
     - id: 1021
-      uniqueId: Tests.dll/CaptainCoder/Data/HistogramTest/[Tests][CaptainCoder.Data.HistogramTest.TestCount]
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestCount]
       name: TestCount
-      fullName: CaptainCoder.Data.HistogramTest.TestCount
+      fullName: AdventureQuest.Data.HistogramTest.TestCount
       resultStatus: 1
-      duration: 0.0020179
+      duration: 0.0009244
       messages: 
       output: 
       stacktrace: 
@@ -1133,13 +1198,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1018
-      parentUniqueId: Tests.dll/CaptainCoder/Data/[Tests][CaptainCoder.Data.HistogramTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
     - id: 1019
-      uniqueId: Tests.dll/CaptainCoder/Data/HistogramTest/[Tests][CaptainCoder.Data.HistogramTest.TestMax]
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestMax]
       name: TestMax
-      fullName: CaptainCoder.Data.HistogramTest.TestMax
+      fullName: AdventureQuest.Data.HistogramTest.TestMax
       resultStatus: 1
-      duration: 0.0015293
+      duration: 0.0013791
       messages: 
       output: 
       stacktrace: 
@@ -1150,13 +1215,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1018
-      parentUniqueId: Tests.dll/CaptainCoder/Data/[Tests][CaptainCoder.Data.HistogramTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
     - id: 1020
-      uniqueId: Tests.dll/CaptainCoder/Data/HistogramTest/[Tests][CaptainCoder.Data.HistogramTest.TestMin]
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestMin]
       name: TestMin
-      fullName: CaptainCoder.Data.HistogramTest.TestMin
+      fullName: AdventureQuest.Data.HistogramTest.TestMin
       resultStatus: 1
-      duration: 0.0011172
+      duration: 0.0008535
       messages: 
       output: 
       stacktrace: 
@@ -1167,13 +1232,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1018
-      parentUniqueId: Tests.dll/CaptainCoder/Data/[Tests][CaptainCoder.Data.HistogramTest][suite]
-    - id: 1016
-      uniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.Dice][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+    - id: 1027
+      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
       name: Dice
-      fullName: CaptainCoder.Dice
+      fullName: AdventureQuest.Dice
       resultStatus: 1
-      duration: 0.1284509
+      duration: 0.7032538
       messages: 
       output: 
       stacktrace: 
@@ -1182,14 +1247,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1015
-      parentUniqueId: Tests.dll/[CaptainCoder][suite]
+      parentId: 1026
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
     - id: 1006
-      uniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DiceGroupTest][suite]
+      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
       name: DiceGroupTest
-      fullName: CaptainCoder.Dice.DiceGroupTest
+      fullName: AdventureQuest.Dice.DiceGroupTest
       resultStatus: 1
-      duration: 0.020034
+      duration: 0.0443509
       messages: 
       output: 
       stacktrace: 
@@ -1198,14 +1263,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1020
-      parentUniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.Dice][suite]
+      parentId: 1027
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
     - id: 1009
-      uniqueId: Tests.dll/CaptainCoder/Dice/DiceGroupTest/[Tests][CaptainCoder.Dice.DiceGroupTest.TestIsParseable]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestIsParseable]
       name: TestIsParseable
-      fullName: CaptainCoder.Dice.DiceGroupTest.TestIsParseable
+      fullName: AdventureQuest.Dice.DiceGroupTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0011759
+      duration: 0.0007211
       messages: 
       output: 
       stacktrace: 
@@ -1216,13 +1281,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1006
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DiceGroupTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
     - id: 1008
-      uniqueId: Tests.dll/CaptainCoder/Dice/DiceGroupTest/[Tests][CaptainCoder.Dice.DiceGroupTest.TestParse1D20]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestParse1D20]
       name: TestParse1D20
-      fullName: CaptainCoder.Dice.DiceGroupTest.TestParse1D20
+      fullName: AdventureQuest.Dice.DiceGroupTest.TestParse1D20
       resultStatus: 1
-      duration: 0.0120966
+      duration: 0.0232559
       messages: 
       output: 
       stacktrace: 
@@ -1233,13 +1298,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1006
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DiceGroupTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
     - id: 1007
-      uniqueId: Tests.dll/CaptainCoder/Dice/DiceGroupTest/[Tests][CaptainCoder.Dice.DiceGroupTest.TestParse3D6]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestParse3D6]
       name: TestParse3D6
-      fullName: CaptainCoder.Dice.DiceGroupTest.TestParse3D6
+      fullName: AdventureQuest.Dice.DiceGroupTest.TestParse3D6
       resultStatus: 1
-      duration: 0.0049778
+      duration: 0.0175077
       messages: 
       output: 
       stacktrace: 
@@ -1250,13 +1315,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1006
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DiceGroupTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
     - id: 1001
-      uniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DicePoolTest][suite]
+      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
       name: DicePoolTest
-      fullName: CaptainCoder.Dice.DicePoolTest
+      fullName: AdventureQuest.Dice.DicePoolTest
       resultStatus: 1
-      duration: 0.1246392
+      duration: 0.5469835
       messages: 
       output: 
       stacktrace: 
@@ -1265,14 +1330,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1016
-      parentUniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.Dice][suite]
+      parentId: 1027
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
     - id: 1005
-      uniqueId: Tests.dll/CaptainCoder/Dice/DicePoolTest/[Tests][CaptainCoder.Dice.DicePoolTest.TestIsParseable]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestIsParseable]
       name: TestIsParseable
-      fullName: CaptainCoder.Dice.DicePoolTest.TestIsParseable
+      fullName: AdventureQuest.Dice.DicePoolTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0463265
+      duration: 0.0005764
       messages: 
       output: 
       stacktrace: 
@@ -1283,13 +1348,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DicePoolTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
     - id: 1003
-      uniqueId: Tests.dll/CaptainCoder/Dice/DicePoolTest/[Tests][CaptainCoder.Dice.DicePoolTest.TestParse1D20]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse1D20]
       name: TestParse1D20
-      fullName: CaptainCoder.Dice.DicePoolTest.TestParse1D20
+      fullName: AdventureQuest.Dice.DicePoolTest.TestParse1D20
       resultStatus: 1
-      duration: 0.0977937
+      duration: 0.1739708
       messages: 
       output: 
       stacktrace: 
@@ -1300,13 +1365,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DicePoolTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
     - id: 1002
-      uniqueId: Tests.dll/CaptainCoder/Dice/DicePoolTest/[Tests][CaptainCoder.Dice.DicePoolTest.TestParse2D4Plus1D6]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6]
       name: TestParse2D4Plus1D6
-      fullName: CaptainCoder.Dice.DicePoolTest.TestParse2D4Plus1D6
+      fullName: AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6
       resultStatus: 1
-      duration: 0.0533527
+      duration: 0.1731241
       messages: 
       output: 
       stacktrace: 
@@ -1317,13 +1382,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DicePoolTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
     - id: 1004
-      uniqueId: Tests.dll/CaptainCoder/Dice/DicePoolTest/[Tests][CaptainCoder.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8]
       name: TestParse3D6Plus1D4Plus3D8
-      fullName: CaptainCoder.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
+      fullName: AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
       resultStatus: 1
-      duration: 0.0435671
+      duration: 0.1897489
       messages: 
       output: 
       stacktrace: 
@@ -1334,13 +1399,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DicePoolTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
     - id: 1010
-      uniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
+      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
       name: DieTest
-      fullName: CaptainCoder.Dice.DieTest
+      fullName: AdventureQuest.Dice.DieTest
       resultStatus: 1
-      duration: 0.0812308
+      duration: 0.0884293
       messages: 
       output: 
       stacktrace: 
@@ -1349,14 +1414,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1016
-      parentUniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.Dice][suite]
+      parentId: 1027
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
     - id: 1013
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestConstruct12SidedDie]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestConstruct12SidedDie]
       name: TestConstruct12SidedDie
-      fullName: CaptainCoder.Dice.DieTest.TestConstruct12SidedDie
+      fullName: AdventureQuest.Dice.DieTest.TestConstruct12SidedDie
       resultStatus: 1
-      duration: 0.0090313
+      duration: 0.0261961
       messages: 
       output: 
       stacktrace: 
@@ -1367,13 +1432,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
     - id: 1012
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestConstruct6SidedDie]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestConstruct6SidedDie]
       name: TestConstruct6SidedDie
-      fullName: CaptainCoder.Dice.DieTest.TestConstruct6SidedDie
+      fullName: AdventureQuest.Dice.DieTest.TestConstruct6SidedDie
       resultStatus: 1
-      duration: 0.0153418
+      duration: 0.0309861
       messages: 
       output: 
       stacktrace: 
@@ -1384,13 +1449,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
     - id: 1011
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestDieMinimumSize]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestDieMinimumSize]
       name: TestDieMinimumSize
-      fullName: CaptainCoder.Dice.DieTest.TestDieMinimumSize
+      fullName: AdventureQuest.Dice.DieTest.TestDieMinimumSize
       resultStatus: 1
-      duration: 0.0313132
+      duration: 0.0038659
       messages: 
       output: 
       stacktrace: 
@@ -1401,13 +1466,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
     - id: 1016
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestEdgeCaseParse]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestEdgeCaseParse]
       name: TestEdgeCaseParse
-      fullName: CaptainCoder.Dice.DieTest.TestEdgeCaseParse
+      fullName: AdventureQuest.Dice.DieTest.TestEdgeCaseParse
       resultStatus: 1
-      duration: 0.0006236
+      duration: 0.000898
       messages: 
       output: 
       stacktrace: 
@@ -1418,13 +1483,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
-    - id: 1013
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestIsParseable]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1014
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestIsParseable]
       name: TestIsParseable
-      fullName: CaptainCoder.Dice.DieTest.TestIsParseable
+      fullName: AdventureQuest.Dice.DieTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0002634
+      duration: 0.0003858
       messages: 
       output: 
       stacktrace: 
@@ -1435,13 +1500,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
     - id: 1017
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestParseFormatException]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestParseFormatException]
       name: TestParseFormatException
-      fullName: CaptainCoder.Dice.DieTest.TestParseFormatException
+      fullName: AdventureQuest.Dice.DieTest.TestParseFormatException
       resultStatus: 1
-      duration: 0.000504
+      duration: 0.0007863
       messages: 
       output: 
       stacktrace: 
@@ -1452,13 +1517,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
     - id: 1015
-      uniqueId: Tests.dll/CaptainCoder/Dice/DieTest/[Tests][CaptainCoder.Dice.DieTest.TestSimpleParse]
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestSimpleParse]
       name: TestSimpleParse
-      fullName: CaptainCoder.Dice.DieTest.TestSimpleParse
+      fullName: AdventureQuest.Dice.DieTest.TestSimpleParse
       resultStatus: 1
-      duration: 0.0002699
+      duration: 0.0004611
       messages: 
       output: 
       stacktrace: 
@@ -1469,14 +1534,17 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1010
-      parentUniqueId: Tests.dll/CaptainCoder/Dice/[Tests][CaptainCoder.Dice.DieTest][suite]
-    m_ResultText: TestIsParseable (0.046s)
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    m_ResultText: 'TestEquipWeapon (0.059s)
+
+      Test Character can only have 1
+      weapon equipped.'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c77669f9
-      m_LastClickedID: -110528825
-      m_ExpandedIDs: 9ca393a5832b53c1e557abf7ff3705f8d8e1341202f3aa132791061f6d36de43524433650c12e46bffffff7f
+      m_SelectedIDs: d57679ad
+      m_LastClickedID: -1384548651
+      m_ExpandedIDs: e622df8c02f1b5a09ca393a5832b53c1e557abf7ff3705f8d8e1341202f3aa132791061f6c21753e6d36de43524433650c12e46b4f163e6dffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
