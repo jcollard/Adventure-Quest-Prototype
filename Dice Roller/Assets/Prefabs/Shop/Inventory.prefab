@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1643589103420613236}
   - component: {fileID: 6582860798161015710}
   - component: {fileID: 3049482099680436975}
-  - component: {fileID: 4374965349953924273}
+  - component: {fileID: 8337381019934980183}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &4374965349953924273
+--- !u!114 &8337381019934980183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,11 +136,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1643589103420613234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ecfc9fe1994c2046994b82cd8c90cdd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8332d377d5947a448943b67b85962ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _name: {fileID: 8570420122247433050}
-  _itemTemplate: {fileID: 5382505594720600380, guid: 6fa011989840bcb47a71308eff417339, type: 3}
+  _itemTemplate: {fileID: 3427041635638448624, guid: 6fa011989840bcb47a71308eff417339, type: 3}
   _itemList: {fileID: 1647666745629516468}
   <OnSelectItem>k__BackingField:
     m_PersistentCalls:
