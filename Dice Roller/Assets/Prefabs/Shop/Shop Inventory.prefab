@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9171910609814464198}
+  - component: {fileID: 1970629158554270699}
   m_Layer: 5
   m_Name: Shop Inventory
   m_TagString: Untagged
@@ -37,6 +38,21 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 800, y: -100}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1970629158554270699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171910609814464199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4582a4b1bd52c4ebc6d26dbdd12810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <OnChange>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &9171910610382649767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2504,6 +2520,10 @@ PrefabInstance:
       propertyPath: _itemTemplate
       value: 
       objectReference: {fileID: 271180354579148031, guid: adb01976a9942ad4b89cca20c174d13e, type: 3}
+    - target: {fileID: 8337381019934980183, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
+      propertyPath: _defaultController
+      value: 
+      objectReference: {fileID: 1970629158554270699}
     - target: {fileID: 8570420122247433050, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
       propertyPath: m_text
       value: Abdul's Armor

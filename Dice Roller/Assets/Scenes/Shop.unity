@@ -1285,7 +1285,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185548689}
-  - component: {fileID: 185548688}
+  - component: {fileID: 185548691}
+  - component: {fileID: 185548690}
   m_Layer: 0
   m_Name: PlayerCharacterController
   m_TagString: Untagged
@@ -1293,41 +1294,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &185548688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185548687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c57724bce843684ab4888690821230e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerCharacter:
-    _gold: 0
-    <Name>k__BackingField: 
-    <PortraitSpriteKey>k__BackingField: 
-    <Abilities>k__BackingField:
-      _abilityScores: []
-  <LoadFromStorageOnLoad>k__BackingField: 1
-  <OnChange>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AdventureQuest.Character.Equipment.CharacterInventoryController,
-          Scripts
-        m_MethodName: Render
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &185548689
 Transform:
   m_ObjectHideFlags: 0
@@ -1343,6 +1309,118 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185548690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185548687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c57724bce843684ab4888690821230e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LoadFromStorageOnLoad>k__BackingField: 1
+--- !u!114 &185548691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185548687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5174644448d75514d8d16f68a6107ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <OnChange>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973256726}
+        m_TargetAssemblyTypeName: AdventureQuest.Equipment.InventoryObservable, Scripts
+        m_MethodName: set_Inventory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &868973957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868973958}
+  - component: {fileID: 868973960}
+  - component: {fileID: 868973959}
+  m_Layer: 0
+  m_Name: ShopController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868973958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868973957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 242.87427, y: 174.1938, z: -1.8022211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &868973959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868973957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cefd62769a4d514ea151eeed46f5322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &868973960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868973957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae365966788f854c97b8cacb1b0b36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <OnChange>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2014269270}
+        m_TargetAssemblyTypeName: AdventureQuest.Equipment.InventoryObservable, Scripts
+        m_MethodName: set_Inventory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &973256724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2309,6 +2387,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1973561713192844817, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
   m_PrefabInstance: {fileID: 973256724}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &973256726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6008759291436225796, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+  m_PrefabInstance: {fileID: 973256724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4582a4b1bd52c4ebc6d26dbdd12810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975464034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,3 +2542,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014269270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1970629158554270699, guid: 719d4416da927c146b0c508252869389, type: 3}
+  m_PrefabInstance: {fileID: 66877230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4582a4b1bd52c4ebc6d26dbdd12810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
