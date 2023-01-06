@@ -8,7 +8,7 @@ namespace AdventureQuest.Character
         // Fields
         public AbilityScore(Ability ability, int score)
         {
-            if (score  < 1 || score > 30) throw new System.ArgumentException($"Ability Score must be within range [1, 30] but was {score}.");
+            if (score  < MIN || score > MAX) throw new System.ArgumentException($"Ability Score must be within range [1, 30] but was {score}.");
             Ability = ability;
             Score = score;
         }
