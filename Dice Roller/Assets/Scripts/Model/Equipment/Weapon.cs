@@ -11,24 +11,26 @@ namespace AdventureQuest.Equipment
     {
         private List<IRequirement> _requirements;
 
-        public Weapon(string name, int cost, AbilityRoll damage) : 
-            this(name, cost, damage, new List<IRequirement>() { new WeaponRequirement() }) { }
+        public Weapon(string name, string description, int cost, AbilityRoll damage) : 
+            this(name, description, cost, damage, new List<IRequirement>() { new WeaponRequirement() }) { }
 
-        public Weapon(string name, int cost, AbilityRoll damage, List<IRequirement> requirements)
+        public Weapon(string name, string description, int cost, AbilityRoll damage, List<IRequirement> requirements)
         {
             Name = name;
+            Description = description;
             Cost = cost;
             Damage = damage;
             _requirements = requirements.ToList();
         }
 
         public string Name { get; }
+        public string Description { get; }
         public int Cost { get; }
         public bool IsTwoHanded { get; }
         public AbilityRoll Damage { get; }
         public HashSet<EquipmentSlot> Slots => new() { EquipmentSlot.LeftHand, EquipmentSlot.RightHand };
         public List<IRequirement> Requirements => _requirements.ToList();
 
-        public virtual IItem Duplicate() => new Weapon(Name, Cost, Damage, Requirements);
+        public virtual IItem Duplicate() => new Weapon(Name, Description, Cost, Damage, Requirements);
     }
 }

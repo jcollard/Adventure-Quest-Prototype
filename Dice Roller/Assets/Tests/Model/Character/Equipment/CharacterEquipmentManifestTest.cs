@@ -10,8 +10,8 @@ namespace AdventureQuest.Character.Equipment
         [Test, Timeout(5000), Description("Test Character can only have 1 weapon equipped.")]
         public void TestEquipWeapon()
         {
-            Weapon dagger = new ("Dagger", 3, AbilityRoll.Parse($"1d4 + {Ability.Dexterity}"));
-            Weapon sword = new ("Sword", 6, AbilityRoll.Parse($"1d6 + {Ability.Strength}"));
+            Weapon dagger = new ("Dagger", "", 3, AbilityRoll.Parse($"1d4 + {Ability.Dexterity}"));
+            Weapon sword = new ("Sword", "", 6, AbilityRoll.Parse($"1d6 + {Ability.Strength}"));
             PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
             CharacterEquipmentManifest manifest = new (bob);
             
