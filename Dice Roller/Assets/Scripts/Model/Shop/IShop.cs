@@ -5,10 +5,9 @@ using AdventureQuest.Result;
 
 namespace AdventureQuest.Shop
 {
-    public interface IShop
+    public interface IShop : IHasInventory
     {
         public string Name { get; }
-        public IInventory Inventory { get; }
         public IResult Purchase(IItem toPurchase, ICharacter shopper);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 namespace AdventureQuest.Character
 {
     [System.Serializable]
-    public class PlayerCharacter : ICharacter
+    public class PlayerCharacter : ICharacter, ISerializationCallbackReceiver
     {
         [field: SerializeField]
         private int _gold;
@@ -84,5 +84,16 @@ namespace AdventureQuest.Character
             }
         }
 
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        {
+            
+        }
+
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
+        {
+            Inventory = new Inventory($"{Name}'s Inventory");
+            Inventory.Add(new Weapon("Dagger of Sadness", 3, Dice.AbilityRoll.Parse($"1d4 + {Ability.Dexterity}")));
+            Inventory.Add(new Weapon("Sword of Happiness", 6, Dice.AbilityRoll.Parse($"1d6 + {Ability.Strength}")));
+        }
     }
 }
