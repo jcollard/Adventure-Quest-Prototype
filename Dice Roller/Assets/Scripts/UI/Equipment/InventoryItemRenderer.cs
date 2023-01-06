@@ -5,7 +5,7 @@ using TMPro;
 namespace AdventureQuest.Equipment
 {
 
-    public class ItemEntryController : MonoBehaviour
+    public class InventoryItemRenderer : MonoBehaviour
     {
         [field: SerializeField]
         private TextMeshProUGUI _name;

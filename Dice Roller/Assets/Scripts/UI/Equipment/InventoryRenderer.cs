@@ -8,12 +8,12 @@ using AdventureQuest.Character;
 namespace AdventureQuest.Equipment
 {
 
-    public class InventoryController : MonoBehaviour
+    public class InventoryRenderer : MonoBehaviour
     {
         [SerializeField]
         private TextMeshProUGUI _name;
         [SerializeField]
-        private ItemEntryController _itemTemplate;
+        private InventoryItemRenderer _itemTemplate;
         [SerializeField]
         private Transform _itemList;
 
@@ -41,7 +41,7 @@ namespace AdventureQuest.Equipment
             _name.text = inventory.Name;
             foreach (IItem item in inventory.Items)
             {
-                ItemEntryController entry = Instantiate(_itemTemplate, _itemList);
+                InventoryItemRenderer entry = Instantiate(_itemTemplate, _itemList);
                 entry.Render(item);
                 entry.OnSelected.AddListener(() => OnSelectItem.Invoke(item));
             }
