@@ -24,5 +24,24 @@ namespace AdventureQuest.Shop
             shopper.Gold -= toPurchase.Cost;
             return IResult.Success($"Thank you for your purchase!");
         }
+
+        public IResult Sell(IItem toSell, ICharacter shopper)
+        {
+            if (!shopper.Inventory.Contains(toSell)) { return IResult.Failure($"You don't own that! What are you trying to pull here?"); }
+            IResult result = shopper.Inventory.Remove(toSell);
+            if (result is Failure) { return result; }            
+            int value = EvaluateItem(toSell, shopper).Value;
+            shopper.Gold += value;
+            return IResult.Success($"Nice doin' buisness with ya!");
+        }
+
+        public SaleProposal EvaluateItem(IItem toSell, ICharacter shopper) 
+        {
+            int value = toSell.Cost/2;
+            return new SaleProposal(
+                $"Selling {toSell.Name}", 
+                $"Hmmm... that {toSell.Name} looks a litte worn out. But, I'll give you {value} gold for it. What do you think?", 
+                value);
+        }
     }
 }

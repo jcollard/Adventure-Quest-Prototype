@@ -19,6 +19,10 @@ namespace AdventureQuest.Shop
         [field: SerializeField]
         public UnityEvent<IItem> OnPurchase { get; private set; }
         [field: SerializeField]
+        public UnityEvent<SaleProposal> OnEvaluateItem { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<Result.Success> OnSell { get; private set; }
+        [field: SerializeField]
         public UnityEvent<Result.Error> OnError { get; private set; }
 
         private ObservableItem Selected 
@@ -78,6 +82,30 @@ namespace AdventureQuest.Shop
             else if (result is Success)
             {
                 OnPurchase.Invoke(Selected.Observed);
+            }
+        }
+
+        public void EvaluateItem(IItem toEvaluate) 
+        {
+            Selected.Observed = toEvaluate;
+            SaleProposal proposal = Shop.Observed.EvaluateItem(toEvaluate, Character.Observed);
+            OnEvaluateItem.Invoke(proposal);
+        }
+
+        public void Sell()
+        {
+            IResult result = Shop.Observed.Sell(Selected.Observed, Character.Observed);
+            if (result is Failure)
+            {
+                OnError.Invoke(new Result.Error($"{Shop.Observed.Name}", result.Message));
+            }
+            else if (result is Success)
+            {
+                OnSell.Invoke((Success)result);
+            }
+            else
+            {
+                throw new System.InvalidOperationException($"Sale resulted in unknwon result {result}.");
             }
         }
     }    

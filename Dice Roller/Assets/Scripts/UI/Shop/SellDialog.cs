@@ -7,24 +7,25 @@ using UnityEngine.Events;
 namespace AdventureQuest.Shop.UI
 {
     [RequireComponent(typeof(ConfirmCancelDialog))]
-    public class PurchaseDialog : MonoBehaviour
+    public class SellDialog : MonoBehaviour
     {
-        private ItemInfoRenderer _renderer;
-        public IItem Item 
+        private SaleProposalRenderer _renderer;
+
+        public SaleProposal SaleProposal 
         { 
             set 
             {
                 gameObject.SetActive(true);
-                _renderer.RenderItemInfo(value);                 
+                _renderer.Render(value);                 
             }
         }
 
         protected void Awake()
         {
-            _renderer = transform.GetComponentInChildren<ItemInfoRenderer>(true);
+            _renderer = transform.GetComponentInChildren<SaleProposalRenderer>(true);
             if (_renderer == null)
             {
-                throw new System.InvalidOperationException($"Unable to create Purchase Dialog. Could not find ItemInfoRenderer");
+                throw new System.InvalidOperationException($"Unable to create Sell Dialog. Could not find SaleProposalRenderer");
             }
         }
         

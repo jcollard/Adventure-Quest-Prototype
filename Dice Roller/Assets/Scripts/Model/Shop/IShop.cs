@@ -9,5 +9,7 @@ namespace AdventureQuest.Shop
     {
         public string Name { get; }
         public IResult Purchase(IItem toPurchase, ICharacter shopper);
+        public IResult Sell(IItem toSell, ICharacter shopper);
+        public SaleProposal EvaluateItem(IItem toSell, ICharacter shopper);
     }
 }
