@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace AdventureQuest.Controller
 {
-    public class Observable<T> : MonoBehaviour, IObservable<T>
+    public class ObservableComponent<T> : MonoBehaviour
     {
         private T _observed;
         private bool _cleared = true;

@@ -6,7 +6,7 @@ using AdventureQuest.Controller;
 
 namespace AdventureQuest.Equipment
 {
-    public class InventoryObservable : Observable<IHasInventory>
+    public class InventoryObservable : ObservableComponent<IHasInventory>
     {
         public IHasInventory Inventory { set => Observed = value; }
     }

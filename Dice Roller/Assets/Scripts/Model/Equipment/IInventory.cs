@@ -3,7 +3,7 @@ using AdventureQuest.Result;
 
 namespace AdventureQuest.Equipment
 {
-    public interface IInventory
+    public interface IInventory : IObservable<IInventory>
     {
         public string Name { get; }
         public List<IItem> Items { get; }

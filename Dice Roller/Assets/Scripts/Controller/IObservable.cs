@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace AdventureQuest.Controller
+namespace AdventureQuest
 {
     public interface IObservable<T>
     {
-        public T Observed { get; set; }
-        public UnityEvent<T> OnChange { get;  }
+        public event System.Action<T> OnChange;
     }
 }

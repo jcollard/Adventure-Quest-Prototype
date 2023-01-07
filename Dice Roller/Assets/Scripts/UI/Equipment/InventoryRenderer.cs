@@ -21,6 +21,7 @@ namespace AdventureQuest.Equipment
 
         [field: SerializeField]
         public UnityEvent<IItem> OnSelectItem { get; private set; }
+
         
 
         // Start is called before the first frame update
@@ -31,21 +32,23 @@ namespace AdventureQuest.Equipment
                 _defaultController.OnChange.AddListener(Render);
             }
         }
+        public void Render(IHasInventory hasInventory) => Render(hasInventory.Inventory);
 
-        public void Render(IHasInventory hasInventory)
+        public void Render(IInventory inventory)
         {
             foreach (Transform child in _itemList)
             {
                 Destroy(child.gameObject);
             }
-            _name.text = hasInventory.Inventory.Name;
-            foreach (IItem item in hasInventory.Inventory.Items)
+            _name.text = inventory.Name;
+            foreach (IItem item in inventory.Items)
             {
                 InventoryItemRenderer entry = Instantiate(_itemTemplate, _itemList);
                 entry.Render(item);
                 entry.OnSelected.AddListener(() => OnSelectItem.Invoke(item));
             }
         }
+
     }
 
 }

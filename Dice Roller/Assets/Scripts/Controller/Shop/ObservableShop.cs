@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace AdventureQuest.Shop
 {
-    public class ObservableShop : Observable<IShop> 
+    public class ObservableShop : ObservableComponent<IShop> 
     {
         public IShop Shop { set => Observed = value; }
     } 

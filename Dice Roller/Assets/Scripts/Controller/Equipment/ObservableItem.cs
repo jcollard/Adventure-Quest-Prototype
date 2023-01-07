@@ -2,7 +2,7 @@ using AdventureQuest.Controller;
 
 namespace AdventureQuest.Equipment
 {
-    public class ObservableItem : Observable<IItem>
+    public class ObservableItem : ObservableComponent<IItem>
     {
         public IItem Item { set => Observed = value; }
     }
