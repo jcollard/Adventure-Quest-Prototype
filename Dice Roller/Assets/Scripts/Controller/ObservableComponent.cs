@@ -21,6 +21,7 @@ namespace AdventureQuest.Controller
         }
 
         public void Clear() => _cleared = true;
+        protected void Change() => OnChange.Invoke(_observed);
 
         [field: SerializeField]
         public UnityEvent<T> OnChange { get; private set; }

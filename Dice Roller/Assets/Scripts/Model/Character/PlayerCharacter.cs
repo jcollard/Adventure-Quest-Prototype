@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using AdventureQuest.Character.Equipment;
@@ -25,6 +26,8 @@ namespace AdventureQuest.Character
             Inventory = new Inventory($"{name}'s Inventory");
         }
 
+        public event Action<ICharacter> OnChange;
+
         [field: SerializeField]
         public string Name { get; private set; }
         [field: SerializeField]
@@ -46,6 +49,7 @@ namespace AdventureQuest.Character
                     Debug.Assert(value >= 0, $"Attempted to set PlayerCharacter.Gold to a value less than 0. {value}");
                 }
                 _gold = Mathf.Max(value, 0);
+                OnChange?.Invoke(this);
             }
         }
 

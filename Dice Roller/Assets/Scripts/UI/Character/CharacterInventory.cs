@@ -17,8 +17,10 @@ namespace AdventureQuest.UI.Character
         void Awake()
         {
             ObservableCharacter character = GetComponent<ObservableCharacter>();
-            InventoryRenderer renderer = GetComponentInChildren<InventoryRenderer>();
-            character.OnChange.AddListener(ch => Observe(ch, renderer));            
+            InventoryRenderer inventoryRenderer = GetComponentInChildren<InventoryRenderer>();
+            CharacterRenderer characterRenderer = GetComponentInChildren<CharacterRenderer>();
+            character.OnChange.AddListener(ch => Observe(ch, inventoryRenderer));
+            character.OnChange.AddListener(characterRenderer.Render);
         }
 
         void OnDestroy() => ClearListener();
@@ -40,7 +42,7 @@ namespace AdventureQuest.UI.Character
             }
         }
 
-        
+
     }
 
 }
