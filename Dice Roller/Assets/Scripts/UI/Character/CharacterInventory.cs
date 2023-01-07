@@ -12,6 +12,7 @@ namespace AdventureQuest.UI.Character
     {
 
         private ICharacter _observing;
+        private System.Action<IInventory> _render;
 
         void Awake()
         {
@@ -20,18 +21,23 @@ namespace AdventureQuest.UI.Character
             character.OnChange.AddListener(ch => Observe(ch, renderer));            
         }
 
-        void OnDestroy() {
-            
-        }
+        void OnDestroy() => ClearListener();
 
         private void Observe(ICharacter character, InventoryRenderer renderer)
         {
-            if (_observing != null)
+            ClearListener();
+            _render = renderer.Render;
+            _render.Invoke(character.Inventory);
+            _observing = character;
+            character.Inventory.OnChange += _render;
+        }
+
+        private void ClearListener()
+        {
+            if (_observing != null && _render != null)
             {
-                _observing.Inventory.OnChange -= renderer.Render;
+                _observing.Inventory.OnChange -= _render;
             }
-            renderer.Render(character);
-            character.Inventory.OnChange += renderer.Render;
         }
 
         
