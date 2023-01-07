@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3106035994087641530}
   - component: {fileID: 144291583377525780}
   m_Layer: 5
-  m_Name: Error Dialog
+  m_Name: Confirm Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 7886818031294806585}
   - component: {fileID: 3945905525103977452}
   m_Layer: 5
-  m_Name: ErrorDialogRenderer
+  m_Name: Message Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ca12e6046b4354bb9c185748e38cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <OnErrorTitle>k__BackingField:
+  <OnTitleChange>k__BackingField:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7440625338142134297}
@@ -184,7 +184,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  <OnErrorMessage>k__BackingField:
+  <OnMessageChange>k__BackingField:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7440625339389492324}
@@ -321,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905226207184236083, guid: beb50b0eb37d55143aabed927f514373, type: 3}
       propertyPath: m_Name
-      value: Description
+      value: Text
       objectReference: {fileID: 0}
     - target: {fileID: 7891810424007024618, guid: beb50b0eb37d55143aabed927f514373, type: 3}
       propertyPath: m_Pivot.x

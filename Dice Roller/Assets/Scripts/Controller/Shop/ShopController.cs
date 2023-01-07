@@ -17,13 +17,13 @@ namespace AdventureQuest.Shop
         private ObservableCharacter _character;
 
         [field: SerializeField]
-        public UnityEvent<IItem> OnPurchase { get; private set; }
+        public UnityEvent<Message> OnPurchase { get; private set; }
         [field: SerializeField]
         public UnityEvent<SaleProposal> OnEvaluateItem { get; private set; }
         [field: SerializeField]
-        public UnityEvent<Result.Success> OnSell { get; private set; }
+        public UnityEvent<Message> OnSell { get; private set; }
         [field: SerializeField]
-        public UnityEvent<Result.Error> OnError { get; private set; }
+        public UnityEvent<Message> OnError { get; private set; }
 
         private ObservableItem Selected 
         {
@@ -75,14 +75,7 @@ namespace AdventureQuest.Shop
         public void Purchase()
         {
             IResult result = Shop.Observed.Purchase(Selected.Observed, Character.Observed);
-            if (result is Failure)
-            {
-                OnError.Invoke(new Result.Error($"{Shop.Observed.Name}", result.Message));
-            }
-            else if (result is Success)
-            {
-                OnPurchase.Invoke(Selected.Observed);
-            }
+            SendMessage(result);            
         }
 
         public void EvaluateItem(IItem toEvaluate) 
@@ -95,18 +88,19 @@ namespace AdventureQuest.Shop
         public void Sell()
         {
             IResult result = Shop.Observed.Sell(Selected.Observed, Character.Observed);
-            if (result is Failure)
-            {
-                OnError.Invoke(new Result.Error($"{Shop.Observed.Name}", result.Message));
-            }
-            else if (result is Success)
-            {
-                OnSell.Invoke((Success)result);
-            }
-            else
-            {
-                throw new System.InvalidOperationException($"Sale resulted in unknwon result {result}.");
-            }
+            SendMessage(result);
+        }
+
+        private void SendMessage(IResult result)
+        {
+            Message message = new ($"{Shop.Observed.Name}", result.Message);
+            UnityEvent<Message> handlerEvent = result switch {
+                Failure => OnError,
+                Success => OnPurchase,
+                _ => throw new System.InvalidOperationException($"Could not determine correct event to use for message."),
+
+            };
+            handlerEvent.Invoke(message);
         }
     }    
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4830033572283535941}
   - component: {fileID: 4830033572283535938}
   m_Layer: 5
-  m_Name: Error Dialog
+  m_Name: Error Dialog (Old)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
