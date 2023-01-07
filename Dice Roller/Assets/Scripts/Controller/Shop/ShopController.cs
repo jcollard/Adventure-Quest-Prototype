@@ -19,7 +19,7 @@ namespace AdventureQuest.Shop
         [field: SerializeField]
         public UnityEvent<IItem> OnPurchase { get; private set; }
         [field: SerializeField]
-        public UnityEvent<string> OnFailure { get; private set; }
+        public UnityEvent<Result.Error> OnError { get; private set; }
 
         private ObservableItem Selected 
         {
@@ -73,7 +73,7 @@ namespace AdventureQuest.Shop
             IResult result = Shop.Observed.Purchase(Selected.Observed, Character.Observed);
             if (result is Failure)
             {
-                OnFailure.Invoke(result.Message);
+                OnError.Invoke(new Result.Error($"{Shop.Observed.Name}", result.Message));
             }
             else if (result is Success)
             {

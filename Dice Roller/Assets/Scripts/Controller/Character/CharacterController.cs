@@ -22,6 +22,7 @@ namespace AdventureQuest.Character
             if (LoadFromStorageOnLoad)
             {
                 _observable.Observed = PlayerCharacter.Restore();
+                _observable.Observed.Gold = 100;
                 return;
             }
         }
