@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AdventureQuest.Equipment;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -75,6 +76,8 @@ namespace AdventureQuest.Character
                 return;
             }
             PlayerCharacter character = new (Name, Abilities, PortraitSpriteKey);
+            character.Gold = 50;
+            character.Inventory.Add(Weapons.Dagger);
             PlayerCharacter.Store(character);
             // TODO: Consider loading scene without "stringly" types
             SceneManager.LoadScene("Town");
