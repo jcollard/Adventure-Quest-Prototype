@@ -12,6 +12,10 @@ namespace AdventureQuest.Character
     {
         [field: SerializeField]
         private int _gold;
+        [field: SerializeField]
+        private string _equipmentJson;
+        [field: SerializeField]
+        private string _inventoryJson;
         
         public PlayerCharacter(string name, Abilities abilities, string portraitSpriteKey)
         {
@@ -34,9 +38,7 @@ namespace AdventureQuest.Character
         public string PortraitSpriteKey { get; private set; }
         [field: SerializeField]
         public Abilities Abilities { get; private set; }
-        [field: SerializeField]
         public IEquipmentManifest Equipment { get; private set; }
-        [field: SerializeField]
         public IInventory Inventory { get; private set; }
         
         public int Gold 
@@ -90,12 +92,16 @@ namespace AdventureQuest.Character
 
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
-            
+            if (Equipment == null || Inventory == null) { return; }
+            _equipmentJson = JsonUtility.ToJson(Equipment);
+            _inventoryJson = JsonUtility.ToJson(Inventory);            
         }
 
         void ISerializationCallbackReceiver.OnAfterDeserialize()
         {
-            Inventory = new Inventory($"{Name}'s Inventory");
+            if (_equipmentJson == null || _inventoryJson == null) { return ; }
+            Inventory = JsonUtility.FromJson<Inventory>(_inventoryJson);
+            Equipment = JsonUtility.FromJson<CharacterEquipmentManifest>(_equipmentJson);
         }
 
         public override bool Equals(object obj)

@@ -34,8 +34,15 @@ namespace AdventureQuest.Character
         {
             string serialized = PlayerCharacter.Encode(character);
             PlayerCharacter loaded = PlayerCharacter.Decode(serialized);
-
             Assert.AreEqual(character, loaded);
+
+            Abilities abilitiesOther = Abilities.Roll();
+            PlayerCharacter characterOther = new ("Jim Davis", abilities, "TestPortrait");
+            characterOther.Inventory.Add(Weapons.BattleAxe);
+            characterOther.Equipment.Equip(Weapons.Longsword, EquipmentSlot.LeftHand);
+            serialized = PlayerCharacter.Encode(characterOther);
+            loaded = PlayerCharacter.Decode(serialized);
+            Assert.AreEqual(characterOther, loaded);
         }
 
         [Test]
