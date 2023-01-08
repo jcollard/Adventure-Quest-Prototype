@@ -97,5 +97,21 @@ namespace AdventureQuest.Character
         {
             Inventory = new Inventory($"{Name}'s Inventory");
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is PlayerCharacter other &&
+                   _gold == other._gold &&
+                   Name == other.Name &&
+                   PortraitSpriteKey == other.PortraitSpriteKey &&
+                   Abilities.Equals(other.Abilities) &&
+                   Inventory.Equals(other.Inventory) &&
+                   Equipment.Equals(other.Equipment);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_gold, Name, PortraitSpriteKey, Abilities, Equipment, Inventory, Gold);
+        }
     }
 }
