@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 namespace AdventureQuest.Character
 {
@@ -34,6 +34,18 @@ namespace AdventureQuest.Character
         public const int MIN = 1;
         public const int MAX = 30;
 
+        public override bool Equals(object obj)
+        {
+            return obj is AbilityScore score &&
+                   Ability == score.Ability &&
+                   Score == score.Score;
+            
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Ability, Score, Modifier);
+        }
     }
 
 }

@@ -1,6 +1,9 @@
+using System;
+using System.Linq;
 using System.Collections.Generic;
 using AdventureQuest.Dice;
 using UnityEngine;
+using AdventureQuest.Utils;
 
 namespace AdventureQuest.Character
 {
@@ -53,6 +56,19 @@ namespace AdventureQuest.Character
                 Total += score.Score;
                 TotalModifiers += score.Modifier;
             }
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Abilities other &&
+                   Total == other.Total &&
+                   TotalModifiers == other.TotalModifiers &&
+                   _abilities.DeepCompare(other._abilities);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_abilities, Total, TotalModifiers);
         }
 
         public class Builder
