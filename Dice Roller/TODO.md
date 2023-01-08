@@ -2,6 +2,10 @@
 
 1. Equipment / related classes should be Serializable
 2. Shop needs to be Serializable
+3. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
+4. IEquippable needs a better deserialization method. Potentially could write a
+   "InterfaceSerializationWrapper" which stores information about deserializing
+   the associated interface.
 
 # Potential Abstractions (Code Smells)
 

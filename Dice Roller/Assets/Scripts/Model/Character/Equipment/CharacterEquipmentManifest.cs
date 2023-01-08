@@ -4,14 +4,23 @@ using AdventureQuest.Equipment.Requirement;
 using AdventureQuest.Utils;
 using System.Linq;
 using System;
+using UnityEngine;
 
 namespace AdventureQuest.Character.Equipment
 {
-    public class CharacterEquipmentManifest : IEquipmentManifest
+    [Serializable]
+    public class CharacterEquipmentManifest : IEquipmentManifest, ISerializationCallbackReceiver
     {
 
         private readonly ICharacter _character;
         private Dictionary<EquipmentSlot, IEquipable> _equipment = new ();
+
+        #region Serialized Fields
+        [SerializeField]
+        private List<EquipmentSlot> _slots;
+        [SerializeField]
+        private List<string> _equipped;
+        #endregion
 
         public CharacterEquipmentManifest(ICharacter character)
         {
@@ -85,5 +94,28 @@ namespace AdventureQuest.Character.Equipment
             }            
         }
 
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        {
+            if (_equipment == null) return;
+            _slots = new List<EquipmentSlot>();
+            _equipped = new List<string>();
+            foreach (KeyValuePair<EquipmentSlot, IEquipable> pair in _equipment)
+            {
+                _slots.Add(pair.Key);
+                _equipped.Add(JsonUtility.ToJson(pair.Value));
+            }
+        }
+
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
+        {
+            if (_slots == null || _equipped == null) return;
+            _equipment = new Dictionary<EquipmentSlot, IEquipable>();
+            for (int ix = 0; ix < _slots.Count; ix++)
+            {
+                EquipmentSlot key = _slots[ix];
+                IEquipable value = IEquipable.FromJson(_equipped[ix]);
+                _equipment[key] = value;
+            }
+        }
     }
 }

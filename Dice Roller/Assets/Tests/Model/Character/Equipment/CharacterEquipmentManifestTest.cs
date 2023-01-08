@@ -69,5 +69,27 @@ namespace AdventureQuest.Character.Equipment
             manifest.Equip(Weapons.ShortSword, EquipmentSlot.RightHand);
             Assert.AreEqual(manifest, manifestOther);            
         }
+
+        [Test, Timeout(5000), Description("Tests Serialization/Deserialization equality")]
+        [TestCase(EquipmentSlot.LeftHand)]
+        [TestCase(EquipmentSlot.RightHand)]
+        public void TestSerialization(EquipmentSlot slot)
+        {
+            PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
+            CharacterEquipmentManifest manifest = new (bob);
+            manifest.Equip(Weapons.Dagger, slot);
+
+            string json = UnityEngine.JsonUtility.ToJson(manifest);
+            CharacterEquipmentManifest loaded = UnityEngine.JsonUtility.FromJson<CharacterEquipmentManifest>(json);
+            Assert.AreEqual(manifest, loaded);
+
+            PlayerCharacter steve = new ("Steve", Abilities.Roll(), "no-portrait");
+            manifest = new (steve);
+            manifest.Equip(Weapons.ShortSword, slot);
+
+            json = UnityEngine.JsonUtility.ToJson(manifest);
+            loaded = UnityEngine.JsonUtility.FromJson<CharacterEquipmentManifest>(json);
+            Assert.AreEqual(manifest, loaded);
+        }
     }
 }
