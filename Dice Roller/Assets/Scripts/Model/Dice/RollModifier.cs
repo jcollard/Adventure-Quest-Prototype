@@ -11,7 +11,7 @@ namespace AdventureQuest.Dice
     public class RollModifier
     {
         [SerializeField]
-        private readonly List<Ability> _abilityModifiers = new ();
+        private readonly List<Ability> _abilityModifiers = new();
 
         public RollModifier(int modifier, params Ability[] abilities)
         {
@@ -25,17 +25,17 @@ namespace AdventureQuest.Dice
         }
 
         public int Modifier { get; }
-        public List<Ability> AbilityModifiers 
-        { 
+        public List<Ability> AbilityModifiers
+        {
             get
             {
-                List<Ability> abilities = new ();
+                List<Ability> abilities = new();
                 foreach (Ability ability in _abilityModifiers)
                 {
                     abilities.Add(ability);
                 }
                 return abilities;
-            }            
+            }
         }
 
         public int ModifyWith(Abilities abilities)
@@ -48,13 +48,15 @@ namespace AdventureQuest.Dice
             return total;
         }
 
+        public override string ToString() => _abilityModifiers.Count == 0 ? Modifier.ToString() : $"{string.Join(" + ", _abilityModifiers)} + {Modifier}";
+
         public static RollModifier Parse(string modifier)
         {
             if (!IsParseable(modifier)) { throw new System.FormatException($"Could not parse \"{modifier}\" as a RollModifier."); }
             if (modifier.Trim() == string.Empty) { return new RollModifier(0); }
             string[] tokens = modifier.Trim().Split("+");
             int valueComponent = 0;
-            List<Ability> abilities = new ();
+            List<Ability> abilities = new();
             foreach (string token in tokens)
             {
                 if (int.TryParse(token, out int value))
