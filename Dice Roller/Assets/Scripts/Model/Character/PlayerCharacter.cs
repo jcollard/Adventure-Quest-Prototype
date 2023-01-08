@@ -26,8 +26,7 @@ namespace AdventureQuest.Character
             Name = name;
             Abilities = abilities;
             PortraitSpriteKey = portraitSpriteKey;
-            Equipment = new CharacterEquipmentManifest(this);
-            Inventory = new Inventory($"{name}'s Inventory");
+            InitSerializedFields();
         }
 
         public event Action<ICharacter> OnChange;
@@ -99,9 +98,7 @@ namespace AdventureQuest.Character
 
         void ISerializationCallbackReceiver.OnAfterDeserialize()
         {
-            if (_equipmentJson == null || _inventoryJson == null) { return ; }
-            Inventory = JsonUtility.FromJson<Inventory>(_inventoryJson);
-            Equipment = JsonUtility.FromJson<CharacterEquipmentManifest>(_equipmentJson);
+            InitSerializedFields();
         }
 
         public override bool Equals(object obj)
@@ -118,6 +115,12 @@ namespace AdventureQuest.Character
         public override int GetHashCode()
         {
             return HashCode.Combine(_gold, Name, PortraitSpriteKey, Abilities, Equipment, Inventory, Gold);
+        }
+
+        private void InitSerializedFields()
+        {
+            Inventory = _inventoryJson == null ? new Inventory($"{Name}'s Inventory") : JsonUtility.FromJson<Inventory>(_inventoryJson);
+            Equipment = _equipmentJson == null ? new CharacterEquipmentManifest(this) : JsonUtility.FromJson<CharacterEquipmentManifest>(_equipmentJson);
         }
     }
 }

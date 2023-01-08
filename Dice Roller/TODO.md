@@ -1,11 +1,11 @@
 # TODO List
 
-1. Equipment / related classes should be Serializable
-2. Shop needs to be Serializable
-3. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
-4. IEquippable needs a better deserialization method. Potentially could write a
+1. Shop needs to be Serializable
+2. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
+3. IEquippable needs a better deserialization method. Potentially could write a
    "InterfaceSerializationWrapper" which stores information about deserializing
    the associated interface.
+4. Create a UnityEditor drawer for ICharacter / IEquipment / IInventory
 
 # Potential Abstractions (Code Smells)
 
