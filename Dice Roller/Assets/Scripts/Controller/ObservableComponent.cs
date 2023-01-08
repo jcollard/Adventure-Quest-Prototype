@@ -24,6 +24,6 @@ namespace AdventureQuest.Controller
         protected void Change() => OnChange.Invoke(_observed);
 
         [field: SerializeField]
-        public UnityEvent<T> OnChange { get; private set; }
+        public UnityEvent<T> OnChange { get; private set; } = new(); 
     }
 }

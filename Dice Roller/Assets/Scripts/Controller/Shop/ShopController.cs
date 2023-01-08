@@ -5,6 +5,7 @@ using AdventureQuest.Character.Dice;
 using AdventureQuest.Character;
 using UnityEngine.Events;
 using AdventureQuest.Result;
+using UnityEngine.SceneManagement;
 
 namespace AdventureQuest.Shop
 {
@@ -91,6 +92,13 @@ namespace AdventureQuest.Shop
         {
             IResult result = Shop.Observed.Sell(Selected.Observed, Character.Observed);
             SendMessage(result);
+        }
+
+        public void ExitShop(string targetScene)
+        {
+            // TODO: Consider storing a PlayerCharacter rather than a Character
+            PlayerCharacter.Store((PlayerCharacter)Character.Observed);
+            SceneManager.LoadScene(targetScene);
         }
 
         private void SendMessage(IResult result)
