@@ -6,6 +6,8 @@
    "InterfaceSerializationWrapper" which stores information about deserializing
    the associated interface.
 4. Create a UnityEditor drawer for ICharacter / IEquipment / IInventory
+5. Scene Transition Manager for moving between scenes. Currently everytime, we
+   save the character manually on the button click.
 
 # Potential Abstractions (Code Smells)
 
