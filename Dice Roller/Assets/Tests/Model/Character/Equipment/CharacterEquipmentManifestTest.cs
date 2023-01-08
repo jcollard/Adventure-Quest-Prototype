@@ -36,5 +36,38 @@ namespace AdventureQuest.Character.Equipment
             Assert.AreEqual(1, manifest.Equipped.Count);
             Assert.AreEqual(sword, manifest.Equipped[EquipmentSlot.RightHand]);
         }
+
+        [Test, Timeout(5000), Description("Tests structural equality")]
+        public void TestEquality()
+        {
+            PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
+            CharacterEquipmentManifest manifest = new (bob);
+            CharacterEquipmentManifest manifestOther = new (bob);
+            Assert.AreEqual(manifest, manifestOther);
+
+            manifest.Equip(Weapons.Dagger, EquipmentSlot.LeftHand);
+            Assert.AreNotEqual(manifest, manifestOther);
+
+            manifestOther.Equip(Weapons.Dagger, EquipmentSlot.LeftHand);
+            Assert.AreEqual(manifest, manifestOther);
+
+            manifest.Unequip(EquipmentSlot.LeftHand);
+            Assert.AreNotEqual(manifest, manifestOther);
+
+            manifest.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            Assert.AreNotEqual(manifest, manifestOther);
+            
+            manifestOther.Unequip(EquipmentSlot.LeftHand);
+            Assert.AreNotEqual(manifest, manifestOther);
+
+            manifestOther.Equip(Weapons.ShortSword, EquipmentSlot.RightHand);
+            Assert.AreNotEqual(manifest, manifestOther);
+
+            manifest.Unequip(EquipmentSlot.RightHand);
+            Assert.AreNotEqual(manifest, manifestOther);
+
+            manifest.Equip(Weapons.ShortSword, EquipmentSlot.RightHand);
+            Assert.AreEqual(manifest, manifestOther);            
+        }
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using AdventureQuest.Result;
-using AdventureQuest.Equipment;
+using AdventureQuest.Utils;
 using System.Linq;
 using System;
 
@@ -34,5 +34,17 @@ namespace AdventureQuest.Equipment
         }
     
         public bool Contains(IItem toCheck) => _items.Contains(toCheck);
+
+        public override bool Equals(object obj)
+        {
+            return obj is Inventory other &&
+                   Name == other.Name &&
+                   _items.DeepCompare(other._items);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_items, Name);
+        }
     }
 }

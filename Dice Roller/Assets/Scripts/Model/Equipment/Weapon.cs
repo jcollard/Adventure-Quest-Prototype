@@ -4,6 +4,7 @@ using AdventureQuest.Character;
 using AdventureQuest.Character.Dice;
 using AdventureQuest.Equipment.Requirement;
 using System.Linq;
+using System;
 
 namespace AdventureQuest.Equipment
 {
@@ -32,5 +33,18 @@ namespace AdventureQuest.Equipment
         public List<IRequirement> Requirements => _requirements.ToList();
 
         public virtual IItem Duplicate() => new Weapon(Name, Description, Cost, Damage, Requirements);
+
+        public override bool Equals(object obj)
+        {
+            return obj is Weapon weapon &&
+                   Name == weapon.Name &&
+                   Description == weapon.Description &&
+                   Cost == weapon.Cost;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Description, Cost);
+        }
     }
 }

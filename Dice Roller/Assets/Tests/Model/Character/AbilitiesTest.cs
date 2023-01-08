@@ -1,7 +1,4 @@
 using NUnit.Framework;
-using AdventureQuest.Equipment;
-using AdventureQuest.Character.Dice;
-
 namespace AdventureQuest.Character
 {
     [TestFixture]

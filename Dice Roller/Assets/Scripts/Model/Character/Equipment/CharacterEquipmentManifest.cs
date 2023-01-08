@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using AdventureQuest.Equipment;
 using AdventureQuest.Equipment.Requirement;
+using AdventureQuest.Utils;
 using System.Linq;
+using System;
 
 namespace AdventureQuest.Character.Equipment
 {
@@ -18,7 +20,7 @@ namespace AdventureQuest.Character.Equipment
         }
 
         public Dictionary<EquipmentSlot, IEquipable> Equipped => _equipment.ToDictionary((pair) => pair.Key, (pair) => pair.Value);
-        
+
         public virtual bool Equip(IEquipable toEquip, List<EquipmentSlot> slots)
         {
             foreach (EquipmentSlot slot in toEquip.Slots)
@@ -41,6 +43,17 @@ namespace AdventureQuest.Character.Equipment
             }
             
             return true;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is CharacterEquipmentManifest other &&
+                   _equipment.DeepCompare(other._equipment);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_character, _equipment, Equipped);
         }
 
         public bool IsEquipped(EquipmentSlot type) => _equipment.ContainsKey(type);
