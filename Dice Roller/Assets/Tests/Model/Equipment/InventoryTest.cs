@@ -4,7 +4,7 @@ namespace AdventureQuest.Equipment
     [TestFixture]
     public class InventoryTest
     {
-        [Test]
+        [Test, Timeout(5000)]
         public void TestEquality()
         {
             Inventory bobsInventory = new ("Bob's Inventory");
@@ -29,6 +29,25 @@ namespace AdventureQuest.Equipment
             clarksInventory.Add(Weapons.ShortSword);
             clarksInventory.Add(Weapons.Longsword);
             Assert.AreNotEqual(bobsInventory, clarksInventory);
+        }
+
+        [Test, Timeout(5000)]
+        public void TestSerialization()
+        {
+            Inventory bobsInventory = new ("Bob's Inventory");
+            bobsInventory.Add(Weapons.Dagger);
+            bobsInventory.Add(Weapons.ShortSword);
+            bobsInventory.Add(Weapons.Longsword);
+
+            string jsonified = UnityEngine.JsonUtility.ToJson(bobsInventory);
+            Inventory loaded = UnityEngine.JsonUtility.FromJson<Inventory>(jsonified);
+            Assert.AreEqual(bobsInventory, loaded);
+
+            Inventory clarksInventory = new ("Clark's Inventory");
+            clarksInventory.Add(Weapons.Dagger);
+            jsonified = UnityEngine.JsonUtility.ToJson(clarksInventory);
+            loaded = UnityEngine.JsonUtility.FromJson<Inventory>(jsonified);
+            Assert.AreEqual(clarksInventory, loaded);
         }
     }
 }

@@ -3,12 +3,15 @@ using AdventureQuest.Result;
 using AdventureQuest.Utils;
 using System.Linq;
 using System;
+using UnityEngine;
 
 namespace AdventureQuest.Equipment
 {
-    public class Inventory : IInventory
+    public class Inventory : IInventory, UnityEngine.ISerializationCallbackReceiver
     {
         private List<IItem> _items;
+        [SerializeField]
+        private List<string> _serializedItems;
         public event Action<IInventory> OnChange;
 
         public Inventory(string name)
@@ -17,7 +20,8 @@ namespace AdventureQuest.Equipment
             Name = name;
         }
 
-        public string Name { get; }
+        [field: SerializeField]
+        public string Name { get; private set; }
         public List<IItem> Items => _items.ToList();
         public IResult Add(IItem toAdd)
         {
@@ -45,6 +49,18 @@ namespace AdventureQuest.Equipment
         public override int GetHashCode()
         {
             return HashCode.Combine(_items, Name);
+        }
+
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        {
+            if (_items == null) { return; }
+            _serializedItems = _items.Select(JsonUtility.ToJson).ToList();
+        }
+
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
+        {
+            if (_serializedItems == null) { return; }
+            _items = _serializedItems.Select(IItem.FromJson).ToList();
         }
     }
 }
