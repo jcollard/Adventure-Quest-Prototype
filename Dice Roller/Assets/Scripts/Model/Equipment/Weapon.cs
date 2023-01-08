@@ -8,8 +8,10 @@ using System;
 
 namespace AdventureQuest.Equipment
 {
+    [Serializable]
     public class Weapon : IEquipable
     {
+        [UnityEngine.SerializeField]
         private List<IRequirement> _requirements;
 
         public Weapon(string name, string description, int cost, AbilityRoll damage) : 
@@ -24,11 +26,19 @@ namespace AdventureQuest.Equipment
             _requirements = requirements.ToList();
         }
 
-        public string Name { get; }
-        public string Description { get; }
-        public int Cost { get; }
+        [field: UnityEngine.SerializeField]
+        public string Name { get; private set; }
+        
+        [field: UnityEngine.SerializeField]
+        public string Description { get; private set; }
+
+        [field: UnityEngine.SerializeField]
+        public int Cost { get; private set; }
+
+        [field: UnityEngine.SerializeField]
+        public AbilityRoll Damage { get; private set; }
+
         public bool IsTwoHanded { get; }
-        public AbilityRoll Damage { get; }
         public HashSet<EquipmentSlot> Slots => new() { EquipmentSlot.LeftHand, EquipmentSlot.RightHand };
         public List<IRequirement> Requirements => _requirements.ToList();
 
