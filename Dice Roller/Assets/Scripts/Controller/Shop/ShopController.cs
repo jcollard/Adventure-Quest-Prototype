@@ -65,8 +65,10 @@ namespace AdventureQuest.Shop
         {
             
             IInventory shopInventory = new Inventory("Wilfred's Weapons");
-            shopInventory.Add(new Weapon("Dagger", "A pointy dagger!", 3, AbilityRoll.Parse($"1d4 + {Ability.Dexterity}")));
-            shopInventory.Add(new Weapon("Short Sword", "Light weight and sharp!", 6, AbilityRoll.Parse($"1d6 + {Ability.Strength}")));
+            shopInventory.Add(Weapons.Dagger);
+            shopInventory.Add(Weapons.ShortSword);
+            shopInventory.Add(Weapons.Longsword);
+            shopInventory.Add(Weapons.BattleAxe);
             Shop shop = new Shop("Wilfred's Weapons", shopInventory);
 
             Shop.Observed = shop;

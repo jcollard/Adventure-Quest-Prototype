@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DiceRoller.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dice Analyzer.unity
     guid: 5fd8644c729d1d34aa6971bd4d784aa9
   - enabled: 0
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Character Creator (Part 3).unity
     guid: ad2c915cb448e5a4283dbc477fbed877
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 7ebd1f074b574244da41525b1004fcfd
   m_configObjects: {}

@@ -1,3 +1,4 @@
+using AdventureQuest.Equipment;
 using UnityEngine;
 
 namespace AdventureQuest.Character
@@ -21,8 +22,14 @@ namespace AdventureQuest.Character
         {
             if (LoadFromStorageOnLoad)
             {
-                _observable.Observed = PlayerCharacter.Restore();
-                _observable.Observed.Gold = 10;
+                // _observable.Observed = PlayerCharacter.Restore();
+                _observable.Observed = new PlayerCharacter(
+                    "Darwin",
+                    Abilities.Roll(),
+                    "knight-1"
+                );
+                _observable.Observed.Inventory.Add(new Weapon("Bag of Apples", "A bag full of apples!",10, Dice.AbilityRoll.Parse("1d3")));
+                _observable.Observed.Gold = 70;
                 return;
             }
         }

@@ -51,6 +51,7 @@ namespace AdventureQuest.Dice
         public static RollModifier Parse(string modifier)
         {
             if (!IsParseable(modifier)) { throw new System.FormatException($"Could not parse \"{modifier}\" as a RollModifier."); }
+            if (modifier.Trim() == string.Empty) { return new RollModifier(0); }
             string[] tokens = modifier.Trim().Split("+");
             int valueComponent = 0;
             List<Ability> abilities = new ();
@@ -71,6 +72,7 @@ namespace AdventureQuest.Dice
         public static bool IsParseable(string modifier)
         {
             if (modifier == null) { return false; }
+            if (modifier.Trim() == string.Empty) { return true; }
             string[] tokens = modifier.Trim().Split("+");
             foreach (string token in tokens)
             {
