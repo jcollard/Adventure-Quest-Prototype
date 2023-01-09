@@ -7,5 +7,11 @@ namespace AdventureQuest.Character
         public string PortraitSpriteKey { get; }
         public Abilities Abilities { get; }
         public int Gold { get; set; }
+        public string AsJson { get; }
+
+        public static ICharacter FromJson(string json)
+        {
+            return PlayerCharacter.Decode(json);
+        }
     }
 }

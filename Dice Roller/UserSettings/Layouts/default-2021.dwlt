@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1596
     height: 978
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 15
+  controlID: 454
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 612
+    width: 1140
     height: 928
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 45
+  controlID: 455
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 612
+    width: 1140
     height: 613
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 46
+  controlID: 84
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,13 +187,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 192
+    width: 222
     height: 613
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -211,17 +211,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 192
+    x: 222
     y: 0
-    width: 420
+    width: 918
     height: 613
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 12}
   - {fileID: 15}
+  - {fileID: 13}
+  - {fileID: 16}
+  - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &10
@@ -234,23 +235,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 613
-    width: 612
+    width: 1140
     height: 315
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,24 +262,61 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 612
+    x: 1140
     y: 0
-    width: 984
+    width: 456
     height: 928
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f817a38900380be47942905e17e7d39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Timeline
+    m_Image: {fileID: -9173288242387172643, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2278
+    y: 84
+    width: 916
+    height: 592
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Preferences:
+    editType: 0
+    timeReferenceMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_SequenceHierarchy: {fileID: 0}
+  m_SequencePath:
+    m_SelectionRoot: 0
+    m_SubElements: []
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,10 +336,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2313
-    y: 81
-    width: 857
-    height: 582
+    x: 2278
+    y: 84
+    width: 916
+    height: 592
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -312,7 +350,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 857, y: 482}
+  m_TargetSize: {x: 916, y: 515}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -327,10 +365,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -428.5
-    m_HBaseRangeMax: 428.5
-    m_VBaseRangeMin: -241
-    m_VBaseRangeMax: 241
+    m_HBaseRangeMin: -458
+    m_HBaseRangeMax: 458
+    m_VBaseRangeMin: -257.5
+    m_VBaseRangeMax: 257.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -348,29 +386,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 857
-      height: 561
+      width: 916
+      height: 571
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 428.5, y: 280.5}
+    m_Translation: {x: 458, y: 285.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -428.5
-      y: -280.5
-      width: 857
-      height: 561
+      x: -458
+      y: -285.5
+      width: 916
+      height: 571
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 857, y: 582}
+  m_LastWindowPixelSize: {x: 916, y: 592}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,7 +430,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 84
-    width: 191
+    width: 221
     height: 592
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -403,7 +441,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fceeffff0af3ffff8af6ffff2cfbffff
+      m_ExpandedIDs: 263bffff8240ffff5e44ffff905cffff2e5dffffc05dffff4c5effffac63ffff6265ffff9e65ffff6c66ffff6a69ffff666fffff1672ffff9875ffff867effff2684ffff7e84ffffd08cffff128effffc68effff7e9effff14afffff16afffff9aafffff92b9ffff16baffff1cbeffff22c2ffff1cc8ffffa0cbffff1ccfffff26d3ffff30d7ffff42dbffffbedeffff44e2ffffc0e5ffff56eaffff66eeffff88f2ffff94f6ffff2cfbffff4c8a000068c3000096c80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -427,7 +465,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: dbabd557e2aa59f47958b06c7756a9c4
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,9 +485,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2248
+    x: 2278
     y: 84
-    width: 418
+    width: 916
     height: 592
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -707,9 +745,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 428.5, y: 241, z: 0}
+    m_Target: {x: 410.8859, y: 325.2381, z: 1.5816383}
     speed: 2
-    m_Value: {x: 428.5, y: 241, z: 0}
+    m_Value: {x: 410.8859, y: 325.2381, z: 1.5816383}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -760,9 +798,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 491.62308
+    m_Target: 363.2521
     speed: 2
-    m_Value: 491.62308
+    m_Value: 363.2521
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -787,7 +825,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -815,7 +853,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -837,7 +875,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 697
-    width: 1247
+    width: 1139
     height: 294
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -856,22 +894,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Controller
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Controller
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\git\jcollard\Unity-2021-DiceRoller\Dice Roller
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 9}
-    m_SelectedIDs: 32660000
-    m_LastClickedID: 26162
-    m_ExpandedIDs: 00000000246600002666000028660000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f66f0000
+    m_LastClickedID: 28662
+    m_ExpandedIDs: 0000000024660000486b0000227e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -930,18 +968,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: TownHubController
+      m_OriginalName: TownHubController
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 51472
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -955,7 +993,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 214
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -977,13 +1015,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 697
-    width: 611
+    width: 1139
     height: 294
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1003,9 +1041,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3304
+    x: 3196
     y: 84
-    width: 345
+    width: 455
     height: 907
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1024,7 +1062,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1044,16 +1082,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2668
+    x: 3196
     y: 84
-    width: 983
+    width: 455
     height: 907
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 115
+    ID: 116
     splitterInitialOffset: 456
     currentActiveSplitter: -1
     realSizes:
@@ -1113,15 +1151,15 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 19}
+    m_Window: {fileID: 20}
     m_NewResultList:
     - id: 1000
       uniqueId: '[Untitled 2D Project][suite]'
       name: Untitled 2D Project
       fullName: Untitled 2D Project
-      resultStatus: 2
-      duration: 0.127838
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.0894722
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1135,9 +1173,9 @@ MonoBehaviour:
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: D:/git/jcollard/Unity-2021-DiceRoller/Dice Roller/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.0852491
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.0393223
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1151,9 +1189,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[AdventureQuest][suite]
       name: AdventureQuest
       fullName: AdventureQuest
-      resultStatus: 2
-      duration: 0.0837848
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.0377234
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1167,9 +1205,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
       name: Character
       fullName: AdventureQuest.Character
-      resultStatus: 2
-      duration: 0.0829873
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1576359
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1184,7 +1222,7 @@ MonoBehaviour:
       name: AbilitiesTest
       fullName: AdventureQuest.Character.AbilitiesTest
       resultStatus: 1
-      duration: 0.0556686
+      duration: 0.0750978
       messages: 
       output: 
       stacktrace: 
@@ -1200,7 +1238,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.AbilitiesTest.TestEquality
       resultStatus: 1
-      duration: 0.0351119
+      duration: 0.0331047
       messages: 
       output: 
       stacktrace: 
@@ -1216,9 +1254,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
       name: Equipment
       fullName: AdventureQuest.Character.Equipment
-      resultStatus: 2
-      duration: 0.0807279
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0568221
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1232,9 +1270,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
       name: CharacterEquipmentManifestTest
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest
-      resultStatus: 2
-      duration: 0.0771199
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0446888
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1249,7 +1287,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality
       resultStatus: 1
-      duration: 0.0555261
+      duration: 0.018853
       messages: 
       output: 
       stacktrace: 
@@ -1266,7 +1304,7 @@ MonoBehaviour:
       name: TestEquipWeapon
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon
       resultStatus: 1
-      duration: 0.0210444
+      duration: 0.0045376
       messages: 
       output: 
       stacktrace: 
@@ -1282,9 +1320,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
       name: TestSerialization
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
-      resultStatus: 2
-      duration: 0.0711457
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0178753
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1298,31 +1336,11 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/TestSerialization/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)]
       name: TestSerialization(LeftHand)
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)
-      resultStatus: 2
-      duration: 0.052256
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
+      resultStatus: 1
+      duration: 0.005106
+      messages: 
       output: 
-      stacktrace: "  at AdventureQuest.Utils.DictionaryExtensions.DeepCompare[K,V]
-        (System.Collections.Generic.Dictionary`2[TKey,TValue] dict0, System.Collections.Generic.Dictionary`2[TKey,TValue]
-        dict1) [0x0000e] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice Roller\\Assets\\Scripts\\Model\\Utils\\DictionaryExtensions.cs:10
-        \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifest.Equals
-        (System.Object obj) [0x00001] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-        Roller\\Assets\\Scripts\\Model\\Character\\Equipment\\CharacterEquipmentManifest.cs:59
-        \r\n  at NUnit.Framework.Constraints.NUnitEqualityComparer.AreEqual (System.Object
-        x, System.Object y, NUnit.Framework.Constraints.Tolerance& tolerance) [0x004d5]
-        in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at NUnit.Framework.Constraints.EqualConstraint.ApplyTo
-        (System.Object actual) [0x0000a] in <10b6135e63434fdba4fc6c109928ab3b>:0
-        \r\n  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint
-        expression, System.String message, System.Object[] args) [0x0000e] in <10b6135e63434fdba4fc6c109928ab3b>:0
-        \r\n  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object
-        actual) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
-        (AdventureQuest.Equipment.EquipmentSlot slot) [0x00038] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-        Roller\\Assets\\Tests\\Model\\Character\\Equipment\\CharacterEquipmentManifestTest.cs:84
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1335,31 +1353,11 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/TestSerialization/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)]
       name: TestSerialization(RightHand)
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)
-      resultStatus: 2
-      duration: 0.000767
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
+      resultStatus: 1
+      duration: 0.00085
+      messages: 
       output: 
-      stacktrace: "  at AdventureQuest.Utils.DictionaryExtensions.DeepCompare[K,V]
-        (System.Collections.Generic.Dictionary`2[TKey,TValue] dict0, System.Collections.Generic.Dictionary`2[TKey,TValue]
-        dict1) [0x0000e] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice Roller\\Assets\\Scripts\\Model\\Utils\\DictionaryExtensions.cs:10
-        \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifest.Equals
-        (System.Object obj) [0x00001] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-        Roller\\Assets\\Scripts\\Model\\Character\\Equipment\\CharacterEquipmentManifest.cs:59
-        \r\n  at NUnit.Framework.Constraints.NUnitEqualityComparer.AreEqual (System.Object
-        x, System.Object y, NUnit.Framework.Constraints.Tolerance& tolerance) [0x004d5]
-        in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at NUnit.Framework.Constraints.EqualConstraint.ApplyTo
-        (System.Object actual) [0x0000a] in <10b6135e63434fdba4fc6c109928ab3b>:0
-        \r\n  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint
-        expression, System.String message, System.Object[] args) [0x0000e] in <10b6135e63434fdba4fc6c109928ab3b>:0
-        \r\n  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object
-        actual) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
-        (AdventureQuest.Equipment.EquipmentSlot slot) [0x00038] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-        Roller\\Assets\\Tests\\Model\\Character\\Equipment\\CharacterEquipmentManifestTest.cs:84
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1372,9 +1370,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
       name: PlayerCharacterTest
       fullName: AdventureQuest.Character.PlayerCharacterTest
-      resultStatus: 2
-      duration: 0.0890326
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0203558
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1389,7 +1387,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.PlayerCharacterTest.TestEquality
       resultStatus: 1
-      duration: 0.0563691
+      duration: 0.0045856
       messages: 
       output: 
       stacktrace: 
@@ -1405,15 +1403,11 @@ MonoBehaviour:
       uniqueId: Tests.dll/AdventureQuest/Character/PlayerCharacterTest/[Tests][AdventureQuest.Character.PlayerCharacterTest.TestSerialization]
       name: TestSerialization
       fullName: AdventureQuest.Character.PlayerCharacterTest.TestSerialization
-      resultStatus: 2
-      duration: 0.0106047
-      messages: "  Expected: <AdventureQuest.Character.PlayerCharacter>\r\n  But
-        was:  <AdventureQuest.Character.PlayerCharacter>\r\n"
+      resultStatus: 1
+      duration: 0.0041588
+      messages: 
       output: 
-      stacktrace: 'at AdventureQuest.Character.PlayerCharacterTest.TestSerialization
-        () [0x00014] in D:\git\jcollard\Unity-2021-DiceRoller\Dice Roller\Assets\Tests\Model\Character\PlayerCharacterTest.cs:38
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1427,7 +1421,7 @@ MonoBehaviour:
       name: Data
       fullName: AdventureQuest.Data
       resultStatus: 1
-      duration: 0.0176041
+      duration: 0.0177071
       messages: 
       output: 
       stacktrace: 
@@ -1443,7 +1437,7 @@ MonoBehaviour:
       name: HistogramTest
       fullName: AdventureQuest.Data.HistogramTest
       resultStatus: 1
-      duration: 0.0085707
+      duration: 0.008984
       messages: 
       output: 
       stacktrace: 
@@ -1459,7 +1453,7 @@ MonoBehaviour:
       name: TestChanceOf
       fullName: AdventureQuest.Data.HistogramTest.TestChanceOf
       resultStatus: 1
-      duration: 0.0025229
+      duration: 0.0027989
       messages: 
       output: 
       stacktrace: 
@@ -1476,7 +1470,7 @@ MonoBehaviour:
       name: TestCount
       fullName: AdventureQuest.Data.HistogramTest.TestCount
       resultStatus: 1
-      duration: 0.0008643
+      duration: 0.0012101
       messages: 
       output: 
       stacktrace: 
@@ -1493,7 +1487,7 @@ MonoBehaviour:
       name: TestMax
       fullName: AdventureQuest.Data.HistogramTest.TestMax
       resultStatus: 1
-      duration: 0.0015918
+      duration: 0.0014024
       messages: 
       output: 
       stacktrace: 
@@ -1510,7 +1504,7 @@ MonoBehaviour:
       name: TestMin
       fullName: AdventureQuest.Data.HistogramTest.TestMin
       resultStatus: 1
-      duration: 0.00076
+      duration: 0.0007045
       messages: 
       output: 
       stacktrace: 
@@ -1527,7 +1521,7 @@ MonoBehaviour:
       name: Dice
       fullName: AdventureQuest.Dice
       resultStatus: 1
-      duration: 0.8745127
+      duration: 0.848801
       messages: 
       output: 
       stacktrace: 
@@ -1543,7 +1537,7 @@ MonoBehaviour:
       name: DiceGroupTest
       fullName: AdventureQuest.Dice.DiceGroupTest
       resultStatus: 1
-      duration: 0.0550899
+      duration: 0.0553692
       messages: 
       output: 
       stacktrace: 
@@ -1559,7 +1553,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DiceGroupTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0004248
+      duration: 0.0006552
       messages: 
       output: 
       stacktrace: 
@@ -1576,7 +1570,7 @@ MonoBehaviour:
       name: TestParse1D20
       fullName: AdventureQuest.Dice.DiceGroupTest.TestParse1D20
       resultStatus: 1
-      duration: 0.0264346
+      duration: 0.0297054
       messages: 
       output: 
       stacktrace: 
@@ -1593,7 +1587,7 @@ MonoBehaviour:
       name: TestParse3D6
       fullName: AdventureQuest.Dice.DiceGroupTest.TestParse3D6
       resultStatus: 1
-      duration: 0.0258256
+      duration: 0.0222298
       messages: 
       output: 
       stacktrace: 
@@ -1610,7 +1604,7 @@ MonoBehaviour:
       name: DicePoolTest
       fullName: AdventureQuest.Dice.DicePoolTest
       resultStatus: 1
-      duration: 0.7404388
+      duration: 0.6805452
       messages: 
       output: 
       stacktrace: 
@@ -1626,7 +1620,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DicePoolTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0009881
+      duration: 0.0005759
       messages: 
       output: 
       stacktrace: 
@@ -1643,7 +1637,7 @@ MonoBehaviour:
       name: TestParse1D20
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse1D20
       resultStatus: 1
-      duration: 0.2547497
+      duration: 0.2148803
       messages: 
       output: 
       stacktrace: 
@@ -1660,7 +1654,7 @@ MonoBehaviour:
       name: TestParse2D4Plus1D6
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6
       resultStatus: 1
-      duration: 0.2228416
+      duration: 0.2293815
       messages: 
       output: 
       stacktrace: 
@@ -1677,7 +1671,7 @@ MonoBehaviour:
       name: TestParse3D6Plus1D4Plus3D8
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
       resultStatus: 1
-      duration: 0.2481809
+      duration: 0.2235641
       messages: 
       output: 
       stacktrace: 
@@ -1694,7 +1688,7 @@ MonoBehaviour:
       name: DieTest
       fullName: AdventureQuest.Dice.DieTest
       resultStatus: 1
-      duration: 0.0694257
+      duration: 0.1033271
       messages: 
       output: 
       stacktrace: 
@@ -1710,7 +1704,7 @@ MonoBehaviour:
       name: TestConstruct12SidedDie
       fullName: AdventureQuest.Dice.DieTest.TestConstruct12SidedDie
       resultStatus: 1
-      duration: 0.0258353
+      duration: 0.0321413
       messages: 
       output: 
       stacktrace: 
@@ -1727,7 +1721,7 @@ MonoBehaviour:
       name: TestConstruct6SidedDie
       fullName: AdventureQuest.Dice.DieTest.TestConstruct6SidedDie
       resultStatus: 1
-      duration: 0.0260937
+      duration: 0.0493729
       messages: 
       output: 
       stacktrace: 
@@ -1744,7 +1738,7 @@ MonoBehaviour:
       name: TestDieMinimumSize
       fullName: AdventureQuest.Dice.DieTest.TestDieMinimumSize
       resultStatus: 1
-      duration: 0.0023636
+      duration: 0.0033108
       messages: 
       output: 
       stacktrace: 
@@ -1761,7 +1755,7 @@ MonoBehaviour:
       name: TestEdgeCaseParse
       fullName: AdventureQuest.Dice.DieTest.TestEdgeCaseParse
       resultStatus: 1
-      duration: 0.0006642
+      duration: 0.0010926
       messages: 
       output: 
       stacktrace: 
@@ -1778,7 +1772,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DieTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0003757
+      duration: 0.0005215
       messages: 
       output: 
       stacktrace: 
@@ -1795,7 +1789,7 @@ MonoBehaviour:
       name: TestParseFormatException
       fullName: AdventureQuest.Dice.DieTest.TestParseFormatException
       resultStatus: 1
-      duration: 0.0007287
+      duration: 0.000893
       messages: 
       output: 
       stacktrace: 
@@ -1812,7 +1806,7 @@ MonoBehaviour:
       name: TestSimpleParse
       fullName: AdventureQuest.Dice.DieTest.TestSimpleParse
       resultStatus: 1
-      duration: 0.0003552
+      duration: 0.0005517
       messages: 
       output: 
       stacktrace: 
@@ -1829,7 +1823,7 @@ MonoBehaviour:
       name: Equipment
       fullName: AdventureQuest.Equipment
       resultStatus: 1
-      duration: 0.0122109
+      duration: 0.0120028
       messages: 
       output: 
       stacktrace: 
@@ -1845,7 +1839,7 @@ MonoBehaviour:
       name: InventoryTest
       fullName: AdventureQuest.Equipment.InventoryTest
       resultStatus: 1
-      duration: 0.0033324
+      duration: 0.0027875
       messages: 
       output: 
       stacktrace: 
@@ -1861,7 +1855,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Equipment.InventoryTest.TestEquality
       resultStatus: 1
-      duration: 0.0017934
+      duration: 0.0004601
       messages: 
       output: 
       stacktrace: 
@@ -1873,51 +1867,29 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
-    m_ResultText: "TestSerialization(LeftHand) (0.052s)\n---\nSystem.NullReferenceException
-      : Object reference not set to an instance of an object\n---\nat AdventureQuest.Utils.DictionaryExtensions.DeepCompare[K,V]
-      (System.Collections.Generic.Dictionary`2[TKey,TValue] dict0, System.Collections.Generic.Dictionary`2[TKey,TValue]
-      dict1) [0x0000e] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice Roller\\Assets\\Scripts\\Model\\Utils\\DictionaryExtensions.cs:10
-      \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifest.Equals
-      (System.Object obj) [0x00001] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-      Roller\\Assets\\Scripts\\Model\\Character\\Equipment\\CharacterEquipmentManifest.cs:59
-      \r\n  at NUnit.Framework.Constraints.NUnitEqualityComparer.AreEqual (System.Object
-      x, System.Object y, NUnit.Framework.Constraints.Tolerance& tolerance) [0x004d5]
-      in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at NUnit.Framework.Constraints.EqualConstraint.ApplyTo
-      (System.Object actual) [0x0000a] in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n 
-      at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint
-      expression, System.String message, System.Object[] args) [0x0000e] in <10b6135e63434fdba4fc6c109928ab3b>:0
-      \r\n  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object
-      actual) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
-      (AdventureQuest.Equipment.EquipmentSlot slot) [0x00038] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-      Roller\\Assets\\Tests\\Model\\Character\\Equipment\\CharacterEquipmentManifestTest.cs:84
-      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0"
-    m_ResultStacktrace: "  at AdventureQuest.Utils.DictionaryExtensions.DeepCompare[K,V]
-      (System.Collections.Generic.Dictionary`2[TKey,TValue] dict0, System.Collections.Generic.Dictionary`2[TKey,TValue]
-      dict1) [0x0000e] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice Roller\\Assets\\Scripts\\Model\\Utils\\DictionaryExtensions.cs:10
-      \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifest.Equals
-      (System.Object obj) [0x00001] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-      Roller\\Assets\\Scripts\\Model\\Character\\Equipment\\CharacterEquipmentManifest.cs:59
-      \r\n  at NUnit.Framework.Constraints.NUnitEqualityComparer.AreEqual (System.Object
-      x, System.Object y, NUnit.Framework.Constraints.Tolerance& tolerance) [0x004d5]
-      in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at NUnit.Framework.Constraints.EqualConstraint.ApplyTo
-      (System.Object actual) [0x0000a] in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n 
-      at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint
-      expression, System.String message, System.Object[] args) [0x0000e] in <10b6135e63434fdba4fc6c109928ab3b>:0
-      \r\n  at NUnit.Framework.Assert.AreEqual (System.Object expected, System.Object
-      actual) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0 \r\n  at AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
-      (AdventureQuest.Equipment.EquipmentSlot slot) [0x00038] in D:\\git\\jcollard\\Unity-2021-DiceRoller\\Dice
-      Roller\\Assets\\Tests\\Model\\Character\\Equipment\\CharacterEquipmentManifestTest.cs:84
-      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 "
+    - id: 1003
+      uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestSerialization]
+      name: TestSerialization
+      fullName: AdventureQuest.Equipment.InventoryTest.TestSerialization
+      resultStatus: 1
+      duration: 0.0007512
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
+    m_ResultText: TestSerialization (0.004s)
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e79e7768
-      m_LastClickedID: 1752669927
+      m_SelectedIDs: bc41c8de
+      m_LastClickedID: -557301316
       m_ExpandedIDs: e622df8c02f1b5a06593f7a49ca393a5832b53c1e557abf7ff3705f8bc75bf00d8e1341202f3aa132791061fa3b1e7356c21753e6d36de43b985554e524433650c12e46b4f163e6d8128b073f9493a7affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0

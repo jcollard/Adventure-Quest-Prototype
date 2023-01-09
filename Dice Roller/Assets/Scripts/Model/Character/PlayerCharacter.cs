@@ -37,6 +37,7 @@ namespace AdventureQuest.Character
         public string PortraitSpriteKey { get; private set; }
         [field: SerializeField]
         public Abilities Abilities { get; private set; }
+        public string AsJson => Encode(this);
         public IEquipmentManifest Equipment { get; private set; }
         public IInventory Inventory { get; private set; }
         
@@ -68,11 +69,7 @@ namespace AdventureQuest.Character
             return Decode(encoded);
         }
 
-        public static string Encode(PlayerCharacter character)
-        {
-            string asJson = JsonUtility.ToJson(character);
-            return asJson;
-        }
+        public static string Encode(PlayerCharacter character) => JsonUtility.ToJson(character);
 
         public static PlayerCharacter Decode(string json)
         {

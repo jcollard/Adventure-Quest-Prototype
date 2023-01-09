@@ -806,6 +806,7 @@ GameObject:
   - component: {fileID: 185548689}
   - component: {fileID: 185548691}
   - component: {fileID: 185548690}
+  - component: {fileID: 185548692}
   m_Layer: 0
   m_Name: PlayerCharacterController
   m_TagString: Untagged
@@ -840,14 +841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c57724bce843684ab4888690821230e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SerializedCharacter:
-    _gold: 0
-    _equipmentJson: 
-    _inventoryJson: 
-    <Name>k__BackingField: 
-    <PortraitSpriteKey>k__BackingField: 
-    <Abilities>k__BackingField:
-      _abilityScores: []
   <LoadFromStorageOnLoad>k__BackingField: 1
 --- !u!114 &185548691
 MonoBehaviour:
@@ -888,6 +881,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 185548692}
+        m_TargetAssemblyTypeName: AdventureQuest.Editor.Character.CharacterInspector,
+          Scripts
+        m_MethodName: set_Character
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &185548692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185548687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a5c5ec1febd744ca9070ee83e357ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _json: 
 --- !u!224 &350476284 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4363154867652145627, guid: 9abcd213a45cba44eafd263f25edb9aa, type: 3}
