@@ -1,13 +1,24 @@
 # TODO List
 
+Current Prime Goal: Implement Status Screen
+
 1. Shop needs to be Serializable
 2. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
 3. IEquippable needs a better deserialization method. Potentially could write a
    "InterfaceSerializationWrapper" which stores information about deserializing
    the associated interface.
-4. Create a UnityEditor drawer for ICharacter / IEquipment / IInventory
+4. Consider generalizing the CharacterInspectorEditor to work for anything that
+   implements an "AsJson" / "IObservable"
+   * a UnityEditor drawer for ICharacter / IEquipment / IInventory
 5. Scene Transition Manager for moving between scenes. Currently everytime, we
    save the character manually on the button click.
+6. Create Character "Status" screen which allows equipping and unequipping equipment
+7. Add in Hitpoints / other stats to character
+8. Create "combat" system
+9. Add "forest" to the town hub
+10. Add an armor Shop
+11. Add "healer" to town?
+12. Add Potions? / Useable items?
 
 # Potential Abstractions (Code Smells)
 

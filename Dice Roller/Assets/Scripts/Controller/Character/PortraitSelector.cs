@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using AdventureQuest.UI;
 using UnityEngine.Events;
+using AdventureQuest.Character;
 
 public class PortraitSelector : MonoBehaviour
 {
@@ -45,5 +46,7 @@ public class PortraitSelector : MonoBehaviour
 
     public void Next() => CurrentIx++;
     public void Prev() => CurrentIx--;
+
+    public void Render(ICharacter character) => PortraitKey = character.PortraitSpriteKey;
 }
 

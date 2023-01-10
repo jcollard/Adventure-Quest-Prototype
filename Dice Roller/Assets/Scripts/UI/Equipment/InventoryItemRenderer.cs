@@ -14,6 +14,7 @@ namespace AdventureQuest.Equipment
         
 
         public UnityEvent OnSelected { get; private set; } = new UnityEvent();
+        public UnityEvent OnDrag { get; private set; } = new UnityEvent();
 
         public virtual void Render(IItem item)
         {
@@ -22,6 +23,9 @@ namespace AdventureQuest.Equipment
         }
 
         public void Select() => OnSelected.Invoke();
+        public void Drag() {
+            OnDrag.Invoke();
+        } 
     }
 
 }
