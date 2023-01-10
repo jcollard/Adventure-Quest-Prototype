@@ -16,7 +16,7 @@ namespace AdventureQuest.UI
             Initialize();
         }
 
-        public void Render(PlayerCharacter playerCharacter) => Render(playerCharacter.Abilities);
+        public void Render(IHasAbilities hasAbilities) => Render(hasAbilities.Abilities);
 
         public void Render(Abilities abilities)
         {
