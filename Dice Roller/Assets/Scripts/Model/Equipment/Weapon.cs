@@ -15,17 +15,21 @@ namespace AdventureQuest.Equipment
         [UnityEngine.SerializeField]
         private List<string> _jsonRequirements;
 
-        public Weapon(string name, string description, int cost, AbilityRoll damage) : 
-            this(name, description, cost, damage, new List<IRequirement>() { new WeaponRequirement() }) { }
+        public Weapon(string name, string spriteId, string description, int cost, AbilityRoll damage) : 
+            this(name, spriteId, description, cost, damage, new List<IRequirement>() { new WeaponRequirement() }) { }
 
-        public Weapon(string name, string description, int cost, AbilityRoll damage, List<IRequirement> requirements)
+        public Weapon(string name, string spriteId, string description, int cost, AbilityRoll damage, List<IRequirement> requirements)
         {
             Name = name;
+            ItemSpriteID = spriteId;
             Description = description;
             Cost = cost;
             Damage = damage;
             _requirements = requirements.ToList();
         }
+
+        [field: UnityEngine.SerializeField]
+        public string ItemSpriteID { get; private set; }
 
         [field: UnityEngine.SerializeField]
         public string Name { get; private set; }
@@ -43,7 +47,7 @@ namespace AdventureQuest.Equipment
         public HashSet<EquipmentSlot> Slots => new() { EquipmentSlot.LeftHand, EquipmentSlot.RightHand };
         public List<IRequirement> Requirements => _requirements.ToList();
 
-        public virtual IItem Duplicate() => new Weapon(Name, Description, Cost, Damage, Requirements);
+        public virtual IItem Duplicate() => new Weapon(Name, ItemSpriteID, Description, Cost, Damage, Requirements);
 
         public override bool Equals(object obj)
         {
@@ -75,7 +79,5 @@ namespace AdventureQuest.Equipment
                 _requirements = _jsonRequirements.Select(IRequirement.Deserialize).ToList();
             }
         }
-
-        
     }
 }

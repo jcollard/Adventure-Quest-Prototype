@@ -6,6 +6,7 @@ namespace AdventureQuest.Equipment
     {
         public static readonly Weapon Dagger = new Builder()
             .Name("Dagger")
+            .SpriteId("dagger")        
             .Description("A dagger is a fighting knife with a very sharp point and usually two sharp edges, typically designed or capable of being used as a thrusting or stabbing weapon.")
             .Cost(2)
             .Damage("1d4")
@@ -13,6 +14,7 @@ namespace AdventureQuest.Equipment
         
         public static readonly Weapon ShortSword = new Builder()
             .Name("Short sword")
+            .SpriteId("shortsword")
             .Description("Short sword, as the name suggests, is a relatively smaller sword than an original sword. It is a single-handed sword with a handle that just features a grip with a single hand.")
             .Cost(10)
             .Damage("1d6")
@@ -20,6 +22,7 @@ namespace AdventureQuest.Equipment
 
         public static readonly Weapon Longsword = new Builder()
             .Name("Longsword")
+            .SpriteId("longsword")
             .Description("The longsword is a one-handed military melee weapon in the heavy blade group.")
             .Cost(25)
             .Damage("2d4")
@@ -27,6 +30,7 @@ namespace AdventureQuest.Equipment
         
         public static readonly Weapon BattleAxe = new Builder()
             .Name("Battle-axe")
+            .SpriteId("battle-axe")
             .Description("A battle axe is an axe specifically designed for combat.")
             .Cost(75)
             .Damage("1d12")
@@ -34,11 +38,12 @@ namespace AdventureQuest.Equipment
 
         private class Builder
         {
+            private string _spriteId = string.Empty;
             private string _name = string.Empty;
             private string _description = string.Empty;
             private int _cost = -1;
             private AbilityRoll _damage = null;
-
+            public Builder SpriteId(string value) => SetRef(ref _spriteId, value); 
             public Builder Name(string value) => SetRef(ref _name, value); 
             public Builder Cost(int value) => SetRef(ref _cost, value); 
             public Builder Description(string value) => SetRef(ref _description, value); 
@@ -52,11 +57,11 @@ namespace AdventureQuest.Equipment
 
             public Weapon Build()
             {
-                if (_name == null || _description == null || _cost == -1 || _damage == null)
+                if (_name == null || _description == null || _cost == -1 || _damage == null || _spriteId == null)
                 {
                     throw new System.InvalidOperationException($"Could not construct weapon with missing fields.");
                 }
-                return new Weapon(_name, _description, _cost, _damage);
+                return new Weapon(_name, _spriteId, _description, _cost, _damage);
             }
             
         }
