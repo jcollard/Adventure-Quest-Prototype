@@ -1,3 +1,4 @@
+using AdventureQuest.Equipment;
 using UnityEngine;
 
 namespace AdventureQuest.Character
@@ -10,6 +11,8 @@ namespace AdventureQuest.Character
 
         [field: SerializeField]
         public bool LoadFromStorageOnLoad { get; private set; }
+        [field: SerializeField]
+        public bool Reinitialize { get; private set; }
         private ObservableCharacter _observable;
 
         protected void Awake()
@@ -23,8 +26,21 @@ namespace AdventureQuest.Character
             if (LoadFromStorageOnLoad)
             {
                 _observable.Observed = PlayerCharacter.Restore();
-                return;
             }
+
+            if (Reinitialize)
+            {
+                ReinitializeCharacter();
+            }
+            
+        }
+
+        private void ReinitializeCharacter()
+        {
+            _observable.Observed.Gold = 50;
+            _observable.Observed.Inventory.Clear();
+            _observable.Observed.Inventory.Add(Weapons.Dagger);
+            _observable.Observed.Inventory.Add(Weapons.Longsword);
         }
     }
 }
