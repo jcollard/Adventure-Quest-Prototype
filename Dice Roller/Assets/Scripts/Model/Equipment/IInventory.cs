@@ -9,6 +9,7 @@ namespace AdventureQuest.Equipment
         public List<IItem> Items { get; }
         public IResult Add(IItem toAdd);
         public IResult Remove(IItem toRemove);
+        public void Clear();
         public bool Contains(IItem toCheck);
     }
 }

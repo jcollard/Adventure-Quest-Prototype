@@ -36,6 +36,12 @@ namespace AdventureQuest.Equipment
             OnChange?.Invoke(this);
             return IResult.Success();
         }
+
+        public void Clear()
+        {
+            _items.Clear();
+            OnChange?.Invoke(this);
+        }
     
         public bool Contains(IItem toCheck) => _items.Contains(toCheck);
 
