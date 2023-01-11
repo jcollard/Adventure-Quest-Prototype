@@ -68,7 +68,7 @@ namespace AdventureQuest.Character
             characterIdentical.Inventory.Add(Weapons.Dagger);
             characterIdentical.Inventory.Add(Weapons.ShortSword);
             characterIdentical.Inventory.Add(Weapons.Longsword);
-            characterIdentical.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
+            characterIdentical.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, characterIdentical);
             Assert.AreEqual(character, characterIdentical);
 
             characterIdentical.Gold += 10;
@@ -87,20 +87,20 @@ namespace AdventureQuest.Character
             characterOtherNotEqual.Inventory.Add(Weapons.Dagger);
             characterOtherNotEqual.Inventory.Add(Weapons.ShortSword);
             characterOtherNotEqual.Inventory.Add(Weapons.Longsword);
-            characterOtherNotEqual.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
+            characterOtherNotEqual.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, characterOtherNotEqual);
             Assert.AreNotEqual(character, characterOtherNotEqual);
 
             PlayerCharacter characterInventoryDiff = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
             characterInventoryDiff.Inventory.Add(Weapons.ShortSword);
             characterInventoryDiff.Inventory.Add(Weapons.Longsword);
-            characterInventoryDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
+            characterInventoryDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, characterInventoryDiff);
             Assert.AreNotEqual(character, characterInventoryDiff);
 
             PlayerCharacter characterEquipmentDiff = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
             characterEquipmentDiff.Inventory.Add(Weapons.Dagger);
             characterEquipmentDiff.Inventory.Add(Weapons.ShortSword);
             characterEquipmentDiff.Inventory.Add(Weapons.Longsword);
-            characterEquipmentDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.LeftHand, character);
+            characterEquipmentDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.LeftHand, characterEquipmentDiff);
             Assert.AreNotEqual(character, characterEquipmentDiff);
         }
             
