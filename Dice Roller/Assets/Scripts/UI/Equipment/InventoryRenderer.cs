@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using TMPro;
 
 using AdventureQuest.Character.Dice;
@@ -9,7 +10,7 @@ using AdventureQuest.UI;
 namespace AdventureQuest.Equipment
 {
 
-    public class InventoryRenderer : MonoBehaviour
+    public class InventoryRenderer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField]
         private InventoryObservable _defaultController;
@@ -25,6 +26,10 @@ namespace AdventureQuest.Equipment
         public UnityEvent<IItem> OnSelectItem { get; private set; }
         [field: SerializeField]
         public UnityEvent<IItem> OnDragRelease { get; private set; }
+        [field: SerializeField]
+        public UnityEvent OnMouseEnter { get; private set; }
+        [field: SerializeField]
+        public UnityEvent OnMouseExit { get; private set; }
 
         // Start is called before the first frame update
         void Awake()
@@ -60,6 +65,8 @@ namespace AdventureQuest.Equipment
             }
         }
 
+        void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData) => OnMouseEnter.Invoke();
+        void IPointerExitHandler.OnPointerExit(PointerEventData eventData) => OnMouseExit.Invoke();
     }
 
 }

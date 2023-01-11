@@ -25,6 +25,11 @@ namespace AdventureQuest.Equipment.UI
             _image.gameObject.SetActive(true);
         }
 
+        public void ClearRender()
+        {
+            _image.gameObject.SetActive(false);
+        }
+
         public Image CloneImage(Transform parent)
         {
             Image img = Instantiate(_image, parent);

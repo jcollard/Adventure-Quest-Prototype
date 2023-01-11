@@ -12,6 +12,7 @@ namespace AdventureQuest.Equipment.UI
     public class EquipmentManifestRenderer : MonoBehaviour
     {
         private Transform _canvas;
+        private EquipmentManifestController _controller;
         private Dictionary<EquipmentSlot, EquipmentSlotRenderer> _rendererLookup;
 
         protected void Awake()
@@ -24,16 +25,20 @@ namespace AdventureQuest.Equipment.UI
                 _rendererLookup[slotRenderer.Slot] = slotRenderer;
                 slotRenderer.Controller.OnDragBegin.AddListener(() => CreateDraggableItem(slotRenderer));
             }
-            EquipmentManifestController controller = GetComponent<EquipmentManifestController>();
-            controller.OnEquip.AddListener(Render);
+            _controller = GetComponent<EquipmentManifestController>();
+            _controller.OnEquip.AddListener(Render);
+            _controller.OnUnequip.AddListener(ClearRender);
         }
 
         public void Render(IItem item, EquipmentSlot slot) => _rendererLookup[slot].Render(item);
+        public void ClearRender(IItem item, EquipmentSlot slot) => _rendererLookup[slot].ClearRender();
 
         private void CreateDraggableItem(EquipmentSlotRenderer slotRenderer)
         {
            Image img = slotRenderer.CloneImage(_canvas);
+           img.raycastTarget = false;
            DraggableController draggable = img.gameObject.AddComponent<DraggableController>();
+           draggable.OnRelease.AddListener(() => _controller.Unequip(slotRenderer.Slot));
         }
     }
 }

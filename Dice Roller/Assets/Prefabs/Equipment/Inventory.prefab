@@ -149,6 +149,12 @@ MonoBehaviour:
   <OnDragRelease>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
+  <OnMouseEnter>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnMouseExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7463327031172794442
 GameObject:
   m_ObjectHideFlags: 0

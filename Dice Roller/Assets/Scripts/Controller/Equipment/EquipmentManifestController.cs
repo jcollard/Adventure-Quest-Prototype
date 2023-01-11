@@ -11,12 +11,16 @@ namespace AdventureQuest.Equipment
 {
     public class EquipmentManifestController : MonoBehaviour
     {
+        [field: SerializeField]
+        public bool CanDrop { get; set; }
         public IHasEquipment HasEquipment { get; set; }
         public ICharacter Character { get; set; }
         [field: SerializeField]
         public EquipmentSlot? SelectedSlot { get; private set; }
         [field: SerializeField]
         public UnityEvent<IItem, EquipmentSlot> OnEquip { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<IItem, EquipmentSlot> OnUnequip { get; private set; }
 
         protected void Awake()
         {
@@ -41,9 +45,26 @@ namespace AdventureQuest.Equipment
 
             if (success)
             {
+                Character.Inventory.Remove(toEquip);
                 OnEquip.Invoke(toEquip, SelectedSlot.Value);
             }
         }
 
+        public void Unequip(EquipmentSlot slot)
+        {
+            if (!CanDrop) { return; }
+            Debug.Assert(HasEquipment != null, "The EquipmentManifest was not loaded prior to unequipping.");
+            Debug.Assert(Character != null, "The Character was not loaded prior to unequipping.");
+
+            if(HasEquipment.Equipment.Equipped.TryGetValue(slot, out IEquipable toRemove))
+            {
+                if(HasEquipment.Equipment.Unequip(slot))
+                {
+                    //TODO: This should probably be part of Unequip
+                    Character.Inventory.Add(toRemove);
+                    OnUnequip.Invoke(toRemove, slot);
+                }
+            }
+        }
     }
 }

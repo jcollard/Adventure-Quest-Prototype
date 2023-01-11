@@ -8,9 +8,7 @@ namespace AdventureQuest.UI
 
     public class DraggableController : MonoBehaviour
     {
-
         public UnityEvent OnRelease { get; private set; } = new ();
-        
 
         protected void Update()
         {

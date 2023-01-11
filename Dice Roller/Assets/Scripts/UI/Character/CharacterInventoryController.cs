@@ -8,7 +8,7 @@ namespace AdventureQuest.UI.Character
 {
 
     [RequireComponent(typeof(ObservableCharacter))]
-    public class CharacterInventory : MonoBehaviour
+    public class CharacterInventoryController : MonoBehaviour
     {
 
         private ICharacter _observing;
@@ -23,7 +23,13 @@ namespace AdventureQuest.UI.Character
             character.OnChange.AddListener(characterRenderer.Render);
         }
 
-        void OnDestroy() => ClearListener();
+        public void AddItem(IItem toAdd, EquipmentSlot _) => AddItem(toAdd);
+        public void AddItem(IItem toAdd)
+        {
+            _observing.Inventory.Add(toAdd);
+        }
+
+        protected void OnDestroy() => ClearListener();
 
         private void Observe(ICharacter character, InventoryRenderer renderer)
         {
