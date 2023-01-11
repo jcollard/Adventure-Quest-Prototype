@@ -3,6 +3,10 @@ namespace AdventureQuest.Equipment
     public enum EquipmentSlot
     {
         LeftHand,
-        RightHand
+        RightHand,
+        Head,
+        Chest,
+        Legs,
+        Feet
     }
 }

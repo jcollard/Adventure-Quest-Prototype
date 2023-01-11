@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.UI;
 
 namespace AdventureQuest.Equipment
 {
@@ -10,7 +11,9 @@ namespace AdventureQuest.Equipment
         [field: SerializeField]
         private TextMeshProUGUI _name;
         [field: SerializeField]
-        private TextMeshProUGUI _cost;
+        private TextMeshProUGUI _cost; 
+        [field: SerializeField]
+        private Image _highlighter;
         
 
         public UnityEvent OnSelected { get; private set; } = new UnityEvent();
@@ -26,6 +29,12 @@ namespace AdventureQuest.Equipment
         public void Drag() {
             OnDrag.Invoke();
         } 
+
+        public void DisableRaycast()
+        {
+            _highlighter.raycastTarget = false;
+            _highlighter.color = new Color(_highlighter.color.r, _highlighter.color.g, _highlighter.color.b, .2f);
+        }
     }
 
 }

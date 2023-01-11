@@ -1,15 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace AdventureQuest.UI
 {
 
     public class DraggableController : MonoBehaviour
     {
+
+        public UnityEvent OnRelease { get; private set; } = new ();
         
+
         protected void Update()
         {
             CenterOnMouse();
@@ -20,11 +22,11 @@ namespace AdventureQuest.UI
         {
             transform.position = Input.mousePosition;
         }
-
         private void CheckDropped()
         {
             if (!Input.GetMouseButton(0))
             {
+                OnRelease.Invoke();
                 gameObject.SetActive(false);
                 Destroy(gameObject);
             }

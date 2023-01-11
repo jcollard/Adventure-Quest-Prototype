@@ -24,9 +24,7 @@ namespace AdventureQuest.Equipment
         [field: SerializeField]
         public UnityEvent<IItem> OnSelectItem { get; private set; }
         [field: SerializeField]
-        public UnityEvent<IItem> OnDrag { get; private set; }
-
-
+        public UnityEvent<IItem> OnDragRelease { get; private set; }
 
         // Start is called before the first frame update
         void Awake()
@@ -53,10 +51,11 @@ namespace AdventureQuest.Equipment
                 entry.OnSelected.AddListener(() => OnSelectItem.Invoke(item));
                 entry.OnDrag.AddListener(() =>
                 {
-                    InventoryItemRenderer draggable = Instantiate(_itemTemplate, _canvas);
-                    draggable.gameObject.AddComponent<DraggableController>();
-                    draggable.Render(item);
-                    OnDrag.Invoke(item);
+                    InventoryItemRenderer itemRenderer = Instantiate(_itemTemplate, _canvas);
+                    itemRenderer.DisableRaycast();
+                    DraggableController draggable = itemRenderer.gameObject.AddComponent<DraggableController>();
+                    itemRenderer.Render(item);
+                    draggable.OnRelease.AddListener(() => OnDragRelease.Invoke(item));
                 });
             }
         }
