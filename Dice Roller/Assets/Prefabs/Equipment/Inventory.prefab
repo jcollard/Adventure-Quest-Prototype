@@ -146,7 +146,7 @@ MonoBehaviour:
   <OnSelectItem>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  <OnDrag>k__BackingField:
+  <OnDragRelease>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &7463327031172794442

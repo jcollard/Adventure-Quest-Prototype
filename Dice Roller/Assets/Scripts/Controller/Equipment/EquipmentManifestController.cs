@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using AdventureQuest.Character;
+using AdventureQuest.UI;
 
 namespace AdventureQuest.Equipment
 {
@@ -41,8 +43,6 @@ namespace AdventureQuest.Equipment
             {
                 OnEquip.Invoke(toEquip, SelectedSlot.Value);
             }
-                        
-            Debug.Log($"Equipping {toEquip.Name} to {SelectedSlot} was {success}");
         }
 
     }

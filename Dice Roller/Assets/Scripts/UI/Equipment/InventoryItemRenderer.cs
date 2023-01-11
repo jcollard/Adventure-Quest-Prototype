@@ -14,7 +14,6 @@ namespace AdventureQuest.Equipment
         private TextMeshProUGUI _cost; 
         [field: SerializeField]
         private Image _highlighter;
-        
 
         public UnityEvent OnSelected { get; private set; } = new UnityEvent();
         public UnityEvent OnDrag { get; private set; } = new UnityEvent();

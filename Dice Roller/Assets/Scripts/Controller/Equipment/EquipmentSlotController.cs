@@ -15,8 +15,11 @@ namespace AdventureQuest.Equipment
         public UnityEvent OnSelected { get; private set; } = new ();
         [field: SerializeField]
         public UnityEvent OnDeselected { get; private set; } = new ();
+        [field: SerializeField]
+        public UnityEvent OnDragBegin { get; private set; } = new ();
 
         public void OnPointerEnter(PointerEventData eventData) => OnSelected.Invoke();
-        public void OnPointerExit(PointerEventData eventData) => OnDeselected.Invoke();  
+        public void OnPointerExit(PointerEventData eventData) => OnDeselected.Invoke();
+        public void BeginDrag() => OnDragBegin.Invoke();
     }
 }
