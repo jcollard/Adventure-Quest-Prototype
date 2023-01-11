@@ -26,7 +26,7 @@ namespace AdventureQuest.Character
             character.Inventory.Add(Weapons.Dagger);
             character.Inventory.Add(Weapons.ShortSword);
             character.Inventory.Add(Weapons.Longsword);
-            character.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            character.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace AdventureQuest.Character
             Abilities abilitiesOther = Abilities.Roll();
             PlayerCharacter characterOther = new ("Jim Davis", abilities, "TestPortrait");
             characterOther.Inventory.Add(Weapons.BattleAxe);
-            characterOther.Equipment.Equip(Weapons.Longsword, EquipmentSlot.LeftHand);
+            characterOther.Equipment.Equip(Weapons.Longsword, EquipmentSlot.LeftHand, character);
             serialized = PlayerCharacter.Encode(characterOther);
             loaded = PlayerCharacter.Decode(serialized);
             Assert.AreEqual(characterOther, loaded);
@@ -61,14 +61,14 @@ namespace AdventureQuest.Character
             characterDiffName.Inventory.Add(Weapons.Dagger);
             characterDiffName.Inventory.Add(Weapons.ShortSword);
             characterDiffName.Inventory.Add(Weapons.Longsword);
-            characterDiffName.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            characterDiffName.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
             Assert.AreNotEqual(character, characterDiffName);
 
             PlayerCharacter characterIdentical = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
             characterIdentical.Inventory.Add(Weapons.Dagger);
             characterIdentical.Inventory.Add(Weapons.ShortSword);
             characterIdentical.Inventory.Add(Weapons.Longsword);
-            characterIdentical.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            characterIdentical.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
             Assert.AreEqual(character, characterIdentical);
 
             characterIdentical.Gold += 10;
@@ -87,20 +87,20 @@ namespace AdventureQuest.Character
             characterOtherNotEqual.Inventory.Add(Weapons.Dagger);
             characterOtherNotEqual.Inventory.Add(Weapons.ShortSword);
             characterOtherNotEqual.Inventory.Add(Weapons.Longsword);
-            characterOtherNotEqual.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            characterOtherNotEqual.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
             Assert.AreNotEqual(character, characterOtherNotEqual);
 
             PlayerCharacter characterInventoryDiff = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
             characterInventoryDiff.Inventory.Add(Weapons.ShortSword);
             characterInventoryDiff.Inventory.Add(Weapons.Longsword);
-            characterInventoryDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            characterInventoryDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
             Assert.AreNotEqual(character, characterInventoryDiff);
 
             PlayerCharacter characterEquipmentDiff = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
             characterEquipmentDiff.Inventory.Add(Weapons.Dagger);
             characterEquipmentDiff.Inventory.Add(Weapons.ShortSword);
             characterEquipmentDiff.Inventory.Add(Weapons.Longsword);
-            characterEquipmentDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.LeftHand);
+            characterEquipmentDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.LeftHand, character);
             Assert.AreNotEqual(character, characterEquipmentDiff);
         }
             

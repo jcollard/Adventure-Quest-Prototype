@@ -17,13 +17,13 @@ namespace AdventureQuest.Character.Equipment
             
             Assert.IsEmpty(manifest.Equipped);
 
-            Assert.True(manifest.Equip(dagger, EquipmentSlot.LeftHand ));
+            Assert.True(manifest.Equip(dagger, EquipmentSlot.LeftHand, bob ));
             Assert.Contains(dagger, manifest.Equipped.Values);
             Assert.AreEqual(1, manifest.Equipped.Count);
             Assert.AreEqual(dagger, manifest.Equipped[EquipmentSlot.LeftHand]);
 
-            Assert.False(manifest.Equip(sword, EquipmentSlot.LeftHand ));
-            Assert.False(manifest.Equip(sword, EquipmentSlot.RightHand ));
+            Assert.False(manifest.Equip(sword, EquipmentSlot.LeftHand, bob ));
+            Assert.False(manifest.Equip(sword, EquipmentSlot.RightHand, bob ));
             Assert.Contains(dagger, manifest.Equipped.Values);
             Assert.AreEqual(dagger, manifest.Equipped[EquipmentSlot.LeftHand]);
             Assert.AreEqual(1, manifest.Equipped.Count);
@@ -31,7 +31,7 @@ namespace AdventureQuest.Character.Equipment
             Assert.True(manifest.Unequip(EquipmentSlot.LeftHand));
             Assert.IsEmpty(manifest.Equipped);
 
-            Assert.True(manifest.Equip(sword, EquipmentSlot.RightHand));
+            Assert.True(manifest.Equip(sword, EquipmentSlot.RightHand, bob));
             Assert.Contains(sword, manifest.Equipped.Values);
             Assert.AreEqual(1, manifest.Equipped.Count);
             Assert.AreEqual(sword, manifest.Equipped[EquipmentSlot.RightHand]);
@@ -45,28 +45,28 @@ namespace AdventureQuest.Character.Equipment
             CharacterEquipmentManifest manifestOther = new (bob);
             Assert.AreEqual(manifest, manifestOther);
 
-            manifest.Equip(Weapons.Dagger, EquipmentSlot.LeftHand);
+            manifest.Equip(Weapons.Dagger, EquipmentSlot.LeftHand, bob);
             Assert.AreNotEqual(manifest, manifestOther);
 
-            manifestOther.Equip(Weapons.Dagger, EquipmentSlot.LeftHand);
+            manifestOther.Equip(Weapons.Dagger, EquipmentSlot.LeftHand, bob);
             Assert.AreEqual(manifest, manifestOther);
 
             manifest.Unequip(EquipmentSlot.LeftHand);
             Assert.AreNotEqual(manifest, manifestOther);
 
-            manifest.Equip(Weapons.Dagger, EquipmentSlot.RightHand);
+            manifest.Equip(Weapons.Dagger, EquipmentSlot.RightHand, bob);
             Assert.AreNotEqual(manifest, manifestOther);
             
             manifestOther.Unequip(EquipmentSlot.LeftHand);
             Assert.AreNotEqual(manifest, manifestOther);
 
-            manifestOther.Equip(Weapons.ShortSword, EquipmentSlot.RightHand);
+            manifestOther.Equip(Weapons.ShortSword, EquipmentSlot.RightHand, bob);
             Assert.AreNotEqual(manifest, manifestOther);
 
             manifest.Unequip(EquipmentSlot.RightHand);
             Assert.AreNotEqual(manifest, manifestOther);
 
-            manifest.Equip(Weapons.ShortSword, EquipmentSlot.RightHand);
+            manifest.Equip(Weapons.ShortSword, EquipmentSlot.RightHand, bob);
             Assert.AreEqual(manifest, manifestOther);            
         }
 
@@ -77,7 +77,7 @@ namespace AdventureQuest.Character.Equipment
         {
             PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
             CharacterEquipmentManifest manifest = new (bob);
-            manifest.Equip(Weapons.Dagger, slot);
+            manifest.Equip(Weapons.Dagger, slot, bob);
 
             string json = UnityEngine.JsonUtility.ToJson(manifest);
             CharacterEquipmentManifest loaded = UnityEngine.JsonUtility.FromJson<CharacterEquipmentManifest>(json);
@@ -85,7 +85,7 @@ namespace AdventureQuest.Character.Equipment
 
             PlayerCharacter steve = new ("Steve", Abilities.Roll(), "no-portrait");
             manifest = new (steve);
-            manifest.Equip(Weapons.ShortSword, slot);
+            manifest.Equip(Weapons.ShortSword, slot, bob);
 
             json = UnityEngine.JsonUtility.ToJson(manifest);
             loaded = UnityEngine.JsonUtility.FromJson<CharacterEquipmentManifest>(json);

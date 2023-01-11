@@ -12,7 +12,7 @@ namespace AdventureQuest.Character.Equipment
     public class CharacterEquipmentManifest : IEquipmentManifest, ISerializationCallbackReceiver
     {
 
-        private readonly ICharacter _character;
+        // private readonly ICharacter _character;
         private Dictionary<EquipmentSlot, IEquipable> _equipment = new ();
 
         #region Serialized Fields
@@ -25,12 +25,12 @@ namespace AdventureQuest.Character.Equipment
         public CharacterEquipmentManifest(ICharacter character)
         {
             if (character == null) { throw new System.ArgumentNullException($"CharacterEquipmentManifest must be registered to a character."); }
-            _character = character;
+            // _character = character;
         }
 
         public Dictionary<EquipmentSlot, IEquipable> Equipped => _equipment.ToDictionary((pair) => pair.Key, (pair) => pair.Value);
 
-        public virtual bool Equip(IEquipable toEquip, List<EquipmentSlot> slots)
+        public virtual bool Equip(IEquipable toEquip, List<EquipmentSlot> slots, ICharacter _character)
         {
             foreach (EquipmentSlot slot in toEquip.Slots)
             {
@@ -62,7 +62,7 @@ namespace AdventureQuest.Character.Equipment
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(_character, _equipment, Equipped);
+            return HashCode.Combine(_equipment, Equipped);
         }
 
         public bool IsEquipped(EquipmentSlot type) => _equipment.ContainsKey(type);
