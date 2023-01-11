@@ -17,6 +17,6 @@ namespace AdventureQuest.Equipment
         public UnityEvent OnDeselected { get; private set; } = new ();
 
         public void OnPointerEnter(PointerEventData eventData) => OnSelected.Invoke();
-        public void OnPointerExit(PointerEventData eventData) => OnDeselected.Invoke();
+        public void OnPointerExit(PointerEventData eventData) => OnDeselected.Invoke();  
     }
 }

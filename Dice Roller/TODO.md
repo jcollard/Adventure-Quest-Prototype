@@ -7,6 +7,8 @@ Current Prime Goal: Implement Status Screen
 
 1. Shop needs to be Serializable
 2. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
+   * CharacterEquipmentManifest should not take a character, should just have
+     the character attached. Too easy to "equip" using another characters stats.
 3. IEquippable needs a better deserialization method. Potentially could write a
    "InterfaceSerializationWrapper" which stores information about deserializing
    the associated interface.
@@ -18,7 +20,7 @@ Current Prime Goal: Implement Status Screen
 6. Create Character "Status" screen which allows equipping and unequipping equipment
 7. Add in Hitpoints / other stats to character
 8. Create "combat" system
-9. Add "forest" to the town hub
+9.  Add "forest" to the town hub
 10. Add an armor Shop
 11. Add "healer" to town?
 12. Add Potions? / Useable items?

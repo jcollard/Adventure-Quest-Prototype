@@ -13,6 +13,8 @@ namespace AdventureQuest.Equipment
         public ICharacter Character { get; set; }
         [field: SerializeField]
         public EquipmentSlot? SelectedSlot { get; private set; }
+        [field: SerializeField]
+        public UnityEvent<IItem, EquipmentSlot> OnEquip { get; private set; }
 
         protected void Awake()
         {
@@ -34,6 +36,11 @@ namespace AdventureQuest.Equipment
                 IEquipable equipable => HasEquipment.Equipment.Equip(equipable, SelectedSlot.Value, Character),
                 _ => false
             };
+
+            if (success)
+            {
+                OnEquip.Invoke(toEquip, SelectedSlot.Value);
+            }
                         
             Debug.Log($"Equipping {toEquip.Name} to {SelectedSlot} was {success}");
         }

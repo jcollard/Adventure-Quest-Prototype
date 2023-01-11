@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4082951754864604682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4013957912688211353}
   - component: {fileID: 5422685585774099956}
   - component: {fileID: 6855467344114653030}
+  - component: {fileID: 2869346787726235475}
   m_Layer: 5
   m_Name: EquipmentSlot
   m_TagString: Untagged
@@ -173,3 +174,17 @@ MonoBehaviour:
   <OnDeselected>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2869346787726235475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029617577956016659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17110d590e8220840bc201ab42631e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteDatabase: {fileID: 4520383046119037688, guid: 7b8de581e060ccc4099bd3ec5f91f76a, type: 3}
+  _image: {fileID: 4072997462157767648}
