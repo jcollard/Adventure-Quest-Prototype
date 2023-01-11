@@ -9,10 +9,11 @@ using System;
 namespace AdventureQuest.Equipment
 {
     [Serializable]
-    public class Weapon : IEquipable
+    public class Weapon : IEquipable, UnityEngine.ISerializationCallbackReceiver
     {
-        [UnityEngine.SerializeField]
         private List<IRequirement> _requirements;
+        [UnityEngine.SerializeField]
+        private List<string> _jsonRequirements;
 
         public Weapon(string name, string description, int cost, AbilityRoll damage) : 
             this(name, description, cost, damage, new List<IRequirement>() { new WeaponRequirement() }) { }
@@ -56,5 +57,25 @@ namespace AdventureQuest.Equipment
         {
             return HashCode.Combine(Name, Description, Cost);
         }
+
+        public void OnBeforeSerialize()
+        {
+            if (_requirements == null) { return; }
+            _jsonRequirements = _requirements.Select(req => req.AsJson).ToList();
+        }
+
+        public void OnAfterDeserialize()
+        {
+            if (_jsonRequirements == null)
+            {
+                _requirements = new List<IRequirement>() { new WeaponRequirement() };
+            }
+            else
+            {
+                _requirements = _jsonRequirements.Select(IRequirement.Deserialize).ToList();
+            }
+        }
+
+        
     }
 }
