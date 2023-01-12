@@ -371,6 +371,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7067fc8d7f786b34db9030f41330f145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &568622116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+  m_PrefabInstance: {fileID: 871445811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8332d377d5947a448943b67b85962ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &646787308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -948,6 +959,58 @@ PrefabInstance:
     - target: {fileID: 2424091319463160442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].eventID
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 568622116}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPointerMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AdventureQuest.Equipment.InventoryRenderer, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AdventureQuest.Equipment.InventoryRenderer, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684837402570046472, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2923848507039313520, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
       propertyPath: m_AnchorMax.y

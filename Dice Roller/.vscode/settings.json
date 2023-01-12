@@ -1,4 +1,8 @@
-﻿{
+{
+    "files.associations": {
+        ".prefab": "yaml",
+        ".unity": "yaml"
+    },
     "files.exclude":
     {
         "**/.DS_Store":true,

@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using AdventureQuest.Character;
 using AdventureQuest.Equipment;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace AdventureQuest.UI.Character
 {
 
     [RequireComponent(typeof(ObservableCharacter))]
-    public class CharacterInventoryController : MonoBehaviour
+    public class CharacterInventoryController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
     {
 
         private ICharacter _observing;
         private System.Action<IInventory> _render;
+        private InventoryRenderer _inventoryRenderer;
 
         void Awake()
         {
             ObservableCharacter character = GetComponent<ObservableCharacter>();
-            InventoryRenderer inventoryRenderer = GetComponentInChildren<InventoryRenderer>();
+            _inventoryRenderer = GetComponentInChildren<InventoryRenderer>();
             CharacterRenderer characterRenderer = GetComponentInChildren<CharacterRenderer>();
-            character.OnChange.AddListener(ch => Observe(ch, inventoryRenderer));
+            character.OnChange.AddListener(ch => Observe(ch, _inventoryRenderer));
             character.OnChange.AddListener(characterRenderer.Render);
         }
 
@@ -48,7 +50,9 @@ namespace AdventureQuest.UI.Character
             }
         }
 
-
+        void IPointerMoveHandler.OnPointerMove(PointerEventData eventData) => _inventoryRenderer.OnPointerEnter();
+        public void OnPointerEnter(PointerEventData eventData) => ((IPointerEnterHandler)_inventoryRenderer).OnPointerEnter(eventData);
+        public void OnPointerExit(PointerEventData eventData) => ((IPointerExitHandler)_inventoryRenderer).OnPointerExit(eventData);
     }
 
 }

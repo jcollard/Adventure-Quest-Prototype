@@ -2,9 +2,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using TMPro;
-
-using AdventureQuest.Character.Dice;
-using AdventureQuest.Character;
 using AdventureQuest.UI;
 
 namespace AdventureQuest.Equipment
@@ -64,9 +61,11 @@ namespace AdventureQuest.Equipment
                 });
             }
         }
-
-        void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData) => OnMouseEnter.Invoke();
-        void IPointerExitHandler.OnPointerExit(PointerEventData eventData) => OnMouseExit.Invoke();
+        
+        public void OnPointerEnter() => OnMouseEnter.Invoke();
+        public void OnPointerEnter(PointerEventData eventData) => OnPointerEnter();
+        public void OnPointerExit() => OnMouseExit.Invoke();
+        public void OnPointerExit(PointerEventData eventData) => OnPointerExit();
     }
 
 }

@@ -3267,6 +3267,15 @@ MonoBehaviour:
   <OnSelectItem>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
+  <OnDragRelease>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnMouseEnter>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnMouseExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &990457421862806923 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1647666745629516468, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
