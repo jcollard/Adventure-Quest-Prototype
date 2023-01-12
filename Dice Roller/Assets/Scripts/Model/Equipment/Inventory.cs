@@ -4,6 +4,7 @@ using AdventureQuest.Utils;
 using System.Linq;
 using System;
 using UnityEngine;
+using AdventureQuest.Json;
 
 namespace AdventureQuest.Equipment
 {
@@ -60,7 +61,7 @@ namespace AdventureQuest.Equipment
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
             if (_items == null) { return; }
-            _serializedItems = _items.Select(JsonUtility.ToJson).ToList();
+            _serializedItems = _items.Select(IItem.ToJson).ToList();
         }
 
         void ISerializationCallbackReceiver.OnAfterDeserialize()

@@ -4,6 +4,7 @@ Current Prime Goal: Implement Status Screen
 
 * Need IEquipmentManifest to return IResults rather than bools
 * IRequirement needs to have better serialization information to be able to deserialize to the correct type.
+* IEquipable needs better serialization (deserialization needs to know which subclass to use)
 
 1. Shop needs to be Serializable
 2. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor

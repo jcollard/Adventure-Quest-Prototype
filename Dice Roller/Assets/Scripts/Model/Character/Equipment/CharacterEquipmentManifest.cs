@@ -102,7 +102,7 @@ namespace AdventureQuest.Character.Equipment
             foreach (KeyValuePair<EquipmentSlot, IEquipable> pair in _equipment)
             {
                 _slots.Add(pair.Key);
-                _equipped.Add(JsonUtility.ToJson(pair.Value));
+                _equipped.Add(IItem.ToJson(pair.Value));
             }
         }
 

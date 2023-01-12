@@ -15,12 +15,9 @@ namespace AdventureQuest.Equipment.Armor
         [Test, Timeout(5000)]
         public void TestSerialization()
         {
-            string asJson = UnityEngine.JsonUtility.ToJson(Armors.LeatherArmor);
-            UnityEngine.Debug.Log(asJson);
-            Armor loaded = UnityEngine.JsonUtility.FromJson<Armor>(asJson);
+            string asJson = IItem.ToJson(Armors.LeatherArmor);
+            Armor loaded = (Armor)IItem.FromJson(asJson);
             Assert.AreEqual(Armors.LeatherArmor, loaded);
-            Armor fromJson = (Armor)IItem.FromJson(asJson);
-            Assert.AreEqual(Armors.LeatherArmor, fromJson);
         }
     }
 }

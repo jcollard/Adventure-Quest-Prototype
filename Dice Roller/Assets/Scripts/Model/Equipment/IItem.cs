@@ -14,16 +14,16 @@ namespace AdventureQuest.Equipment
         public static IItem FromJson(string json)
         {
             // TODO: Better serialization is required for extensibility
+            JsonSerializer serializer = UnityEngine.JsonUtility.FromJson<JsonSerializer>(json);
+            return serializer.ClassInformation switch 
+            {
+                "Armor" => UnityEngine.JsonUtility.FromJson<Armor.Armor>(serializer.Json),
+                "Weapon" => UnityEngine.JsonUtility.FromJson<Weapon>(serializer.Json),
+                _ => throw new System.FormatException($"Could not deserialize IItem from \"{json}\"")
+            };
             
-            if (json.Contains("\"<ClassInformation>k__BackingField\":\"Armor\""))
-            {
-                return UnityEngine.JsonUtility.FromJson<Armor.Armor>(json);
-            }
-            if (json.Contains("\"<ClassInformation>k__BackingField\":\"Weapon\""))
-            {
-                return UnityEngine.JsonUtility.FromJson<Weapon>(json);
-            }
-            throw new System.FormatException($"Could not deserialize IItem from \"{json}\"");
         }
+
+        public static string ToJson(IItem item) => JsonSerializer.ToJson(item);
     }
 }

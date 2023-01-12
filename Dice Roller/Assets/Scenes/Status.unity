@@ -371,6 +371,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7067fc8d7f786b34db9030f41330f145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &476324586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 787441352158517051, guid: c58d16645c12a74408b81a18dad437e2, type: 3}
+  m_PrefabInstance: {fileID: 9006056515005016343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476324583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bb82cad26d81b4681b160e84c54239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &568622116 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
@@ -1402,8 +1413,9 @@ GameObject:
   - component: {fileID: 887603171}
   - component: {fileID: 887603170}
   - component: {fileID: 887603173}
+  - component: {fileID: 887603174}
   m_Layer: 0
-  m_Name: Player Character Controller
+  m_Name: Status Screen Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,6 +1500,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 476324586}
+        m_TargetAssemblyTypeName: AdventureQuest.Equipment.UI.EquipmentManifestRenderer,
+          Scripts
+        m_MethodName: Render
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &887603172
 Transform:
   m_ObjectHideFlags: 0
@@ -1516,6 +1541,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _observableCharacter: {fileID: 887603171}
+--- !u!114 &887603174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887603169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bf3e6fea65d64438cb1beaf054aec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &930411388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +1751,34 @@ PrefabInstance:
     - target: {fileID: 204902493704809167, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
       propertyPath: m_text
       value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 887603174}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseStatusScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AdventureQuest.Character.StatusScreenController, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641292149475543085, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6743251367317835062, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
       propertyPath: m_Name

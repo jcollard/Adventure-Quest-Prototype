@@ -16,6 +16,11 @@ namespace AdventureQuest.Character
         public bool Reinitialize { get; private set; }
         private ObservableCharacter _observable;
 
+        public void StoreCharacter()
+        {
+            PlayerCharacter.Store((PlayerCharacter)_playerCharacter);
+        }
+
         protected void Awake()
         {
             _observable = GetComponent<ObservableCharacter>();
@@ -42,8 +47,8 @@ namespace AdventureQuest.Character
             _observable.Observed.Inventory.Clear();
             _observable.Observed.Inventory.Add(Weapons.Dagger);
             _observable.Observed.Inventory.Add(Weapons.Longsword);
-            _observable.Observed.Inventory.Add(Armors.LeatherArmor);
-            _observable.Observed.Inventory.Add(Armors.ClothPants);
+            _observable.Observed.Equipment.Equip(Armors.LeatherArmor, EquipmentSlot.Torso, _observable.Observed);
+            _observable.Observed.Equipment.Equip(Armors.ClothPants, EquipmentSlot.Legs, _observable.Observed);
             _observable.Observed.Inventory.Add(Armors.LeatherBoots);
             _observable.Observed.Inventory.Add(Armors.ChainHelmet);
         }
