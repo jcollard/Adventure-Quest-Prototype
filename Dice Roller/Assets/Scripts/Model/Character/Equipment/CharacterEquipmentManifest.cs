@@ -32,7 +32,7 @@ namespace AdventureQuest.Character.Equipment
 
         public virtual bool Equip(IEquipable toEquip, List<EquipmentSlot> slots, ICharacter _character)
         {
-            foreach (EquipmentSlot slot in toEquip.Slots)
+            foreach (EquipmentSlot slot in slots)
             {
                 if (_equipment.ContainsKey(slot)) { return false; }
                 if (!toEquip.Slots.Contains(slot)) { return false; }
