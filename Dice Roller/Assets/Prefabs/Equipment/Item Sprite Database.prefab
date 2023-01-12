@@ -55,3 +55,9 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 21300000, guid: b5a3c04b6716b8147850749c55c8781c, type: 3}
   - <Name>k__BackingField: leather_armor
     <Sprite>k__BackingField: {fileID: 21300000, guid: 919de35bfecdc4a418622271ac9885a4, type: 3}
+  - <Name>k__BackingField: leather_cap
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 9fadbf433c8db6f43827fed7046a21b1, type: 3}
+  - <Name>k__BackingField: leather_pants
+    <Sprite>k__BackingField: {fileID: 21300000, guid: a526f7be6e06413448de552895233020, type: 3}
+  - <Name>k__BackingField: leather_boots
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 2ddd407578e52ee4592a4e51114ba3f3, type: 3}
