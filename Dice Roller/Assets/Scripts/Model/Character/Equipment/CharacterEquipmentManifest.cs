@@ -113,7 +113,7 @@ namespace AdventureQuest.Character.Equipment
             for (int ix = 0; ix < _slots.Count; ix++)
             {
                 EquipmentSlot key = _slots[ix];
-                IEquipable value = IEquipable.FromJson(_equipped[ix]);
+                IEquipable value = (IEquipable)IItem.FromJson(_equipped[ix]);
                 _equipment[key] = value;
             }
         }

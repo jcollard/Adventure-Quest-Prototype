@@ -1,7 +1,9 @@
 
+using AdventureQuest.Json;
+
 namespace AdventureQuest.Equipment
 {
-    public interface IItem
+    public interface IItem : IJsonable
     {
         public string ItemSpriteID { get; }
         public string Name { get; }
@@ -12,15 +14,16 @@ namespace AdventureQuest.Equipment
         public static IItem FromJson(string json)
         {
             // TODO: Better serialization is required for extensibility
-            try
+            
+            if (json.Contains("\"<ClassInformation>k__BackingField\":\"Armor\""))
+            {
+                return UnityEngine.JsonUtility.FromJson<Armor.Armor>(json);
+            }
+            if (json.Contains("\"<ClassInformation>k__BackingField\":\"Weapon\""))
             {
                 return UnityEngine.JsonUtility.FromJson<Weapon>(json);
             }
-            catch
-            {
-
-            }
-            throw new System.Exception("Could not load IEquipable");
+            throw new System.FormatException($"Could not deserialize IItem from \"{json}\"");
         }
     }
 }

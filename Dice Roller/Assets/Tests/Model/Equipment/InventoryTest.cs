@@ -1,3 +1,4 @@
+using AdventureQuest.Equipment.Armor;
 using NUnit.Framework;
 namespace AdventureQuest.Equipment
 {
@@ -38,6 +39,7 @@ namespace AdventureQuest.Equipment
             bobsInventory.Add(Weapons.Dagger);
             bobsInventory.Add(Weapons.ShortSword);
             bobsInventory.Add(Weapons.Longsword);
+            bobsInventory.Add(Armors.LeatherArmor);
 
             string jsonified = UnityEngine.JsonUtility.ToJson(bobsInventory);
             Inventory loaded = UnityEngine.JsonUtility.FromJson<Inventory>(jsonified);

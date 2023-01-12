@@ -21,6 +21,8 @@ namespace AdventureQuest.Equipment
         }
         [field: UnityEngine.SerializeField]
         public AbilityRoll Damage { get; private set; }
+        [field: UnityEngine.SerializeField]
+        public override string ClassInformation { get; protected set; } = "Weapon";
 
         public bool IsTwoHanded { get; }
         public override HashSet<EquipmentSlot> Slots => new() { EquipmentSlot.LeftHand, EquipmentSlot.RightHand };

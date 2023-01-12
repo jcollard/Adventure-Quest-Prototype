@@ -34,6 +34,10 @@ namespace AdventureQuest.Equipment
         public int Cost { get; private set; }
         
         public abstract HashSet<EquipmentSlot> Slots { get; }
+
+        public virtual string AsJson => JsonUtility.ToJson(this);
+        public abstract string ClassInformation { get; protected set; }
+
         public abstract IItem Duplicate();
 
         public void OnBeforeSerialize()
