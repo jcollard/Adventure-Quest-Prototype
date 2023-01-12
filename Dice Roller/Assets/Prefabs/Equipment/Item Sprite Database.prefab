@@ -53,3 +53,5 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 21300000, guid: 442c8cdf0fe45f846b00ba4df51a8e58, type: 3}
   - <Name>k__BackingField: battle-axe
     <Sprite>k__BackingField: {fileID: 21300000, guid: b5a3c04b6716b8147850749c55c8781c, type: 3}
+  - <Name>k__BackingField: leather_armor
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 919de35bfecdc4a418622271ac9885a4, type: 3}

@@ -1,4 +1,5 @@
 using AdventureQuest.Equipment;
+using AdventureQuest.Equipment.Torso;
 using UnityEngine;
 
 namespace AdventureQuest.Character
@@ -41,6 +42,8 @@ namespace AdventureQuest.Character
             _observable.Observed.Inventory.Clear();
             _observable.Observed.Inventory.Add(Weapons.Dagger);
             _observable.Observed.Inventory.Add(Weapons.Longsword);
+            Torso leatherArmor = new Torso("Leather Armor", "leather_armor", "Itsa me! Leather Armor!", 25);
+            _observable.Observed.Inventory.Add(leatherArmor);
         }
     }
 }

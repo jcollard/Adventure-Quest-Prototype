@@ -133,7 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7067fc8d7f786b34db9030f41330f145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <CanDrop>k__BackingField: 0
   <OnEquip>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnUnequip>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &787441352158517051
@@ -245,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9029617577956016659, guid: 6a8fd289498d65a4b9b6ce55fbce3ab9, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Torso
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a8fd289498d65a4b9b6ce55fbce3ab9, type: 3}

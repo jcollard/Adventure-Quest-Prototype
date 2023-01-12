@@ -5,7 +5,7 @@ namespace AdventureQuest.Equipment
         LeftHand,
         RightHand,
         Head,
-        Chest,
+        Torso,
         Legs,
         Feet
     }
