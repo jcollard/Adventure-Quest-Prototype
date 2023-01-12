@@ -13,7 +13,7 @@ namespace AdventureQuest.Character.Equipment
             Weapon dagger = Weapons.Dagger;
             Weapon sword = Weapons.ShortSword;
             PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
-            CharacterEquipmentManifest manifest = new (bob);
+            IEquipmentManifest manifest = bob.Equipment;
             
             Assert.IsEmpty(manifest.Equipped);
 
