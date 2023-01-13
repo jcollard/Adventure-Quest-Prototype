@@ -3,9 +3,9 @@ namespace AdventureQuest.Scene
 {
     public static class Scenes
     {
-        public const string Town = "Town";
-        public const string Status = "Status";
-        public const string CharacterCreator = "Character Creator";
-        public const string Shop = "Shop";
+        public const string Town = "Assets/Scenes/Town.unity";
+        public const string Status = "Assets/Scenes/Status.unity";
+        public const string CharacterCreator = "Assets/Scenes/Character Creator.unity";
+        public const string Shop = "Assets/Scenes/Shop.unity";
     }
 }
