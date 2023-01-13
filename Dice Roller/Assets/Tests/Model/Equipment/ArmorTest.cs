@@ -1,4 +1,5 @@
 using AdventureQuest.Equipment.Armor;
+using AdventureQuest.Json;
 using NUnit.Framework;
 namespace AdventureQuest.Equipment.Armor
 {
@@ -15,8 +16,8 @@ namespace AdventureQuest.Equipment.Armor
         [Test, Timeout(5000)]
         public void TestSerialization()
         {
-            string asJson = IItem.ToJson(Armors.LeatherArmor);
-            Armor loaded = (Armor)IItem.FromJson(asJson);
+            string asJson = JsonSerializer.ToJson(Armors.LeatherArmor);
+            Armor loaded = JsonSerializer.FromJson<Armor>(asJson);
             Assert.AreEqual(Armors.LeatherArmor, loaded);
         }
     }

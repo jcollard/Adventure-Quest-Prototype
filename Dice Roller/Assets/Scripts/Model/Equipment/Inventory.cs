@@ -61,13 +61,13 @@ namespace AdventureQuest.Equipment
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
             if (_items == null) { return; }
-            _serializedItems = _items.Select(IItem.ToJson).ToList();
+            _serializedItems = _items.Select(JsonSerializer.ToJson).ToList();
         }
 
         void ISerializationCallbackReceiver.OnAfterDeserialize()
         {
             if (_serializedItems == null) { return; }
-            _items = _serializedItems.Select(IItem.FromJson).ToList();
+            _items = _serializedItems.Select(JsonSerializer.FromJson<IItem>).ToList();
         }
     }
 }

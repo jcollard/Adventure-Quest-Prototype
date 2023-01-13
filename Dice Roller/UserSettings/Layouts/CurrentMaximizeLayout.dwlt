@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 13}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -24,8 +24,1106 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 58
+  controlID: 94
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 3325
+    y: 85
+    width: 279
+    height: 900
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 143
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 622
+    - 208
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 830
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 2}
+    m_NewResultList:
+    - id: 1051
+      uniqueId: '[Untitled 2D Project][suite]'
+      name: Untitled 2D Project
+      fullName: Untitled 2D Project
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 52443365ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 2}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Untitled 2D Project][suite]'
+      name: Untitled 2D Project
+      fullName: Untitled 2D Project
+      resultStatus: 1
+      duration: 0.412937
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1037
+      uniqueId: '[Tests.dll][suite]'
+      name: Tests.dll
+      fullName: D:/git/jcollard/Unity-2021-DiceRoller/Dice Roller/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 1
+      duration: 0.3633424
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Untitled 2D Project][suite]'
+    - id: 1038
+      uniqueId: Tests.dll/[AdventureQuest][suite]
+      name: AdventureQuest
+      fullName: AdventureQuest
+      resultStatus: 1
+      duration: 0.3628207
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: '[Tests.dll][suite]'
+    - id: 1042
+      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
+      name: Character
+      fullName: AdventureQuest.Character
+      resultStatus: 1
+      duration: 0.1004114
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1038
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1026
+      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.AbilitiesTest][suite]
+      name: AbilitiesTest
+      fullName: AdventureQuest.Character.AbilitiesTest
+      resultStatus: 1
+      duration: 0.0419403
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
+    - id: 1027
+      uniqueId: Tests.dll/AdventureQuest/Character/AbilitiesTest/[Tests][AdventureQuest.Character.AbilitiesTest.TestEquality]
+      name: TestEquality
+      fullName: AdventureQuest.Character.AbilitiesTest.TestEquality
+      resultStatus: 1
+      duration: 0.0274278
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.AbilitiesTest][suite]
+    - id: 1043
+      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
+      name: Equipment
+      fullName: AdventureQuest.Character.Equipment
+      resultStatus: 1
+      duration: 0.0420057
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
+    - id: 1031
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
+      name: CharacterEquipmentManifestTest
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest
+      resultStatus: 1
+      duration: 0.0345515
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1043
+      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
+    - id: 1033
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality]
+      name: TestEquality
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality
+      resultStatus: 1
+      duration: 0.015464
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Tests structural equality
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1031
+      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
+    - id: 1032
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon]
+      name: TestEquipWeapon
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon
+      resultStatus: 1
+      duration: 0.0032519
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Test Character can only have 1 weapon equipped.
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1031
+      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
+    - id: 1036
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
+      name: TestSerialization
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
+      resultStatus: 1
+      duration: 0.0143115
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Tests Serialization/Deserialization equality
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
+    - id: 1034
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/TestSerialization/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)]
+      name: TestSerialization(LeftHand)
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)
+      resultStatus: 1
+      duration: 0.0083612
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
+    - id: 1035
+      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/TestSerialization/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)]
+      name: TestSerialization(RightHand)
+      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)
+      resultStatus: 1
+      duration: 0.0004669
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
+    - id: 1028
+      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
+      name: PlayerCharacterTest
+      fullName: AdventureQuest.Character.PlayerCharacterTest
+      resultStatus: 1
+      duration: 0.0126219
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
+    - id: 1030
+      uniqueId: Tests.dll/AdventureQuest/Character/PlayerCharacterTest/[Tests][AdventureQuest.Character.PlayerCharacterTest.TestEquality]
+      name: TestEquality
+      fullName: AdventureQuest.Character.PlayerCharacterTest.TestEquality
+      resultStatus: 1
+      duration: 0.0050654
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
+    - id: 1029
+      uniqueId: Tests.dll/AdventureQuest/Character/PlayerCharacterTest/[Tests][AdventureQuest.Character.PlayerCharacterTest.TestSerialization]
+      name: TestSerialization
+      fullName: AdventureQuest.Character.PlayerCharacterTest.TestSerialization
+      resultStatus: 1
+      duration: 0.0025407
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
+    - id: 1041
+      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Data][suite]
+      name: Data
+      fullName: AdventureQuest.Data
+      resultStatus: 1
+      duration: 0.0116446
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1038
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1021
+      uniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+      name: HistogramTest
+      fullName: AdventureQuest.Data.HistogramTest
+      resultStatus: 1
+      duration: 0.0074083
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1041
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Data][suite]
+    - id: 1025
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestChanceOf]
+      name: TestChanceOf
+      fullName: AdventureQuest.Data.HistogramTest.TestChanceOf
+      resultStatus: 1
+      duration: 0.0022982
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Test the Histogram.Count property
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+    - id: 1024
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestCount]
+      name: TestCount
+      fullName: AdventureQuest.Data.HistogramTest.TestCount
+      resultStatus: 1
+      duration: 0.0011117
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Test the Histogram.Count property
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+    - id: 1022
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestMax]
+      name: TestMax
+      fullName: AdventureQuest.Data.HistogramTest.TestMax
+      resultStatus: 1
+      duration: 0.0013073
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Test the Histogram.Max property
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+    - id: 1023
+      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestMin]
+      name: TestMin
+      fullName: AdventureQuest.Data.HistogramTest.TestMin
+      resultStatus: 1
+      duration: 0.0013683
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: Test the Histogram.Min property
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
+    - id: 1040
+      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
+      name: Dice
+      fullName: AdventureQuest.Dice
+      resultStatus: 1
+      duration: 0.2303843
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1038
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1009
+      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
+      name: DiceGroupTest
+      fullName: AdventureQuest.Dice.DiceGroupTest
+      resultStatus: 1
+      duration: 0.0192241
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1040
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
+    - id: 1012
+      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestIsParseable]
+      name: TestIsParseable
+      fullName: AdventureQuest.Dice.DiceGroupTest.TestIsParseable
+      resultStatus: 1
+      duration: 0.0003895
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
+    - id: 1011
+      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestParse1D20]
+      name: TestParse1D20
+      fullName: AdventureQuest.Dice.DiceGroupTest.TestParse1D20
+      resultStatus: 1
+      duration: 0.0091419
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
+    - id: 1010
+      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestParse3D6]
+      name: TestParse3D6
+      fullName: AdventureQuest.Dice.DiceGroupTest.TestParse3D6
+      resultStatus: 1
+      duration: 0.0083725
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
+    - id: 1004
+      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
+      name: DicePoolTest
+      fullName: AdventureQuest.Dice.DicePoolTest
+      resultStatus: 1
+      duration: 0.1809019
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1040
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
+    - id: 1008
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestIsParseable]
+      name: TestIsParseable
+      fullName: AdventureQuest.Dice.DicePoolTest.TestIsParseable
+      resultStatus: 1
+      duration: 0.0007721
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
+    - id: 1006
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse1D20]
+      name: TestParse1D20
+      fullName: AdventureQuest.Dice.DicePoolTest.TestParse1D20
+      resultStatus: 1
+      duration: 0.0526022
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
+    - id: 1005
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6]
+      name: TestParse2D4Plus1D6
+      fullName: AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6
+      resultStatus: 1
+      duration: 0.0604935
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
+    - id: 1007
+      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8]
+      name: TestParse3D6Plus1D4Plus3D8
+      fullName: AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
+      resultStatus: 1
+      duration: 0.0605966
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
+    - id: 1013
+      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+      name: DieTest
+      fullName: AdventureQuest.Dice.DieTest
+      resultStatus: 1
+      duration: 0.0231035
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1040
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
+    - id: 1016
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestConstruct12SidedDie]
+      name: TestConstruct12SidedDie
+      fullName: AdventureQuest.Dice.DieTest.TestConstruct12SidedDie
+      resultStatus: 1
+      duration: 0.007904
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1015
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestConstruct6SidedDie]
+      name: TestConstruct6SidedDie
+      fullName: AdventureQuest.Dice.DieTest.TestConstruct6SidedDie
+      resultStatus: 1
+      duration: 0.0057881
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1014
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestDieMinimumSize]
+      name: TestDieMinimumSize
+      fullName: AdventureQuest.Dice.DieTest.TestDieMinimumSize
+      resultStatus: 1
+      duration: 0.0016254
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1019
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestEdgeCaseParse]
+      name: TestEdgeCaseParse
+      fullName: AdventureQuest.Dice.DieTest.TestEdgeCaseParse
+      resultStatus: 1
+      duration: 0.0005818
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1017
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestIsParseable]
+      name: TestIsParseable
+      fullName: AdventureQuest.Dice.DieTest.TestIsParseable
+      resultStatus: 1
+      duration: 0.000247
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1020
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestParseFormatException]
+      name: TestParseFormatException
+      fullName: AdventureQuest.Dice.DieTest.TestParseFormatException
+      resultStatus: 1
+      duration: 0.0004555
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1018
+      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestSimpleParse]
+      name: TestSimpleParse
+      fullName: AdventureQuest.Dice.DieTest.TestSimpleParse
+      resultStatus: 1
+      duration: 0.0002721
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
+    - id: 1042
+      uniqueId: Tests.dll/AdventureQuest/[Equipment][suite]
+      name: Equipment
+      fullName: AdventureQuest.Equipment
+      resultStatus: 1
+      duration: 0.019907
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1041
+      parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1043
+      uniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.Armor][suite]
+      name: Armor
+      fullName: AdventureQuest.Equipment.Armor
+      resultStatus: 1
+      duration: 0.0073289
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: Tests.dll/AdventureQuest/[Equipment][suite]
+    - id: 1004
+      uniqueId: Tests.dll/AdventureQuest/Equipment/Armor/[Tests][AdventureQuest.Equipment.Armor.ArmorTest][suite]
+      name: ArmorTest
+      fullName: AdventureQuest.Equipment.Armor.ArmorTest
+      resultStatus: 1
+      duration: 0.0066441
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1043
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.Armor][suite]
+    - id: 1005
+      uniqueId: Tests.dll/AdventureQuest/Equipment/Armor/ArmorTest/[Tests][AdventureQuest.Equipment.Armor.ArmorTest.TestEquality]
+      name: TestEquality
+      fullName: AdventureQuest.Equipment.Armor.ArmorTest.TestEquality
+      resultStatus: 1
+      duration: 0.0016302
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/Armor/[Tests][AdventureQuest.Equipment.Armor.ArmorTest][suite]
+    - id: 1006
+      uniqueId: Tests.dll/AdventureQuest/Equipment/Armor/ArmorTest/[Tests][AdventureQuest.Equipment.Armor.ArmorTest.TestSerialization]
+      name: TestSerialization
+      fullName: AdventureQuest.Equipment.Armor.ArmorTest.TestSerialization
+      resultStatus: 1
+      duration: 0.0003152
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/Armor/[Tests][AdventureQuest.Equipment.Armor.ArmorTest][suite]
+    - id: 1001
+      uniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
+      name: InventoryTest
+      fullName: AdventureQuest.Equipment.InventoryTest
+      resultStatus: 1
+      duration: 0.0060158
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1039
+      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Equipment][suite]
+    - id: 1002
+      uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestEquality]
+      name: TestEquality
+      fullName: AdventureQuest.Equipment.InventoryTest.TestEquality
+      resultStatus: 1
+      duration: 0.000327
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
+    - id: 1003
+      uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestSerialization]
+      name: TestSerialization
+      fullName: AdventureQuest.Equipment.InventoryTest.TestSerialization
+      resultStatus: 1
+      duration: 0.0009424
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
+    m_ResultText: TestSerialization (0.000s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 9de464c7
+      m_LastClickedID: -949689187
+      m_ExpandedIDs: d8a1b0861ffc8289e622df8cdb12b49dec9a87a26593f7a44efb38aa5feec0ba0d0e6acd63bf45d5e557abf7bc75bf00a3b1e7356c21753eb985554e524433654f163e6d8128b07383cb6274f9493a7affffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1269
+    height: 921
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 95
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1269
+    height: 559
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 96
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 339
+    height: 559
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 6}
+  m_Panes:
+  - {fileID: 6}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2056
+    y: 85
+    width: 338
+    height: 538
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: e0bcffff
+      m_LastClickedID: -17184
+      m_ExpandedIDs: ecbcfffffabcffff1cbdfffff6c1ffffdcc8ffff68cdffff0cd2ffff1cd7ffff18dcffffa2e0ffff20e5ffff5ae9ffff4aedffff2cfbffffc88b0000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 5}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: fe2844dc8ed23d5429c2e678b7e30913
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 339
+    y: 0
+    width: 930
+    height: 559
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 8}
+  m_Panes:
+  - {fileID: 8}
+  - {fileID: 9}
+  - {fileID: 10}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,9 +1143,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2307
+    x: 2395
     y: 85
-    width: 801
+    width: 928
     height: 538
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -305,9 +1403,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 407.995, y: 237.04274, z: 1.6956866}
+    m_Target: {x: 459.65662, y: 256.35947, z: -0.20091055}
     speed: 2
-    m_Value: {x: 407.995, y: 237.04274, z: 1.6956866}
+    m_Value: {x: 400.5, y: 225.5, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -358,9 +1456,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 286.6383
+    m_Target: 297.72104
     speed: 2
-    m_Value: 286.6383
+    m_Value: 632.5346
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -385,168 +1483,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 10}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1054
-    height: 921
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 59
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 5}
-  - {fileID: 7}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1054
-    height: 559
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 60
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 251
-    height: 559
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 6}
-  m_Panes:
-  - {fileID: 6}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 2056
-    y: 85
-    width: 250
-    height: 538
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SceneHierarchy:
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 32ebffff4eebffff40efffffc4f2ffffa8f6ffff2cfbffff
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
-      m_SearchString: 
-    m_ExpandedScenes: []
-    m_CurrenRootInstanceID: 0
-    m_LockTracker:
-      m_IsLocked: 0
-    m_CurrentSortingName: TransformSorting
-  m_WindowGUID: fe2844dc8ed23d5429c2e678b7e30913
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 251
-    y: 0
-    width: 803
-    height: 559
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 2}
-  m_Panes:
-  - {fileID: 2}
-  - {fileID: 8}
-  - {fileID: 9}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &8
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -566,9 +1503,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2307
+    x: 2395
     y: 85
-    width: 801
+    width: 928
     height: 538
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -580,7 +1517,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 801, y: 451}
+  m_TargetSize: {x: 919, y: 517}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -595,10 +1532,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -400.5
-    m_HBaseRangeMax: 400.5
-    m_VBaseRangeMin: -225.5
-    m_VBaseRangeMax: 225.5
+    m_HBaseRangeMin: -459.5
+    m_HBaseRangeMax: 459.5
+    m_VBaseRangeMin: -258.5
+    m_VBaseRangeMax: 258.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -607,7 +1544,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -616,29 +1553,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 801
+      width: 928
       height: 517
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 400.5, y: 258.5}
+    m_Translation: {x: 464, y: 258.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -400.5
+      x: -464
       y: -258.5
-      width: 801
+      width: 928
       height: 517
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 801, y: 538}
+  m_LastWindowPixelSize: {x: 928, y: 538}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &9
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,7 +1603,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &10
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -676,24 +1613,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 559
-    width: 1054
+    width: 1269
     height: 362
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &11
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -715,14 +1652,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 644
-    width: 1053
+    width: 1268
     height: 341
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: leather
+    m_NameFilter: inventory
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -734,22 +1671,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Equipment/Armor
+    - Assets/Scenes
     m_Globs: []
-    m_OriginalText: leather
+    m_OriginalText: inventory
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Sprites/Equipment/Armor
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\git\jcollard\Unity-2021-DiceRoller\Dice Roller
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 83}
-    m_SelectedIDs: f6b60000
-    m_LastClickedID: 46838
-    m_ExpandedIDs: 00000000ec660000ee660000f0660000f2660000
+    m_SelectedIDs: 18670000
+    m_LastClickedID: 26392
+    m_ExpandedIDs: 0000000006670000086700000a6700000c6700002867000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -777,7 +1714,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ec660000ee660000f0660000f2660000
+    m_ExpandedIDs: 0000000006670000086700000a6700000c670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -802,8 +1739,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7cb70000
-    m_LastClickedInstanceID: 46972
+    m_SelectedInstanceIDs: e0bcffff
+    m_LastClickedInstanceID: -17184
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c8640000ca640000ba640000cc640000
     m_RenameOverlay:
@@ -821,7 +1758,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -833,7 +1770,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 190
---- !u!114 &12
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,13 +1792,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 644
-    width: 1053
+    width: 937
     height: 341
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -876,19 +1813,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1054
+    x: 1269
     y: 0
-    width: 495
+    width: 280
     height: 921
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 2}
   m_Panes:
-  - {fileID: 14}
   - {fileID: 15}
+  - {fileID: 2}
   m_Selected: 1
   m_LastSelected: 0
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,9 +1845,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3110
+    x: 3122
     y: 85
-    width: 494
+    width: 482
     height: 900
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -922,867 +1859,10 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 26420
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 3110
-    y: 85
-    width: 494
-    height: 900
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_Spl:
-    ID: 135
-    splitterInitialOffset: 0
-    currentActiveSplitter: -1
-    realSizes:
-    - 622
-    - 208
-    relativeSizes:
-    - 0.75
-    - 0.25
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 830
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    m_NewResultList: []
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories: []
-    m_SelectedOption: 0
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 15}
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[Untitled 2D Project][suite]'
-      name: Untitled 2D Project
-      fullName: Untitled 2D Project
-      resultStatus: 1
-      duration: 0.1203669
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1037
-      uniqueId: '[Tests.dll][suite]'
-      name: Tests.dll
-      fullName: D:/git/jcollard/Unity-2021-DiceRoller/Dice Roller/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.0774496
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Untitled 2D Project][suite]'
-    - id: 1038
-      uniqueId: Tests.dll/[AdventureQuest][suite]
-      name: AdventureQuest
-      fullName: AdventureQuest
-      resultStatus: 1
-      duration: 0.0730516
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1037
-      parentUniqueId: '[Tests.dll][suite]'
-    - id: 1042
-      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
-      name: Character
-      fullName: AdventureQuest.Character
-      resultStatus: 1
-      duration: 0.0702318
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1038
-      parentUniqueId: Tests.dll/[AdventureQuest][suite]
-    - id: 1026
-      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.AbilitiesTest][suite]
-      name: AbilitiesTest
-      fullName: AdventureQuest.Character.AbilitiesTest
-      resultStatus: 1
-      duration: 0.0474874
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1042
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
-    - id: 1027
-      uniqueId: Tests.dll/AdventureQuest/Character/AbilitiesTest/[Tests][AdventureQuest.Character.AbilitiesTest.TestEquality]
-      name: TestEquality
-      fullName: AdventureQuest.Character.AbilitiesTest.TestEquality
-      resultStatus: 1
-      duration: 0.0301682
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1026
-      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.AbilitiesTest][suite]
-    - id: 1043
-      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
-      name: Equipment
-      fullName: AdventureQuest.Character.Equipment
-      resultStatus: 1
-      duration: 0.0676179
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1042
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
-    - id: 1031
-      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
-      name: CharacterEquipmentManifestTest
-      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest
-      resultStatus: 1
-      duration: 0.0659752
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1043
-      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.Equipment][suite]
-    - id: 1033
-      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality]
-      name: TestEquality
-      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality
-      resultStatus: 1
-      duration: 0.0161218
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Tests structural equality
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1031
-      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
-    - id: 1032
-      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon]
-      name: TestEquipWeapon
-      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon
-      resultStatus: 1
-      duration: 0.0462287
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Test Character can only have 1 weapon equipped.
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1031
-      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
-    - id: 1036
-      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
-      name: TestSerialization
-      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
-      resultStatus: 1
-      duration: 0.0169201
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Tests Serialization/Deserialization equality
-      isSuite: 1
-      categories: []
-      parentId: 1031
-      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest][suite]
-    - id: 1034
-      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/TestSerialization/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)]
-      name: TestSerialization(LeftHand)
-      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)
-      resultStatus: 1
-      duration: 0.0064485
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1036
-      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
-    - id: 1035
-      uniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/TestSerialization/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)]
-      name: TestSerialization(RightHand)
-      fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)
-      resultStatus: 1
-      duration: 0.0007364
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1036
-      parentUniqueId: Tests.dll/AdventureQuest/Character/Equipment/CharacterEquipmentManifestTest/[Tests][AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization][suite]
-    - id: 1028
-      uniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
-      name: PlayerCharacterTest
-      fullName: AdventureQuest.Character.PlayerCharacterTest
-      resultStatus: 1
-      duration: 0.0169658
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1042
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Character][suite]
-    - id: 1030
-      uniqueId: Tests.dll/AdventureQuest/Character/PlayerCharacterTest/[Tests][AdventureQuest.Character.PlayerCharacterTest.TestEquality]
-      name: TestEquality
-      fullName: AdventureQuest.Character.PlayerCharacterTest.TestEquality
-      resultStatus: 1
-      duration: 0.0046306
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1028
-      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
-    - id: 1029
-      uniqueId: Tests.dll/AdventureQuest/Character/PlayerCharacterTest/[Tests][AdventureQuest.Character.PlayerCharacterTest.TestSerialization]
-      name: TestSerialization
-      fullName: AdventureQuest.Character.PlayerCharacterTest.TestSerialization
-      resultStatus: 1
-      duration: 0.002824
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1028
-      parentUniqueId: Tests.dll/AdventureQuest/Character/[Tests][AdventureQuest.Character.PlayerCharacterTest][suite]
-    - id: 1041
-      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Data][suite]
-      name: Data
-      fullName: AdventureQuest.Data
-      resultStatus: 1
-      duration: 0.0163326
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1038
-      parentUniqueId: Tests.dll/[AdventureQuest][suite]
-    - id: 1021
-      uniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
-      name: HistogramTest
-      fullName: AdventureQuest.Data.HistogramTest
-      resultStatus: 1
-      duration: 0.0076687
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1041
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Data][suite]
-    - id: 1025
-      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestChanceOf]
-      name: TestChanceOf
-      fullName: AdventureQuest.Data.HistogramTest.TestChanceOf
-      resultStatus: 1
-      duration: 0.0024694
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Test the Histogram.Count property
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1021
-      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
-    - id: 1024
-      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestCount]
-      name: TestCount
-      fullName: AdventureQuest.Data.HistogramTest.TestCount
-      resultStatus: 1
-      duration: 0.0007463
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Test the Histogram.Count property
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1021
-      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
-    - id: 1022
-      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestMax]
-      name: TestMax
-      fullName: AdventureQuest.Data.HistogramTest.TestMax
-      resultStatus: 1
-      duration: 0.0009699
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Test the Histogram.Max property
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1021
-      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
-    - id: 1023
-      uniqueId: Tests.dll/AdventureQuest/Data/HistogramTest/[Tests][AdventureQuest.Data.HistogramTest.TestMin]
-      name: TestMin
-      fullName: AdventureQuest.Data.HistogramTest.TestMin
-      resultStatus: 1
-      duration: 0.0005216
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: Test the Histogram.Min property
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1021
-      parentUniqueId: Tests.dll/AdventureQuest/Data/[Tests][AdventureQuest.Data.HistogramTest][suite]
-    - id: 1040
-      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
-      name: Dice
-      fullName: AdventureQuest.Dice
-      resultStatus: 1
-      duration: 0.657781
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1038
-      parentUniqueId: Tests.dll/[AdventureQuest][suite]
-    - id: 1009
-      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
-      name: DiceGroupTest
-      fullName: AdventureQuest.Dice.DiceGroupTest
-      resultStatus: 1
-      duration: 0.037729
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1040
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
-    - id: 1012
-      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestIsParseable]
-      name: TestIsParseable
-      fullName: AdventureQuest.Dice.DiceGroupTest.TestIsParseable
-      resultStatus: 1
-      duration: 0.0004229
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
-    - id: 1011
-      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestParse1D20]
-      name: TestParse1D20
-      fullName: AdventureQuest.Dice.DiceGroupTest.TestParse1D20
-      resultStatus: 1
-      duration: 0.0182297
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
-    - id: 1010
-      uniqueId: Tests.dll/AdventureQuest/Dice/DiceGroupTest/[Tests][AdventureQuest.Dice.DiceGroupTest.TestParse3D6]
-      name: TestParse3D6
-      fullName: AdventureQuest.Dice.DiceGroupTest.TestParse3D6
-      resultStatus: 1
-      duration: 0.0171788
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DiceGroupTest][suite]
-    - id: 1004
-      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
-      name: DicePoolTest
-      fullName: AdventureQuest.Dice.DicePoolTest
-      resultStatus: 1
-      duration: 0.541224
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1040
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
-    - id: 1008
-      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestIsParseable]
-      name: TestIsParseable
-      fullName: AdventureQuest.Dice.DicePoolTest.TestIsParseable
-      resultStatus: 1
-      duration: 0.0008157
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
-    - id: 1006
-      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse1D20]
-      name: TestParse1D20
-      fullName: AdventureQuest.Dice.DicePoolTest.TestParse1D20
-      resultStatus: 1
-      duration: 0.1790177
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
-    - id: 1005
-      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6]
-      name: TestParse2D4Plus1D6
-      fullName: AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6
-      resultStatus: 1
-      duration: 0.1690969
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
-    - id: 1007
-      uniqueId: Tests.dll/AdventureQuest/Dice/DicePoolTest/[Tests][AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8]
-      name: TestParse3D6Plus1D4Plus3D8
-      fullName: AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
-      resultStatus: 1
-      duration: 0.1793039
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DicePoolTest][suite]
-    - id: 1013
-      uniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-      name: DieTest
-      fullName: AdventureQuest.Dice.DieTest
-      resultStatus: 1
-      duration: 0.0702704
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1040
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Dice][suite]
-    - id: 1016
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestConstruct12SidedDie]
-      name: TestConstruct12SidedDie
-      fullName: AdventureQuest.Dice.DieTest.TestConstruct12SidedDie
-      resultStatus: 1
-      duration: 0.025072
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1015
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestConstruct6SidedDie]
-      name: TestConstruct6SidedDie
-      fullName: AdventureQuest.Dice.DieTest.TestConstruct6SidedDie
-      resultStatus: 1
-      duration: 0.0250739
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1014
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestDieMinimumSize]
-      name: TestDieMinimumSize
-      fullName: AdventureQuest.Dice.DieTest.TestDieMinimumSize
-      resultStatus: 1
-      duration: 0.0021179
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1019
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestEdgeCaseParse]
-      name: TestEdgeCaseParse
-      fullName: AdventureQuest.Dice.DieTest.TestEdgeCaseParse
-      resultStatus: 1
-      duration: 0.000839
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1017
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestIsParseable]
-      name: TestIsParseable
-      fullName: AdventureQuest.Dice.DieTest.TestIsParseable
-      resultStatus: 1
-      duration: 0.0003919
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1020
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestParseFormatException]
-      name: TestParseFormatException
-      fullName: AdventureQuest.Dice.DieTest.TestParseFormatException
-      resultStatus: 1
-      duration: 0.0009376
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1018
-      uniqueId: Tests.dll/AdventureQuest/Dice/DieTest/[Tests][AdventureQuest.Dice.DieTest.TestSimpleParse]
-      name: TestSimpleParse
-      fullName: AdventureQuest.Dice.DieTest.TestSimpleParse
-      resultStatus: 1
-      duration: 0.0004639
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1039
-      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Equipment][suite]
-      name: Equipment
-      fullName: AdventureQuest.Equipment
-      resultStatus: 1
-      duration: 0.0111934
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1038
-      parentUniqueId: Tests.dll/[AdventureQuest][suite]
-    - id: 1001
-      uniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
-      name: InventoryTest
-      fullName: AdventureQuest.Equipment.InventoryTest
-      resultStatus: 1
-      duration: 0.0026081
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1039
-      parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Equipment][suite]
-    - id: 1002
-      uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestEquality]
-      name: TestEquality
-      fullName: AdventureQuest.Equipment.InventoryTest.TestEquality
-      resultStatus: 1
-      duration: 0.0004928
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
-    - id: 1003
-      uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestSerialization]
-      name: TestSerialization
-      fullName: AdventureQuest.Equipment.InventoryTest.TestSerialization
-      resultStatus: 1
-      duration: 0.0007807
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
-    m_ResultText: 'TestEquipWeapon (0.046s)
-
-      Test Character can only have 1
-      weapon equipped.'
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d57679ad
-      m_LastClickedID: -1384548651
-      m_ExpandedIDs: d8a1b0861ffc8289e622df8c6593f7a44efb38aa5feec0ba63bf45d5e557abf7bc75bf00a3b1e7356c21753eb985554e524433654f163e6d8128b07383cb6274f9493a7affffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized

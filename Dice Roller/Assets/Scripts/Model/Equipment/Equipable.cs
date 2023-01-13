@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AdventureQuest.Equipment.Requirement;
+using AdventureQuest.Json;
 using UnityEngine;
 
 namespace AdventureQuest.Equipment
@@ -40,7 +41,7 @@ namespace AdventureQuest.Equipment
         public void OnBeforeSerialize()
         {
             if (_requirements == null) { return; }
-            _jsonRequirements = _requirements.Select(req => req.AsJson).ToList();
+            _jsonRequirements = _requirements.Select(JsonSerializer.ToJson).ToList();
         }
 
         public void OnAfterDeserialize()
@@ -51,7 +52,7 @@ namespace AdventureQuest.Equipment
             }
             else
             {
-                _requirements = _jsonRequirements.Select(IRequirement.Deserialize).ToList();
+                _requirements = _jsonRequirements.Select(JsonSerializer.FromJson<IRequirement>).ToList();
             }
         }
     }

@@ -5,6 +5,7 @@ using AdventureQuest.Utils;
 using System.Linq;
 using System;
 using UnityEngine;
+using AdventureQuest.Json;
 
 namespace AdventureQuest.Character.Equipment
 {
@@ -102,7 +103,7 @@ namespace AdventureQuest.Character.Equipment
             foreach (KeyValuePair<EquipmentSlot, IEquipable> pair in _equipment)
             {
                 _slots.Add(pair.Key);
-                _equipped.Add(IItem.ToJson(pair.Value));
+                _equipped.Add(JsonSerializer.ToJson(pair.Value));
             }
         }
 
@@ -113,7 +114,7 @@ namespace AdventureQuest.Character.Equipment
             for (int ix = 0; ix < _slots.Count; ix++)
             {
                 EquipmentSlot key = _slots[ix];
-                IEquipable value = (IEquipable)IItem.FromJson(_equipped[ix]);
+                IEquipable value = JsonSerializer.FromJson<IEquipable>(_equipped[ix]);
                 _equipment[key] = value;
             }
         }

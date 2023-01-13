@@ -854,6 +854,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Darwin's Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 734634727053736519, guid: beb50b0eb37d55143aabed927f514373, type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 734634727053736519, guid: beb50b0eb37d55143aabed927f514373, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 734634727053736519, guid: beb50b0eb37d55143aabed927f514373, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3905226207184236083, guid: beb50b0eb37d55143aabed927f514373, type: 3}
       propertyPath: m_Name
       value: Name

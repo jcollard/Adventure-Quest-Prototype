@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <LoadFromStorageOnLoad>k__BackingField: 1
-  <Reinitialize>k__BackingField: 1
+  <Reinitialize>k__BackingField: 0
 --- !u!114 &887603171
 MonoBehaviour:
   m_ObjectHideFlags: 0

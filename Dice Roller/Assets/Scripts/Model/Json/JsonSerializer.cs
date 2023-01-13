@@ -19,5 +19,11 @@ namespace AdventureQuest.Json
             return JsonUtility.ToJson(serializer);
         }
 
+        public static T FromJson<T>(string json)
+        {
+            JsonSerializer serializer = UnityEngine.JsonUtility.FromJson<JsonSerializer>(json);
+            return (T)UnityEngine.JsonUtility.FromJson(serializer.Json, serializer.ClassType);            
+        }
+
     }
 }
