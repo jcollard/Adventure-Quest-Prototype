@@ -1,7 +1,8 @@
 {
     "files.associations": {
         ".prefab": "yaml",
-        ".unity": "yaml"
+        ".unity": "yaml",
+        ".asset": "yaml",
     },
     "files.exclude":
     {
