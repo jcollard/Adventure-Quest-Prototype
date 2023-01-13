@@ -70,7 +70,7 @@ namespace AdventureQuest.Shop
             shopInventory.Add(Weapons.ShortSword);
             shopInventory.Add(Weapons.Longsword);
             shopInventory.Add(Weapons.BattleAxe);
-            Shop shop = new Shop("Wilfred's Weapons", shopInventory);
+            Shop shop = new ("Wilfred's Weapons", shopInventory);
 
             Shop.Observed = shop;
         }

@@ -26,6 +26,8 @@ Primary Goal: Implement Scene Transition Manager to better manage scene transiti
 13. Add drag and drop buy and sell to shop
 14. Add Item information to Status / Inventory. When clicking on item, should
     get information about that item. Similar to shop.
+15. If possible, we would like to "fail fast" on scene load if a Location is not
+    available in the Build settings
 
 # Potential Abstractions (Code Smells)
 
