@@ -1,12 +1,12 @@
 # TODO List
 
-Current Prime Goal: Implement Status Screen
+Primary Goal: Implement Scene Transition Manager to better manage scene transitions
 
-* Need IEquipmentManifest to return IResults rather than bools
-* IRequirement needs to have better serialization information to be able to deserialize to the correct type.
-* IEquipable needs better serialization (deserialization needs to know which subclass to use)
+* Scene Transition Manager for moving between scenes. Currently everytime, we
+   save the character manually on the button click.
 
-1. Shop needs to be Serializable
+
+1. Shop needs to be Serializable (Not sure if this is true anymore)
 2. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
    * CharacterEquipmentManifest should not take a character, should just have
      the character attached. Too easy to "equip" using another characters stats.
@@ -16,15 +16,13 @@ Current Prime Goal: Implement Status Screen
 4. Consider generalizing the CharacterInspectorEditor to work for anything that
    implements an "AsJson" / "IObservable"
    * a UnityEditor drawer for ICharacter / IEquipment / IInventory
-5. Scene Transition Manager for moving between scenes. Currently everytime, we
-   save the character manually on the button click.
-6. Create Character "Status" screen which allows equipping and unequipping equipment
-7. Add in Hitpoints / other stats to character
-8. Create "combat" system
-9.  Add "forest" to the town hub
-10. Add an armor Shop
-11. Add "healer" to town?
-12. Add Potions? / Useable items?
+6. Add in Hitpoints / other stats to character
+7. Create "combat" system
+8.  Add "forest" to the town hub
+9.  Add an armor Shop
+10. Add "healer" to town?
+11. Add Potions? / Useable items?
+12. Need IEquipmentManifest to return IResults rather than bool
 
 # Potential Abstractions (Code Smells)
 
