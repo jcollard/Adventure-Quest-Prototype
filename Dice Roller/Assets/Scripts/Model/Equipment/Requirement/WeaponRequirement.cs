@@ -7,9 +7,6 @@ namespace AdventureQuest.Equipment.Requirement
     {
         public string AsJson => UnityEngine.JsonUtility.ToJson(this);
 
-        [field: UnityEngine.SerializeField]
-        public string ClassInformation { get; private set; } = "WeaponRequirement";
-
         public bool MeetsRequirement(ICharacter character)
         {
             foreach(IEquipable equipped in character.Equipment.Equipped.Values)

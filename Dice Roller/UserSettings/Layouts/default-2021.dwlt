@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1549
     height: 971
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 26
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1054
+    width: 938
     height: 921
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 27
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1054
+    width: 938
     height: 559
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 28
+  controlID: 74
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,7 +187,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 251
+    width: 250
     height: 559
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -211,9 +211,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 251
+    x: 250
     y: 0
-    width: 803
+    width: 688
     height: 559
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -234,23 +234,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 559
-    width: 1054
+    width: 938
     height: 362
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,23 +261,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1054
+    x: 938
     y: 0
-    width: 495
+    width: 611
     height: 921
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 19}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,20 +298,20 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3043
-    y: 84
-    width: 554
-    height: 901
+    x: 2994
+    y: 85
+    width: 610
+    height: 900
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 3749
+    ID: 131
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 623
+    - 622
     - 208
     relativeSizes:
     - 0.75
@@ -322,7 +322,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 831
+    lastTotalSize: 830
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -374,7 +374,7 @@ MonoBehaviour:
       name: Untitled 2D Project
       fullName: Untitled 2D Project
       resultStatus: 1
-      duration: 0.8731923
+      duration: 0.3759181
       messages: 
       output: 
       stacktrace: 
@@ -390,7 +390,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: D:/git/jcollard/Unity-2021-DiceRoller/Dice Roller/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.8320645
+      duration: 0.3431311
       messages: 
       output: 
       stacktrace: 
@@ -406,7 +406,7 @@ MonoBehaviour:
       name: AdventureQuest
       fullName: AdventureQuest
       resultStatus: 1
-      duration: 0.8312078
+      duration: 0.3403449
       messages: 
       output: 
       stacktrace: 
@@ -422,7 +422,7 @@ MonoBehaviour:
       name: Character
       fullName: AdventureQuest.Character
       resultStatus: 1
-      duration: 0.1191348
+      duration: 0.0614843
       messages: 
       output: 
       stacktrace: 
@@ -438,7 +438,7 @@ MonoBehaviour:
       name: AbilitiesTest
       fullName: AdventureQuest.Character.AbilitiesTest
       resultStatus: 1
-      duration: 0.0496833
+      duration: 0.0124498
       messages: 
       output: 
       stacktrace: 
@@ -454,7 +454,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.AbilitiesTest.TestEquality
       resultStatus: 1
-      duration: 0.0323379
+      duration: 0.0092498
       messages: 
       output: 
       stacktrace: 
@@ -471,7 +471,7 @@ MonoBehaviour:
       name: Equipment
       fullName: AdventureQuest.Character.Equipment
       resultStatus: 1
-      duration: 0.0470777
+      duration: 0.0317536
       messages: 
       output: 
       stacktrace: 
@@ -487,7 +487,7 @@ MonoBehaviour:
       name: CharacterEquipmentManifestTest
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest
       resultStatus: 1
-      duration: 0.0385673
+      duration: 0.0271876
       messages: 
       output: 
       stacktrace: 
@@ -503,7 +503,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality
       resultStatus: 1
-      duration: 0.0172287
+      duration: 0.0130981
       messages: 
       output: 
       stacktrace: 
@@ -520,7 +520,7 @@ MonoBehaviour:
       name: TestEquipWeapon
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon
       resultStatus: 1
-      duration: 0.0036375
+      duration: 0.0030698
       messages: 
       output: 
       stacktrace: 
@@ -537,7 +537,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
       resultStatus: 1
-      duration: 0.0151285
+      duration: 0.0096103
       messages: 
       output: 
       stacktrace: 
@@ -553,7 +553,7 @@ MonoBehaviour:
       name: TestSerialization(LeftHand)
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)
       resultStatus: 1
-      duration: 0.00536
+      duration: 0.0042475
       messages: 
       output: 
       stacktrace: 
@@ -570,7 +570,7 @@ MonoBehaviour:
       name: TestSerialization(RightHand)
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)
       resultStatus: 1
-      duration: 0.0005443
+      duration: 0.0005344
       messages: 
       output: 
       stacktrace: 
@@ -587,7 +587,7 @@ MonoBehaviour:
       name: PlayerCharacterTest
       fullName: AdventureQuest.Character.PlayerCharacterTest
       resultStatus: 1
-      duration: 0.0169203
+      duration: 0.0132092
       messages: 
       output: 
       stacktrace: 
@@ -603,7 +603,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.PlayerCharacterTest.TestEquality
       resultStatus: 1
-      duration: 0.0042183
+      duration: 0.0030858
       messages: 
       output: 
       stacktrace: 
@@ -620,7 +620,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Character.PlayerCharacterTest.TestSerialization
       resultStatus: 1
-      duration: 0.0027084
+      duration: 0.0052085
       messages: 
       output: 
       stacktrace: 
@@ -637,7 +637,7 @@ MonoBehaviour:
       name: Data
       fullName: AdventureQuest.Data
       resultStatus: 1
-      duration: 0.0154314
+      duration: 0.0110676
       messages: 
       output: 
       stacktrace: 
@@ -653,7 +653,7 @@ MonoBehaviour:
       name: HistogramTest
       fullName: AdventureQuest.Data.HistogramTest
       resultStatus: 1
-      duration: 0.0068423
+      duration: 0.0068875
       messages: 
       output: 
       stacktrace: 
@@ -669,7 +669,7 @@ MonoBehaviour:
       name: TestChanceOf
       fullName: AdventureQuest.Data.HistogramTest.TestChanceOf
       resultStatus: 1
-      duration: 0.0022336
+      duration: 0.0022271
       messages: 
       output: 
       stacktrace: 
@@ -686,7 +686,7 @@ MonoBehaviour:
       name: TestCount
       fullName: AdventureQuest.Data.HistogramTest.TestCount
       resultStatus: 1
-      duration: 0.0006453
+      duration: 0.0011671
       messages: 
       output: 
       stacktrace: 
@@ -703,7 +703,7 @@ MonoBehaviour:
       name: TestMax
       fullName: AdventureQuest.Data.HistogramTest.TestMax
       resultStatus: 1
-      duration: 0.0009967
+      duration: 0.0012522
       messages: 
       output: 
       stacktrace: 
@@ -720,7 +720,7 @@ MonoBehaviour:
       name: TestMin
       fullName: AdventureQuest.Data.HistogramTest.TestMin
       resultStatus: 1
-      duration: 0.0004972
+      duration: 0.0009251
       messages: 
       output: 
       stacktrace: 
@@ -737,7 +737,7 @@ MonoBehaviour:
       name: Dice
       fullName: AdventureQuest.Dice
       resultStatus: 1
-      duration: 0.6831656
+      duration: 0.2480756
       messages: 
       output: 
       stacktrace: 
@@ -753,7 +753,7 @@ MonoBehaviour:
       name: DiceGroupTest
       fullName: AdventureQuest.Dice.DiceGroupTest
       resultStatus: 1
-      duration: 0.0409977
+      duration: 0.0252507
       messages: 
       output: 
       stacktrace: 
@@ -769,7 +769,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DiceGroupTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0004717
+      duration: 0.0007807
       messages: 
       output: 
       stacktrace: 
@@ -786,7 +786,7 @@ MonoBehaviour:
       name: TestParse1D20
       fullName: AdventureQuest.Dice.DiceGroupTest.TestParse1D20
       resultStatus: 1
-      duration: 0.0218811
+      duration: 0.0163738
       messages: 
       output: 
       stacktrace: 
@@ -803,7 +803,7 @@ MonoBehaviour:
       name: TestParse3D6
       fullName: AdventureQuest.Dice.DiceGroupTest.TestParse3D6
       resultStatus: 1
-      duration: 0.016543
+      duration: 0.0049448
       messages: 
       output: 
       stacktrace: 
@@ -820,7 +820,7 @@ MonoBehaviour:
       name: DicePoolTest
       fullName: AdventureQuest.Dice.DicePoolTest
       resultStatus: 1
-      duration: 0.5717755
+      duration: 0.1919798
       messages: 
       output: 
       stacktrace: 
@@ -836,7 +836,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DicePoolTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0005382
+      duration: 0.0005594
       messages: 
       output: 
       stacktrace: 
@@ -853,7 +853,7 @@ MonoBehaviour:
       name: TestParse1D20
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse1D20
       resultStatus: 1
-      duration: 0.1816959
+      duration: 0.041055
       messages: 
       output: 
       stacktrace: 
@@ -870,7 +870,7 @@ MonoBehaviour:
       name: TestParse2D4Plus1D6
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6
       resultStatus: 1
-      duration: 0.1946742
+      duration: 0.1015829
       messages: 
       output: 
       stacktrace: 
@@ -887,7 +887,7 @@ MonoBehaviour:
       name: TestParse3D6Plus1D4Plus3D8
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
       resultStatus: 1
-      duration: 0.1845381
+      duration: 0.0441799
       messages: 
       output: 
       stacktrace: 
@@ -904,7 +904,7 @@ MonoBehaviour:
       name: DieTest
       fullName: AdventureQuest.Dice.DieTest
       resultStatus: 1
-      duration: 0.0615638
+      duration: 0.0231132
       messages: 
       output: 
       stacktrace: 
@@ -920,7 +920,7 @@ MonoBehaviour:
       name: TestConstruct12SidedDie
       fullName: AdventureQuest.Dice.DieTest.TestConstruct12SidedDie
       resultStatus: 1
-      duration: 0.0225673
+      duration: 0.0058288
       messages: 
       output: 
       stacktrace: 
@@ -937,7 +937,7 @@ MonoBehaviour:
       name: TestConstruct6SidedDie
       fullName: AdventureQuest.Dice.DieTest.TestConstruct6SidedDie
       resultStatus: 1
-      duration: 0.0214237
+      duration: 0.0064507
       messages: 
       output: 
       stacktrace: 
@@ -954,7 +954,7 @@ MonoBehaviour:
       name: TestDieMinimumSize
       fullName: AdventureQuest.Dice.DieTest.TestDieMinimumSize
       resultStatus: 1
-      duration: 0.0020114
+      duration: 0.0019069
       messages: 
       output: 
       stacktrace: 
@@ -971,7 +971,7 @@ MonoBehaviour:
       name: TestEdgeCaseParse
       fullName: AdventureQuest.Dice.DieTest.TestEdgeCaseParse
       resultStatus: 1
-      duration: 0.0006849
+      duration: 0.0005906
       messages: 
       output: 
       stacktrace: 
@@ -988,7 +988,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DieTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0002833
+      duration: 0.0002443
       messages: 
       output: 
       stacktrace: 
@@ -1005,7 +1005,7 @@ MonoBehaviour:
       name: TestParseFormatException
       fullName: AdventureQuest.Dice.DieTest.TestParseFormatException
       resultStatus: 1
-      duration: 0.0007079
+      duration: 0.0004843
       messages: 
       output: 
       stacktrace: 
@@ -1022,7 +1022,7 @@ MonoBehaviour:
       name: TestSimpleParse
       fullName: AdventureQuest.Dice.DieTest.TestSimpleParse
       resultStatus: 1
-      duration: 0.0004516
+      duration: 0.0002598
       messages: 
       output: 
       stacktrace: 
@@ -1034,12 +1034,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1013
       parentUniqueId: Tests.dll/AdventureQuest/Dice/[Tests][AdventureQuest.Dice.DieTest][suite]
-    - id: 1039
-      uniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Equipment][suite]
+    - id: 1042
+      uniqueId: Tests.dll/AdventureQuest/[Equipment][suite]
       name: Equipment
       fullName: AdventureQuest.Equipment
       resultStatus: 1
-      duration: 0.0123965
+      duration: 0.0162084
       messages: 
       output: 
       stacktrace: 
@@ -1048,14 +1048,83 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1038
+      parentId: 1041
       parentUniqueId: Tests.dll/[AdventureQuest][suite]
+    - id: 1043
+      uniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.Armor][suite]
+      name: Armor
+      fullName: AdventureQuest.Equipment.Armor
+      resultStatus: 1
+      duration: 0.006025
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: Tests.dll/AdventureQuest/[Equipment][suite]
+    - id: 1004
+      uniqueId: Tests.dll/AdventureQuest/Equipment/Armor/[Tests][AdventureQuest.Equipment.Armor.ArmorTest][suite]
+      name: ArmorTest
+      fullName: AdventureQuest.Equipment.Armor.ArmorTest
+      resultStatus: 1
+      duration: 0.0056661
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1043
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.Armor][suite]
+    - id: 1005
+      uniqueId: Tests.dll/AdventureQuest/Equipment/Armor/ArmorTest/[Tests][AdventureQuest.Equipment.Armor.ArmorTest.TestEquality]
+      name: TestEquality
+      fullName: AdventureQuest.Equipment.Armor.ArmorTest.TestEquality
+      resultStatus: 1
+      duration: 0.0006033
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/Armor/[Tests][AdventureQuest.Equipment.Armor.ArmorTest][suite]
+    - id: 1006
+      uniqueId: Tests.dll/AdventureQuest/Equipment/Armor/ArmorTest/[Tests][AdventureQuest.Equipment.Armor.ArmorTest.TestSerialization]
+      name: TestSerialization
+      fullName: AdventureQuest.Equipment.Armor.ArmorTest.TestSerialization
+      resultStatus: 1
+      duration: 0.0007438
+      messages: 
+      output: '{"<Json>k__BackingField":"{\"_jsonRequirements\":[],\"<ItemSpriteID>k__BackingField\":\"leather_armor\",\"<Name>k__BackingField\":\"Leather
+        Armor\",\"<Description>k__BackingField\":\"Leather Armor Description\",\"<Cost>k__BackingField\":25,\"_slot\":3,\"<Defense>k__BackingField\":5,\"<ClassInformation>k__BackingField\":\"Armor\"}","<ClassInformation>k__BackingField":"Armor"}
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/Armor/[Tests][AdventureQuest.Equipment.Armor.ArmorTest][suite]
     - id: 1001
       uniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
       name: InventoryTest
       fullName: AdventureQuest.Equipment.InventoryTest
       resultStatus: 1
-      duration: 0.0034642
+      duration: 0.0059505
       messages: 
       output: 
       stacktrace: 
@@ -1071,7 +1140,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Equipment.InventoryTest.TestEquality
       resultStatus: 1
-      duration: 0.0006042
+      duration: 0.0003175
       messages: 
       output: 
       stacktrace: 
@@ -1088,7 +1157,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Equipment.InventoryTest.TestSerialization
       resultStatus: 1
-      duration: 0.0009977
+      duration: 0.0006895
       messages: 
       output: 
       stacktrace: 
@@ -1100,13 +1169,18 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
-    m_ResultText: TestEquality (0.004s)
+    m_ResultText: 'TestSerialization (0.001s)
+
+      ---
+
+      {"<Json>k__BackingField":"{\"_jsonRequirements\":[],\"<ItemSpriteID>k__BackingField\":\"leather_armor\",\"<Name>k__BackingField\":\"Leather
+      Armor\",\"<Description>k__BackingField\":\"Leather Armor Description\",\"<Cost>k__BackingField\":25,\"_slot\":3,\"<Defense>k__BackingField\":5,\"<ClassInformation>k__BackingField\":\"Armor\"}","<ClassInformation>k__BackingField":"Armor"}'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 72bbd958
-      m_LastClickedID: 1490664306
-      m_ExpandedIDs: d8a1b0861ffc8289e622df8c6593f7a44efb38aa5feec0ba63bf45d5e557abf7bc75bf00a3b1e7356c21753eb985554e524433654f163e6d8128b07383cb6274f9493a7affffff7f
+      scrollPos: {x: 0, y: 150}
+      m_SelectedIDs: 9de464c7
+      m_LastClickedID: -949689187
+      m_ExpandedIDs: d8a1b0861ffc8289e622df8cdb12b49dec9a87a26593f7a44efb38aa5feec0ba0d0e6acd63bf45d5e557abf7bc75bf00a3b1e7356c21753eb985554e524433654f163e6d8128b07383cb6274f9493a7affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1152,9 +1226,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2307
+    x: 2306
     y: 85
-    width: 801
+    width: 686
     height: 538
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1166,7 +1240,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 801, y: 451}
+  m_TargetSize: {x: 686, y: 386}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1181,10 +1255,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -400.5
-    m_HBaseRangeMax: 400.5
-    m_VBaseRangeMin: -225.5
-    m_VBaseRangeMax: 225.5
+    m_HBaseRangeMin: -343
+    m_HBaseRangeMax: 343
+    m_VBaseRangeMin: -193
+    m_VBaseRangeMax: 193
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1202,23 +1276,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 801
+      width: 686
       height: 517
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 400.5, y: 258.5}
+    m_Translation: {x: 343, y: 258.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -400.5
+      x: -343
       y: -258.5
-      width: 801
+      width: 686
       height: 517
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 801, y: 538}
+  m_LastWindowPixelSize: {x: 686, y: 538}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1246,7 +1320,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 85
-    width: 250
+    width: 249
     height: 538
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1255,9 +1329,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 1e6c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: fcfaffff0afbffff2cfbffff8a60000098600000
+      m_ExpandedIDs: 7abeffffc0c2ffffc0c9ffff78cdffff0cd2ffff52dbffffacdfffff0ce6ffff28e6ffff90e9fffff8ecffff38f1fffffaf4ffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1563,7 +1637,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 407.995, y: 237.04274, z: 1.6956866}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 407.995, y: 237.04274, z: 1.6956866}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1616,7 +1690,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 286.6383
     speed: 2
-    m_Value: 10
+    m_Value: 286.6383
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1691,14 +1765,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 644
-    width: 1053
+    width: 937
     height: 341
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: leather
+    m_NameFilter: Status
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -1712,7 +1786,7 @@ MonoBehaviour:
     m_Folders:
     - Assets/Sprites/Equipment/Armor
     m_Globs: []
-    m_OriginalText: leather
+    m_OriginalText: Status
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
@@ -1723,9 +1797,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 83}
-    m_SelectedIDs: f6b60000
-    m_LastClickedID: 46838
-    m_ExpandedIDs: 00000000e0660000e2660000e8660000f6660000fe66000000ca9a3b
+    m_SelectedIDs: 26730000
+    m_LastClickedID: 29478
+    m_ExpandedIDs: 000000000467000006670000086700000a6700002675000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1753,7 +1827,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0660000e2660000e4660000e6660000e8660000
+    m_ExpandedIDs: 000000000467000006670000086700000a670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1778,24 +1852,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7cb70000
-    m_LastClickedInstanceID: 46972
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c8640000ca640000ba640000cc640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Armor
-      m_OriginalName: Armor
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 46838
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -1831,7 +1905,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 644
-    width: 1053
+    width: 937
     height: 341
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1857,9 +1931,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3110
+    x: 3122
     y: 85
-    width: 494
+    width: 482
     height: 900
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1871,7 +1945,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 27678
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

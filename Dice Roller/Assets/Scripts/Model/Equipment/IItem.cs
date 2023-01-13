@@ -15,13 +15,7 @@ namespace AdventureQuest.Equipment
         {
             // TODO: Better serialization is required for extensibility
             JsonSerializer serializer = UnityEngine.JsonUtility.FromJson<JsonSerializer>(json);
-            return serializer.ClassInformation switch 
-            {
-                "Armor" => UnityEngine.JsonUtility.FromJson<Armor.Armor>(serializer.Json),
-                "Weapon" => UnityEngine.JsonUtility.FromJson<Weapon>(serializer.Json),
-                _ => throw new System.FormatException($"Could not deserialize IItem from \"{json}\"")
-            };
-            
+            return (IItem)UnityEngine.JsonUtility.FromJson(serializer.Json, serializer.ClassType);
         }
 
         public static string ToJson(IItem item) => JsonSerializer.ToJson(item);

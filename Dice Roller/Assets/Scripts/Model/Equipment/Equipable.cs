@@ -8,7 +8,7 @@ namespace AdventureQuest.Equipment
 {
 
     [System.Serializable]
-    public abstract class Equipable : IEquipable, UnityEngine.ISerializationCallbackReceiver
+    public abstract class Equipable : IEquipable, ISerializationCallbackReceiver
     {
         private List<IRequirement> _requirements;
         [field: SerializeField]
@@ -35,8 +35,6 @@ namespace AdventureQuest.Equipment
         
         public abstract HashSet<EquipmentSlot> Slots { get; }
         public virtual string AsJson => JsonUtility.ToJson(this);
-        public abstract string ClassInformation { get; protected set; }
-
         public abstract IItem Duplicate();
 
         public void OnBeforeSerialize()

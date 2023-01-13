@@ -24,8 +24,6 @@ namespace AdventureQuest.Equipment.Armor
 
         [field: SerializeField]
         public int Defense { get; private set; }
-        [field: SerializeField]
-        public override string ClassInformation { get; protected set; } = "Armor";
 
         public override HashSet<EquipmentSlot> Slots => new () { _slot };
         public override IItem Duplicate() => new Armor(Name, ItemSpriteID, Description, Cost, Defense, _slot, Requirements);
