@@ -8,30 +8,25 @@ namespace AdventureQuest.Character
     public class CharacterController : MonoBehaviour
     {
  
-        private ICharacter _playerCharacter;
+        private ObservableCharacter _observable;
+        public ICharacter PlayerCharacter { get; private set; }
 
         [field: SerializeField]
         public bool LoadFromStorageOnLoad { get; private set; }
         [field: SerializeField]
         public bool Reinitialize { get; private set; }
-        private ObservableCharacter _observable;
-
-        public void StoreCharacter()
-        {
-            PlayerCharacter.Store((PlayerCharacter)_playerCharacter);
-        }
-
+    
         protected void Awake()
         {
             _observable = GetComponent<ObservableCharacter>();
-            _observable.OnChange.AddListener((character) => _playerCharacter = character);
+            _observable.OnChange.AddListener((character) => PlayerCharacter = character);
         }
 
         protected void Start()
         {
             if (LoadFromStorageOnLoad)
             {
-                _observable.Observed = PlayerCharacter.Restore();
+                _observable.Observed = Character.PlayerCharacter.Restore();
             }
 
             if (Reinitialize)

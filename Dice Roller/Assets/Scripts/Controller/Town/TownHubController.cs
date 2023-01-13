@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using AdventureQuest.Character;
-using AdventureQuest.Shop;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using AdventureQuest.Scene;
 
 namespace AdventureQuest.Town
 {
@@ -12,17 +11,9 @@ namespace AdventureQuest.Town
     {
         private PlayerCharacter _character;
         
-        public void EnterShop()
-        {
-            PlayerCharacter.Store(_character);
-            SceneManager.LoadScene("Shop");
-        }
+        public void EnterShop() => Location.Shop.Transition(_character);
 
-        public void StatusScreen()
-        {
-            PlayerCharacter.Store(_character);
-            SceneManager.LoadScene("Status");
-        }
+        public void StatusScreen() => Location.Status.Transition(_character);
 
         protected void Awake()
         {

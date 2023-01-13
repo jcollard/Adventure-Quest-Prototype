@@ -24,6 +24,8 @@ Primary Goal: Implement Scene Transition Manager to better manage scene transiti
 11. Add Potions? / Useable items?
 12. Need IEquipmentManifest to return IResults rather than bool
 13. Add drag and drop buy and sell to shop
+14. Add Item information to Status / Inventory. When clicking on item, should
+    get information about that item. Similar to shop.
 
 # Potential Abstractions (Code Smells)
 

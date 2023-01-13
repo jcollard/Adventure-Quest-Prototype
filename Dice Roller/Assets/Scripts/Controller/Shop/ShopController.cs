@@ -5,7 +5,7 @@ using AdventureQuest.Character.Dice;
 using AdventureQuest.Character;
 using UnityEngine.Events;
 using AdventureQuest.Result;
-using UnityEngine.SceneManagement;
+using AdventureQuest.Scene;
 
 namespace AdventureQuest.Shop
 {
@@ -94,12 +94,8 @@ namespace AdventureQuest.Shop
             SendMessage(result);
         }
 
-        public void ExitShop(string targetScene)
-        {
-            // TODO: Consider storing a PlayerCharacter rather than a Character
-            PlayerCharacter.Store((PlayerCharacter)Character.Observed);
-            SceneManager.LoadScene(targetScene);
-        }
+        // TODO: Consider storing a PlayerCharacter rather than a Character
+        public void ExitShop(string targetScene) => Location.Town.Transition((PlayerCharacter)Character.Observed);
 
         private void SendMessage(IResult result)
         {
