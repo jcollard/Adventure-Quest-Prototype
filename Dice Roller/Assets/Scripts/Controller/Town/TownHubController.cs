@@ -18,6 +18,12 @@ namespace AdventureQuest.Town
             SceneManager.LoadScene("Shop");
         }
 
+        public void StatusScreen()
+        {
+            PlayerCharacter.Store(_character);
+            SceneManager.LoadScene("Status");
+        }
+
         protected void Awake()
         {
             ObservableCharacter _observable = GetComponent<ObservableCharacter>();
