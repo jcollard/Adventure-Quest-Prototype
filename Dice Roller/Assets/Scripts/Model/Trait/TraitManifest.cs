@@ -5,13 +5,21 @@ using System.Linq;
 using UnityEngine;
 using AdventureQuest.Utils;
 
-namespace AdventureQuest.Trait
+namespace AdventureQuest.Entity
 {
 
     [Serializable]
     public class TraitManifest : ISerializationCallbackReceiver
     {
         public static Trait[] AllTraits => (Trait[])System.Enum.GetValues(typeof(Trait));
+        private static Dictionary<Trait, TraitValue> s_DefaultTraits = new ();
+
+        static TraitManifest()
+        {
+            s_DefaultTraits[Trait.Health] = new TraitValue(Trait.Health, 25);
+            s_DefaultTraits[Trait.Stamina] = new TraitValue(Trait.Stamina, 25);
+        }
+
         private Dictionary<Trait, TraitValue> _traitsLookup;
 
         [SerializeField]
@@ -28,10 +36,12 @@ namespace AdventureQuest.Trait
             {
                 if (!_traitsLookup.ContainsKey(t))
                 {
-                    _traitsLookup[t] = new TraitValue(t, 0);
+                    _traitsLookup[t] = new TraitValue(t, s_DefaultTraits[t].Min, s_DefaultTraits[t].Max, s_DefaultTraits[t].Value);
                 }
             }
         }
+
+        public static TraitManifest Default => new ();
 
         public TraitValue Get(Trait t) => _traitsLookup[t];
 

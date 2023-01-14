@@ -1,7 +1,7 @@
 using AdventureQuest.Equipment.Armor;
 using AdventureQuest.Json;
 using NUnit.Framework;
-namespace AdventureQuest.Trait
+namespace AdventureQuest.Entity
 {
     [TestFixture]
     public class TraitManifestTest

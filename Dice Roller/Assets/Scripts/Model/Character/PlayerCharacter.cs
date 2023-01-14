@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using AdventureQuest.Character.Equipment;
 using AdventureQuest.Equipment;
+using AdventureQuest.Entity;
 using UnityEngine;
 
 namespace AdventureQuest.Character
 {
-    [System.Serializable]
+    [Serializable]
     public class PlayerCharacter : ICharacter, ISerializationCallbackReceiver
     {
         [field: SerializeField]
@@ -17,15 +18,16 @@ namespace AdventureQuest.Character
         [field: SerializeField]
         private string _inventoryJson;
         
-        public PlayerCharacter(string name, Abilities abilities, string portraitSpriteKey)
+        public PlayerCharacter(string name, Abilities abilities, TraitManifest traits, string portraitSpriteKey)
         {
-            if (name == null || abilities == null || portraitSpriteKey == null)
+            if (name == null || abilities == null || traits == null || portraitSpriteKey == null)
             {
-                throw new System.ArgumentNullException();
+                throw new ArgumentNullException();
             }
             Name = name;
             Abilities = abilities;
             PortraitSpriteKey = portraitSpriteKey;
+            Traits = traits;
             InitSerializedFields();
         }
 
@@ -37,6 +39,8 @@ namespace AdventureQuest.Character
         public string PortraitSpriteKey { get; private set; }
         [field: SerializeField]
         public Abilities Abilities { get; private set; }
+        [field: SerializeField]
+        public TraitManifest Traits { get; private set;}
         public string AsJson => Encode(this);
         public IEquipmentManifest Equipment { get; private set; }
         public IInventory Inventory { get; private set; }
@@ -54,6 +58,7 @@ namespace AdventureQuest.Character
                 OnChange?.Invoke(this);
             }
         }
+        
 
         public static bool Store(PlayerCharacter character)
         {
@@ -100,18 +105,23 @@ namespace AdventureQuest.Character
 
         public override bool Equals(object obj)
         {
-            return obj is PlayerCharacter other &&
+            if(obj is PlayerCharacter other)
+            {
+                return
                    _gold == other._gold &&
                    Name == other.Name &&
                    PortraitSpriteKey == other.PortraitSpriteKey &&
                    Abilities.Equals(other.Abilities) &&
                    Inventory.Equals(other.Inventory) &&
-                   Equipment.Equals(other.Equipment);
+                   Equipment.Equals(other.Equipment) &&
+                   Traits.Equals(other.Traits);
+            }
+            return false;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(_gold, Name, PortraitSpriteKey, Abilities, Equipment, Inventory, Gold);
+            return HashCode.Combine(_gold, Name, PortraitSpriteKey, Abilities, Equipment, Inventory, Gold, Traits);
         }
 
         private void InitSerializedFields()

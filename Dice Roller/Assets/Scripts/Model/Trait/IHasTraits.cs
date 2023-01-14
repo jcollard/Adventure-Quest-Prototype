@@ -1,4 +1,4 @@
-namespace AdventureQuest.Trait
+namespace AdventureQuest.Entity
 {
 
     public interface IHasTraits

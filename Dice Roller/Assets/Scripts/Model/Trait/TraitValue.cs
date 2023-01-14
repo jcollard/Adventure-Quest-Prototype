@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-namespace AdventureQuest.Trait
+namespace AdventureQuest.Entity
 {
     [Serializable]
-    public class TraitValue
+    public class TraitValue : IObservable<TraitValue>
     {
         [SerializeField]
         private int _value;
@@ -29,8 +29,15 @@ namespace AdventureQuest.Trait
         public int Value
         {
             get => _value;
-            set => _value = Math.Clamp(value, Min, Max);
+            set
+            {
+                if (_value == value) { return; }
+                _value = Math.Clamp(value, Min, Max);
+                OnChange?.Invoke(this);
+            }
         }
+
+        public event Action<TraitValue> OnChange;
 
         public override bool Equals(object obj)
         {

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using AdventureQuest.Equipment;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Entity;
 
 namespace AdventureQuest.Character.Equipment
 {
@@ -12,7 +13,7 @@ namespace AdventureQuest.Character.Equipment
         {
             Weapon dagger = Weapons.Dagger;
             Weapon sword = Weapons.ShortSword;
-            PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
+            PlayerCharacter bob = new ("Bob", Abilities.Roll(), TraitManifest.Default, "no-portrait");
             IEquipmentManifest manifest = bob.Equipment;
             
             Assert.IsEmpty(manifest.Equipped);
@@ -40,7 +41,7 @@ namespace AdventureQuest.Character.Equipment
         [Test, Timeout(5000), Description("Tests structural equality")]
         public void TestEquality()
         {
-            PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
+            PlayerCharacter bob = new ("Bob", Abilities.Roll(), TraitManifest.Default, "no-portrait");
             CharacterEquipmentManifest manifest = new (bob);
             CharacterEquipmentManifest manifestOther = new (bob);
             Assert.AreEqual(manifest, manifestOther);
@@ -75,7 +76,7 @@ namespace AdventureQuest.Character.Equipment
         [TestCase(EquipmentSlot.RightHand)]
         public void TestSerialization(EquipmentSlot slot)
         {
-            PlayerCharacter bob = new ("Bob", Abilities.Roll(), "no-portrait");
+            PlayerCharacter bob = new ("Bob", Abilities.Roll(), TraitManifest.Default, "no-portrait");
             CharacterEquipmentManifest manifest = new (bob);
             manifest.Equip(Weapons.Dagger, slot, bob);
 
@@ -83,7 +84,7 @@ namespace AdventureQuest.Character.Equipment
             CharacterEquipmentManifest loaded = UnityEngine.JsonUtility.FromJson<CharacterEquipmentManifest>(json);
             Assert.AreEqual(manifest, loaded);
 
-            PlayerCharacter steve = new ("Steve", Abilities.Roll(), "no-portrait");
+            PlayerCharacter steve = new ("Steve", Abilities.Roll(), TraitManifest.Default, "no-portrait");
             manifest = new (steve);
             manifest.Equip(Weapons.ShortSword, slot, bob);
 

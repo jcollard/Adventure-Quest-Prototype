@@ -1,7 +1,9 @@
 using AdventureQuest.Equipment;
+using AdventureQuest.Entity;
+
 namespace AdventureQuest.Character
 {
-    public interface ICharacter : IHasInventory, IHasEquipment, IHasAbilities, IObservable<ICharacter>
+    public interface ICharacter : IHasInventory, IHasEquipment, IHasAbilities, IHasTraits, IObservable<ICharacter>
     {
         public string Name { get; }
         public string PortraitSpriteKey { get; }
