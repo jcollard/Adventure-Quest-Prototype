@@ -1,10 +1,12 @@
 using System;
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using AdventureQuest.Character.Equipment;
 using AdventureQuest.Equipment;
 using AdventureQuest.Entity;
 using UnityEngine;
+using AdventureQuest.Equipment.Armor;
+using AdventureQuest.Character.Dice;
 
 namespace AdventureQuest.Character
 {
@@ -58,7 +60,31 @@ namespace AdventureQuest.Character
                 OnChange?.Invoke(this);
             }
         }
-        
+
+        #region ICombatant Implementation
+
+        public int Defense
+        {
+            get
+            {
+                return Equipment.Equipped.Values
+                    .Where(equippable => equippable is Armor)
+                    .Select(equippable => (Armor)equippable)
+                    .Sum(armor => armor.Defense);
+            }
+        }
+
+        public AbilityRoll AttackRoll
+        {
+            get
+            {
+                IEquipable equipable = Equipment.Equipped.Values.FirstOrDefault(equipable => equipable is Weapon);
+                if (equipable != null) { return ((Weapon)equipable).Damage; }
+                return AbilityRoll.Parse($"1d4 + {Ability.Strength}");
+            }
+        }
+
+        #endregion
 
         public static bool Store(PlayerCharacter character)
         {

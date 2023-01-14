@@ -3,7 +3,7 @@ using AdventureQuest.Entity;
 
 namespace AdventureQuest.Character
 {
-    public interface ICharacter : IHasInventory, IHasEquipment, IHasAbilities, IHasTraits, IObservable<ICharacter>
+    public interface ICharacter : IHasInventory, IHasEquipment, ICombatant, IObservable<ICharacter>
     {
         public string Name { get; }
         public string PortraitSpriteKey { get; }
