@@ -1,3 +1,4 @@
+using AdventureQuest.Entity;
 using AdventureQuest.Equipment;
 using AdventureQuest.Equipment.Armor;
 using UnityEngine;
@@ -38,7 +39,14 @@ namespace AdventureQuest.Character
 
         private void ReinitializeCharacter()
         {
-            _observable.Observed.Gold = 50;
+            TraitManifest bobsManifest = new (
+                new TraitValue(Trait.Health, 100),
+                new TraitValue(Trait.Stamina, 3)
+            );
+            _observable.Observed = new PlayerCharacter("Bob", Abilities.Roll(), bobsManifest, "knight-1")
+            {
+                Gold = 50
+            };
             _observable.Observed.Inventory.Clear();
             _observable.Observed.Inventory.Add(Weapons.Dagger);
             _observable.Observed.Inventory.Add(Weapons.Longsword);
@@ -47,13 +55,7 @@ namespace AdventureQuest.Character
             _observable.Observed.Inventory.Add(Armors.LeatherBoots);
             _observable.Observed.Inventory.Add(Armors.ChainHelmet);
 
-            InvokeRepeating(nameof(ReduceTraits), 1, 1);
         }
 
-        private void ReduceTraits()
-        {
-            _observable.Observed.Traits.Get(Entity.Trait.Health).Value--;
-            _observable.Observed.Traits.Get(Entity.Trait.Stamina).Value--;
-        }
     }
 }

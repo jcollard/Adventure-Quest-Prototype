@@ -17,6 +17,7 @@ namespace AdventureQuest.Scene
         public static readonly Location Status = new(Scenes.Status);
         public static readonly Location CharacterCreator = new(Scenes.CharacterCreator);
         public static readonly Location Shop = new(Scenes.Shop);
+        public static readonly Location Combat = new(Scenes.Combat);
 
         private Location(string name)
         {

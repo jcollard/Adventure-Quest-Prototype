@@ -15,6 +15,8 @@ namespace AdventureQuest.Town
 
         public void StatusScreen() => Location.Status.Transition(_character);
 
+        public void LookForTrouble() => Location.Combat.Transition(_character);
+
         protected void Awake()
         {
             ObservableCharacter _observable = GetComponent<ObservableCharacter>();
