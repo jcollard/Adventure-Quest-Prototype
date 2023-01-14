@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8490566
       objectReference: {fileID: 0}
+    - target: {fileID: 1150355514759934406, guid: 77b5ae3d52e1739408c3377905edf7c9, type: 3}
+      propertyPath: <Trait>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1654052939677100797, guid: 77b5ae3d52e1739408c3377905edf7c9, type: 3}
       propertyPath: m_Name
       value: Stamina Bar Variant

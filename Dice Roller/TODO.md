@@ -6,14 +6,15 @@ Primary Goal: Implement Scene Transition Manager to better manage scene transiti
    save the character manually on the button click.
 
 
-1. Shop needs to be Serializable (Not sure if this is true anymore)
-2. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
+1. Add Health / Stamina to Status screen
+2. Shop needs to be Serializable (Not sure if this is true anymore)
+3. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
    * CharacterEquipmentManifest should not take a character, should just have
      the character attached. Too easy to "equip" using another characters stats.
-3. IEquippable needs a better deserialization method. Potentially could write a
+4. IEquippable needs a better deserialization method. Potentially could write a
    "InterfaceSerializationWrapper" which stores information about deserializing
    the associated interface.
-4. Consider generalizing the CharacterInspectorEditor to work for anything that
+5. Consider generalizing the CharacterInspectorEditor to work for anything that
    implements an "AsJson" / "IObservable"
    * a UnityEditor drawer for ICharacter / IEquipment / IInventory
 6. Add in Hitpoints / other stats to character

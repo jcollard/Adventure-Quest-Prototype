@@ -46,6 +46,14 @@ namespace AdventureQuest.Character
             _observable.Observed.Equipment.Equip(Armors.ClothPants, EquipmentSlot.Legs, _observable.Observed);
             _observable.Observed.Inventory.Add(Armors.LeatherBoots);
             _observable.Observed.Inventory.Add(Armors.ChainHelmet);
+
+            InvokeRepeating(nameof(ReduceTraits), 1, 1);
+        }
+
+        private void ReduceTraits()
+        {
+            _observable.Observed.Traits.Get(Entity.Trait.Health).Value--;
+            _observable.Observed.Traits.Get(Entity.Trait.Stamina).Value--;
         }
     }
 }
