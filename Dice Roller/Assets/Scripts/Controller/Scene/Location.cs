@@ -20,7 +20,7 @@ namespace AdventureQuest.Scene
 
         private Location(string name)
         {
-            #if UNITY_EDITOR
+            #if UNITY_EDITOR 
             // TODO: Attempting to fail fast.
             Debug.Assert(IsSceneEnabled(name), $"The Location {name} could not be constructed because the scene is not enabled in the build settings.");
             #endif
