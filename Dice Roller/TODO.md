@@ -3,8 +3,8 @@
 Primary Goal:  Implement a Combat System
 
 
+* Implement Audio system that can withstand scene transitions
 * Nice to have: string extension for ".AsAbilityRoll()"
-* Add Door Icon to Shop
 * CombatantInspector/Editor
 * Add combat info output to Combat scene
 * Implement an Enemy type that implements the ICombat-ant interface
