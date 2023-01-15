@@ -57,3 +57,7 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 21300000, guid: a0d58dd377fb2b5458072555f9f2f397, type: 3}
   - <Name>k__BackingField: slime-1
     <Sprite>k__BackingField: {fileID: 21300000, guid: 1ea7a6673bee69c4ba51b89295802d57, type: 3}
+  - <Name>k__BackingField: dark-knight-0
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 90b371c886d804c40b9f4b6f5274d641, type: 3}
+  - <Name>k__BackingField: dark-knight-1
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 274a085aca327f24f9a88e4ead4c8f53, type: 3}

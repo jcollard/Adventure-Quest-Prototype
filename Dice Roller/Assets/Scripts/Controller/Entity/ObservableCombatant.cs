@@ -8,7 +8,7 @@ namespace AdventureQuest.Entity
         protected void Start()
         {
             //TODO: This is a hack. Plz fix me!
-            Observed = Enemies.Slime.Build();
+            Observed = Enemies.DarkKnight.Build();
         }
     }
 }

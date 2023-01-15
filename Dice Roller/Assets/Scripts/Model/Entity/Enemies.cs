@@ -16,6 +16,13 @@ namespace AdventureQuest.Entity
                 AbilityRoll.Parse("2d3")
             )
             .DefenseRange(AbilityRoll.Parse($"1d2 + { Ability.Strength }")); 
+        
+        public static Enemy.Builder DarkKnight = new Enemy.Builder("Dark Knight", "dark-knight-0")
+            .AddPortrait("dark-knight-1")
+            .TraitRange(Trait.Health, AbilityRoll.Parse("1d8 + 5"))
+            .TraitRange(Trait.Stamina, AbilityRoll.Parse("4d4 + 4"))
+            .AttackRoll(AbilityRoll.Parse("1d12"))
+            .DefenseRange(AbilityRoll.Parse($"2d3"));
 
     }
 }
