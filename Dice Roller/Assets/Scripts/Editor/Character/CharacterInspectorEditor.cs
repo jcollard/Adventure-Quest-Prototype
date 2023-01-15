@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using AdventureQuest.Character;
 
@@ -45,3 +46,4 @@ namespace AdventureQuest.Editor.Character
     }
 
 }
+#endif
