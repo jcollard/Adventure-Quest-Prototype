@@ -1,50 +1,89 @@
+using System.Collections.Generic;
+using System.Linq;
 using AdventureQuest.Character;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Dice;
+using AdventureQuest.Utils;
 
 namespace AdventureQuest.Entity
 {
     public class Enemy : ICombatant
     {
-        private Enemy(string name, int defense, AbilityRoll attackRoll, Abilities abilities, TraitManifest traits, string portraitSpriteKey)
+        private Enemy()
         {
-            Name = name;
-            Defense = defense;
-            AttackRoll = attackRoll;
-            Abilities = abilities;
-            Traits = traits;            
-            PortraitSpriteKey = portraitSpriteKey;
+
         }
 
-        public string Name { get; }
-        public int Defense { get; }
-        public AbilityRoll AttackRoll { get; }
-        public Abilities Abilities { get; }
-        public TraitManifest Traits { get; }
-        public string PortraitSpriteKey { get; }
+        public string Name { get; private set; }
+        public int Defense { get; private set; }
+        public AbilityRoll AttackRoll { get; private set; }
+        public Abilities Abilities { get; private set; }
+        public TraitManifest Traits { get; private set; }
+        public string PortraitSpriteKey { get; private set; }
 
         public class Builder
         {
             private string _name;
             private int _defense = 0;
-            private AbilityRoll _attackRoll = AbilityRoll.Parse($"1d4 + {Ability.Strength}");
+            private AbilityRoll _defenseRoll;
+            private List<AbilityRoll> _attackRolls = new() { AbilityRoll.Parse($"1d4 + {Ability.Strength}") };
             private Abilities _abilities = Character.Abilities.Roll();
-            private TraitManifest _traits;
-            private string _portraitSpriteKey;
-            
-            public Builder(string name, int hp, int stamina, string portraitSpriteKey)
+            private Dictionary<Trait, AbilityRoll> _traits;
+            private List<string> _portriatOptions;
+
+            public Builder(string name, string portraitSpriteKey)
             {
                 _name = name;
-                _portraitSpriteKey = portraitSpriteKey;
-                _traits = new TraitManifest(
-                    new TraitValue(Trait.Health, hp),
-                    new TraitValue(Trait.Stamina, stamina)
-                );
+                _portriatOptions = new List<string>() { portraitSpriteKey };
+                _traits = new Dictionary<Trait, AbilityRoll>();
+                _traits[Trait.Health] = AbilityRoll.Parse($"1d6 + {Ability.Constitution}");
+                _traits[Trait.Stamina] = AbilityRoll.Parse($"1d6 + {Ability.Strength}");
             }
 
             public Builder Defense(int value) => SetRef(ref _defense, value);
-            public Builder AttackRoll(AbilityRoll value) => SetRef(ref _attackRoll, value);
+            public Builder DefenseRange(AbilityRoll value) => SetRef(ref _defenseRoll, value);
+            public Builder AttackRoll(AbilityRoll value) => AttackRollOneOf(value);
+
+            public Builder TraitRange(Trait trait, AbilityRoll roll) 
+            {
+                _traits[trait] = roll;
+                return this;
+            }
+
+            public Builder AddPortrait(string value)
+            {
+                _portriatOptions.Add(value);
+                return this;
+            }            
+            public Builder AttackRollOneOf(params AbilityRoll[] values)
+            {
+                _attackRolls = values.ToList();
+                return this;
+            }
             public Builder Abilities(Abilities value) => SetRef(ref _abilities, value);
-            public Enemy Build() => new Enemy(_name, _defense, _attackRoll, _abilities, _traits, _portraitSpriteKey);
+
+
+            public Enemy Build()
+            {
+                if (_defenseRoll != null) { _defense = _defenseRoll.Roll(_abilities); }
+                TraitManifest traitManifest = new ();
+                foreach (KeyValuePair<Trait, AbilityRoll> trait in _traits)
+                {
+                    traitManifest.Get(trait.Key).Max = System.Math.Max(1, trait.Value.Roll(_abilities));
+                    traitManifest.Get(trait.Key).Value = traitManifest.Get(trait.Key).Max;
+                }
+                
+                return new Enemy()
+                {
+                    Name = _name,
+                    Defense = _defense,
+                    AttackRoll = _attackRolls.Random(),
+                    Abilities = _abilities,
+                    Traits = traitManifest,
+                    PortraitSpriteKey = _portriatOptions.Random(),
+                };
+
+            }
 
             private Builder SetRef<T>(ref T field, T value)
             {
@@ -52,7 +91,7 @@ namespace AdventureQuest.Entity
                 return this;
             }
 
-            
+
         }
     }
 }
