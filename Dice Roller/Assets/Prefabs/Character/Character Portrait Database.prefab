@@ -53,3 +53,5 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 21300000, guid: 58a00c43ed1bcdd46a2cdc48e8bc786f, type: 3}
   - <Name>k__BackingField: monk-2
     <Sprite>k__BackingField: {fileID: 21300000, guid: 94e2f0fe7eb215f4e9f4a70c0c06076d, type: 3}
+  - <Name>k__BackingField: slime-0
+    <Sprite>k__BackingField: {fileID: 21300000, guid: a0d58dd377fb2b5458072555f9f2f397, type: 3}

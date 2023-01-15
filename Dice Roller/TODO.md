@@ -2,7 +2,7 @@
 
 Primary Goal:  Implement a Combat System
 
-* Update Name's in Combat Scene
+* Combatant portrait / portrait render
 * Add combat info output to Combat scene
 * Implement an Enemy type that implements the ICombat-ant interface
 * Implement a Combat Rounds / Timing system
