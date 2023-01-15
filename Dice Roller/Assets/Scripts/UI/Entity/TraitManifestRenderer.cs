@@ -7,12 +7,23 @@ namespace AdventureQuest.Entity.UI
     {
         private TraitValueRenderer[] _renderers;
 
+        private TraitValueRenderer[] Renderers
+        {
+            get 
+            {
+                if (_renderers == null)
+                {
+                    _renderers = GetComponentsInChildren<TraitValueRenderer>();
+                }
+                return _renderers;
+            }
+        }
 
         public void Render(IHasTraits hasTraits) => Render(hasTraits.Traits);
 
         public void Render(TraitManifest manifest)
         {
-            foreach(TraitValueRenderer child in _renderers)
+            foreach(TraitValueRenderer child in Renderers)
             {
                 child.Observing = manifest.Get(child.Trait);
             }

@@ -10,6 +10,9 @@ Primary Goal:  Implement a Combat System
 * Implement Flee
 * Implement Defend
 * Implement Inventory view / Useable items
+* Code Smell: CombatantRenderer and TraitManifestRenderer both have lazy loaded
+  sub properties using Property. Code is identical / copy and paste. We should
+  consider how to abstract this.
 
 
 1. Add Health / Stamina to Status screen
