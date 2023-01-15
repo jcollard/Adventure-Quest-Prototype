@@ -5,7 +5,6 @@ namespace AdventureQuest.Character
 {
     public interface ICharacter : IHasInventory, IHasEquipment, ICombatant, IObservable<ICharacter>
     {
-        public string PortraitSpriteKey { get; }
         public int Gold { get; set; }
         public string AsJson { get; }
 

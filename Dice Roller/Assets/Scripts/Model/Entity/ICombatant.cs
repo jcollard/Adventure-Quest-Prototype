@@ -4,7 +4,7 @@ using AdventureQuest.Character.Dice;
 
 namespace AdventureQuest.Entity
 {
-    public interface ICombatant : IHasAbilities, IHasTraits
+    public interface ICombatant : IHasAbilities, IHasTraits, IHasPortriat
     {
         public string Name { get; }
         public int Defense { get; }
