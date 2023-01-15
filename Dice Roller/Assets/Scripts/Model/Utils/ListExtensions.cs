@@ -10,5 +10,11 @@ namespace AdventureQuest.Utils
             return list0.Count == list1.Count && 
                    list0.SequenceEqual(list1);
         }
+
+        public static T Random<T>(this List<T> list)
+        {
+            int randomIx = UnityEngine.Random.Range(0, list.Count);
+            return list[randomIx];
+        }
     }
 }
