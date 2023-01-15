@@ -40,6 +40,10 @@ namespace AdventureQuest.Entity
                 _traits[Trait.Stamina] = AbilityRoll.Parse($"1d6 + {Ability.Strength}");
             }
 
+            /// <summary>
+            /// Sets the defense of the Enemy to <paramref name="value"/>. For convenience, this
+            /// method returns the builder that was modified.
+            /// </summary>
             public Builder Defense(int value) => SetRef(ref _defense, value);
             public Builder DefenseRange(AbilityRoll value) => SetRef(ref _defenseRoll, value);
             public Builder AttackRoll(AbilityRoll value) => AttackRollOneOf(value);
