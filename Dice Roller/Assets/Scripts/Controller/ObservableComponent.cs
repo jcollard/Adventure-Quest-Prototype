@@ -15,6 +15,7 @@ namespace AdventureQuest.Controller
                 if (value == null) { return; }
                 if (!_cleared && _observed != null && _observed.Equals(value)) { return; }
                 _observed = value;
+                //TODO: Consider using OnChange?.
                 OnChange.Invoke(_observed);
                 _cleared = false;
             }

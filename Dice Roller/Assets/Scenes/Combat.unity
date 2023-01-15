@@ -370,9 +370,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332282022}
-  - component: {fileID: 332282021}
-  - component: {fileID: 332282020}
-  - component: {fileID: 332282019}
+  - component: {fileID: 332282024}
+  - component: {fileID: 332282023}
   m_Layer: 0
   m_Name: Enemy Controller
   m_TagString: Untagged
@@ -380,7 +379,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &332282019
+--- !u!4 &332282022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332282018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543724421}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332282023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,34 +403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 332282018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a5c5ec1febd744ca9070ee83e357ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _observableCharacter: {fileID: 332282021}
---- !u!114 &332282020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332282018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c57724bce843684ab4888690821230e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <LoadFromStorageOnLoad>k__BackingField: 0
-  <Reinitialize>k__BackingField: 1
---- !u!114 &332282021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332282018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5174644448d75514d8d16f68a6107ae3, type: 3}
+  m_Script: {fileID: 11500000, guid: 31532b28a465c584fa2a772a7bfd417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <OnChange>k__BackingField:
@@ -435,21 +422,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!4 &332282022
-Transform:
+      - m_Target: {fileID: 1543724420}
+        m_TargetAssemblyTypeName: AdventureQuest.Combat.CombatController, Scripts
+        m_MethodName: set_Enemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &332282024
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332282018}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1543724421}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772b0a01df369ba4dbd5f5e57f158c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643343451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 2046999092}
-  _enemy: {fileID: 332282020}
 --- !u!4 &1543724421
 Transform:
   m_ObjectHideFlags: 0

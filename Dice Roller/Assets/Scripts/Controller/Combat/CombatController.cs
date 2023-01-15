@@ -10,12 +10,12 @@ namespace AdventureQuest.Combat
     {
         [SerializeField]
         private Character.CharacterController _player;
-        [SerializeField]
-        private Character.CharacterController _enemy;
+        
+        public ICombatant Enemy { get; set; }
 
         public void PlayerAttack()
         {
-            AttackResult result = _player.PlayerCharacter.Attack(_enemy.PlayerCharacter);
+            AttackResult result = _player.PlayerCharacter.Attack(Enemy);
             Debug.Log(result.Description);
         }
         

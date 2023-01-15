@@ -1,9 +1,15 @@
 # TODO List
 
-Primary Goal: Implement Scene Transition Manager to better manage scene transitions
+Primary Goal:  Implement a Combat System
 
-* Scene Transition Manager for moving between scenes. Currently everytime, we
-   save the character manually on the button click.
+* Update Name's in Combat Scene
+* Add combat info output to Combat scene
+* Implement an Enemy type that implements the ICombat-ant interface
+* Implement a Combat Rounds / Timing system
+* Victory / Defeat conditions?
+* Implement Flee
+* Implement Defend
+* Implement Inventory view / Useable items
 
 
 1. Add Health / Stamina to Status screen
