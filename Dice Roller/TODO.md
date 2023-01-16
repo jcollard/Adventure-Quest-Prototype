@@ -2,7 +2,9 @@
 
 Primary Goal:  Implement a Combat System
 
-
+* Consider redesign of Combat scene to provide a sense of URGENCY!
+* Add Traits to Status Screen
+* Add Total Defense to Status Screen?
 * Implement Audio system that can withstand scene transitions
 * Nice to have: string extension for ".AsAbilityRoll()"
 * CombatantInspector/Editor
