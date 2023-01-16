@@ -1,14 +1,14 @@
 using AdventureQuest.Controller;
-using UnityEngine;
+using AdventureQuest.Entity;
 
-namespace AdventureQuest.Entity
+namespace AdventureQuest.Combat
 {
     public class ObservableCombatant : ObservableComponent<ICombatant>  
     {
         protected void Start()
         {
             //TODO: This is a hack. Plz fix me!
-            Observed = Enemies.DarkKnight.Build();
+            Observed = (ICombatant)Enemies.DarkKnight.Build();
         }
     }
 }

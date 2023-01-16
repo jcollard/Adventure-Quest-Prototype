@@ -25,7 +25,18 @@ namespace AdventureQuest.Combat
 
         public CombatResult ProcessRound()
         {
-            CombatResult result = Player.Attack(Enemy);
+            ICombatant nextToAct = _turnQueue.Dequeue();
+            // TODO: Add CombatAgentFactory
+            ICombatAgent agent = nextToAct switch
+            {
+                PlayerCharacter => new PlayerAgent(),
+                Entity.Enemy => new EnemyAgent(),
+                _ => throw new System.Exception("Something terrible has happened."),
+            };
+            ICombatAction action = agent.SelectAction(this);
+            CombatResult result = action.PerformAction();
+
+            _turnQueue.Enqueue(nextToAct);
             OnChange.Invoke(result);
             return result;
         }

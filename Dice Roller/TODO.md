@@ -2,6 +2,7 @@
 
 Primary Goal:  Implement a Combat System
 
+* Reimplement CombatAgent using Coroutines rather than C# Tasks
 * Consider redesign of Combat scene to provide a sense of URGENCY!
 * Add Traits to Status Screen
 * Add Total Defense to Status Screen?

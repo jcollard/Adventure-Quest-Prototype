@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AdventureQuest.Entity
+namespace AdventureQuest.Combat
 {
 
     public class CombatantController : MonoBehaviour 
