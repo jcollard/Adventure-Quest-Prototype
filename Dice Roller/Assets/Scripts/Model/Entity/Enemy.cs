@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AdventureQuest.Character;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Combat;
 using AdventureQuest.Dice;
 using AdventureQuest.Utils;
 

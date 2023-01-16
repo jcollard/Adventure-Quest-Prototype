@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace AdventureQuest.Entity.UI
+namespace AdventureQuest.Combat.UI
 {
     public class CombatantRenderer : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace AdventureQuest.Entity.UI
             foreach (CombatantPropertyRenderer child in PropertyRenderers)
             {
                 child.Render(combatant);
-            }            
+            }   
         }
 
         private CombatantPropertyRenderer[] PropertyRenderers

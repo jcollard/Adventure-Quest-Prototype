@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AdventureQuest.Entity.UI
+namespace AdventureQuest.Combat.UI
 {
     public class CombatantPropertyRenderer : MonoBehaviour
     {

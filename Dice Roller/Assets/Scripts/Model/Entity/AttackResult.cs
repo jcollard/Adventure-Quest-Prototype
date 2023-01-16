@@ -1,4 +1,4 @@
-namespace AdventureQuest.Entity
+namespace AdventureQuest.Combat
 {
 
     public class AttackResult 

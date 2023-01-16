@@ -1,5 +1,5 @@
 using AdventureQuest.Equipment;
-using AdventureQuest.Entity;
+using AdventureQuest.Combat;
 
 namespace AdventureQuest.Character
 {

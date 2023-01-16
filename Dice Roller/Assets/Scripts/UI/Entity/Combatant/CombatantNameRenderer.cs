@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-namespace AdventureQuest.Entity.UI
+namespace AdventureQuest.Combat.UI
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class CombatantNameRenderer : CombatantPropertyRenderer

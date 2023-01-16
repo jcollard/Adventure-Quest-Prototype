@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using AdventureQuest.Entity.UI;
 using UnityEngine;
 
-namespace AdventureQuest.Entity.UI
+namespace AdventureQuest.Combat.UI
 {
     [RequireComponent(typeof(TraitManifestRenderer))]
     public class CombatantTraitsRenderer : CombatantPropertyRenderer

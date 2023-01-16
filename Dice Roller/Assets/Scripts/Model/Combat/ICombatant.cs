@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using AdventureQuest.Character;
 using AdventureQuest.Character.Dice;
-using AdventureQuest.Combat;
+using AdventureQuest.Entity;
 
-namespace AdventureQuest.Entity
+namespace AdventureQuest.Combat
 {
     public interface ICombatant : IHasAbilities, IHasTraits, IHasPortriat
     {

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 using AdventureQuest.UI;
 
-namespace AdventureQuest.Entity.UI
+namespace AdventureQuest.Combat.UI
 {
     [RequireComponent(typeof(Image))]
     public class CombatantPortraitRenderer : CombatantPropertyRenderer
