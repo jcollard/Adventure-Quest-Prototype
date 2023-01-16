@@ -33,15 +33,16 @@ namespace AdventureQuest.Combat.UI
         public float CharactersPerSecond { get; private set; }
 
         /// <summary>
-        /// Enqueues the provided AttackResult to the render queue.
+        /// Enqueues the provided CombatResult to the render queue.
         /// </summary>
-        /// <param name="result">AttackResult to enqueue.</param>
-        public void Enqueue(AttackResult result)
+        /// <param name="result">CombatResult to enqueue.</param>
+        public void Enqueue(CombatResult result)
         {
-            foreach (char ch in result.Description.ToCharArray())
+            foreach (char ch in result.Message.ToCharArray())
             {
                 _renderQueue.Enqueue(ch);
             }
+            _renderQueue.Enqueue('\n');
         }
 
         /// <summary>
