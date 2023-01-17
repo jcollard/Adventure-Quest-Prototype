@@ -1,13 +1,13 @@
 
-using System.Threading.Tasks;
+using System;
 
 namespace AdventureQuest.Combat
 {
     public class EnemyAgent : ICombatAgent
     {
-        public ICombatAction SelectAction(CombatManager manager)
+        public void WaitForAction(CombatManager manager, Action<ICombatAction> onAction)
         {
-            return new AttackAction(manager.Enemy, manager.Player);
+            onAction.Invoke(new AttackAction(manager.Enemy, manager.Player));
         }
     }
 }

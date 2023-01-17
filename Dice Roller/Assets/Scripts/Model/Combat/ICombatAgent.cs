@@ -1,10 +1,7 @@
-
-using System.Threading.Tasks;
-
 namespace AdventureQuest.Combat
 {
     public interface ICombatAgent
     {
-        public ICombatAction SelectAction(CombatManager manager);
+        public void WaitForAction(CombatManager manager, System.Action<ICombatAction> onAction);
     }
 }

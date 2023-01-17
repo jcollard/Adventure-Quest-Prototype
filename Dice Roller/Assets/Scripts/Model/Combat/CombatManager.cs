@@ -9,7 +9,6 @@ namespace AdventureQuest.Combat
     public class CombatManager : IObservable<CombatResult>
     {
         private readonly Queue<ICombatant> _turnQueue = new();
-
         public event System.Action<CombatResult> OnChange;
 
         public CombatManager(ICharacter player, ICombatant enemy)
@@ -17,29 +16,14 @@ namespace AdventureQuest.Combat
             Debug.Assert(player != null, "Player should not be null");
             Debug.Assert(enemy != null, "Enemy should not be null");
             Player = player;
+            PlayerAgent = new PlayerAgent(player);
             Enemy = enemy;
         }
 
+        public ICombatant NextToAct => _turnQueue.Peek();
+        public PlayerAgent PlayerAgent { get; private set; }
         public ICharacter Player { get; private set; }
         public ICombatant Enemy { get; private set; }
-
-        public CombatResult ProcessRound()
-        {
-            ICombatant nextToAct = _turnQueue.Dequeue();
-            // TODO: Add CombatAgentFactory
-            ICombatAgent agent = nextToAct switch
-            {
-                PlayerCharacter => new PlayerAgent(),
-                Entity.Enemy => new EnemyAgent(),
-                _ => throw new System.Exception("Something terrible has happened."),
-            };
-            ICombatAction action = agent.SelectAction(this);
-            CombatResult result = action.PerformAction();
-
-            _turnQueue.Enqueue(nextToAct);
-            OnChange.Invoke(result);
-            return result;
-        }
 
         public CombatResult InitializeCombat()
         {
@@ -71,7 +55,28 @@ namespace AdventureQuest.Combat
             ICombatant firstToAct = _turnQueue.Peek();
             result.Add($"{firstToAct.Name} moves to act!");
             OnChange.Invoke(result);
+            StartNextRound();
             return result;
+        }
+
+        private void StartNextRound()
+        {
+            ICombatant nextToAct = _turnQueue.Peek();
+            ICombatAgent agent = nextToAct switch
+            {
+                PlayerCharacter => PlayerAgent,
+                Entity.Enemy => new EnemyAgent(),
+                _ => throw new System.Exception("Something terrible has happened."),
+            };
+
+            agent.WaitForAction(this, (ICombatAction action) =>
+            {
+                CombatResult result = action.PerformAction();
+                ICombatant acting = _turnQueue.Dequeue();
+                _turnQueue.Enqueue(acting);
+                OnChange.Invoke(result);
+                StartNextRound();
+            });
         }
     }
 }

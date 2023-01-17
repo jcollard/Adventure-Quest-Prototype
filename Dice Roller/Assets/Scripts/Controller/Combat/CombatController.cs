@@ -15,11 +15,8 @@ namespace AdventureQuest.Combat
 
         [field: SerializeField]
         public UnityEvent<CombatResult> OnCombatEvent { get; private set; } = new();
-
-        public void PlayerAttack()
-        {
-            _manager.ProcessRound();
-        }
+        
+        public void PlayerAttack() => _manager.PlayerAgent.Attack();
 
         public void InitializeCombat(ICharacter player, ICombatant enemy)
         {
