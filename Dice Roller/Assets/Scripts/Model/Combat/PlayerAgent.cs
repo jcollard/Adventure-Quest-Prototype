@@ -25,6 +25,7 @@ namespace AdventureQuest.Combat
 
         public void Attack() => SelectAction(new AttackAction(_manager.Player, _manager.Enemy));
         public void Flee() => SelectAction(new FleeAction(_manager.Player, _manager.Enemy));
+        public void Defend() => SelectAction(new DefendAction(_manager.Player));
 
         private void SelectAction(ICombatAction toPerform)
         {

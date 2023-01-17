@@ -17,6 +17,7 @@ namespace AdventureQuest.Combat
         
         public void PlayerAttack() => _manager.PlayerAgent.Attack();
         public void PlayerFlee() => _manager.PlayerAgent.Flee();
+        public void PlayerDefend() => _manager.PlayerAgent.Defend();
 
         public void InitializeCombat(ICharacter player, ICombatant enemy)
         {

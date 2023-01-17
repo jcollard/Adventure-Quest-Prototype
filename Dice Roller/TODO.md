@@ -2,6 +2,7 @@
 
 Primary Goal:  Implement a Combat System
 
+* Fix typo for IHasPortrait (from IHasPortriat)
 * Reimplement CombatAgent using Coroutines rather than C# Tasks
 * Consider redesign of Combat scene to provide a sense of URGENCY!
 * Add Traits to Status Screen
