@@ -11,6 +11,7 @@ namespace AdventureQuest.Combat
         public CombatResult() { }
 
         public string Message => string.Join("\n", _messages);
+        public bool IsCombatOver { get; set; } = false;
 
         public CombatResult Add(string message)
         {

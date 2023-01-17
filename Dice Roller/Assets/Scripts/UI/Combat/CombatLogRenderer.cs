@@ -1,5 +1,5 @@
-using AdventureQuest.Entity;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +31,9 @@ namespace AdventureQuest.Combat.UI
         /// </summary>
         [field: SerializeField]
         public float CharactersPerSecond { get; private set; }
+
+        [field: SerializeField]
+        public UnityEvent OnLogComplete { get; private set; }
 
         /// <summary>
         /// Enqueues the provided CombatResult to the render queue.
@@ -83,6 +86,10 @@ namespace AdventureQuest.Combat.UI
             string toAdd = string.Join("", charsToAdd);
             _textArea.text += toAdd;
             _lastRenderTime = Time.time;
+            if (_renderQueue.Count < 1)
+            {
+                OnLogComplete.Invoke();
+            }
         }
     }
 }

@@ -1,9 +1,8 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-using AdventureQuest.Entity;
 using AdventureQuest.Character;
-using System.Threading.Tasks;
+using AdventureQuest.Scene;
 
 namespace AdventureQuest.Combat
 {
@@ -17,6 +16,7 @@ namespace AdventureQuest.Combat
         public UnityEvent<CombatResult> OnCombatEvent { get; private set; } = new();
         
         public void PlayerAttack() => _manager.PlayerAgent.Attack();
+        public void PlayerFlee() => _manager.PlayerAgent.Flee();
 
         public void InitializeCombat(ICharacter player, ICombatant enemy)
         {
@@ -26,6 +26,8 @@ namespace AdventureQuest.Combat
             _manager.OnChange += (result) => OnCombatEvent.Invoke(result);
             _manager.InitializeCombat();
         }
+
+        public void ReturnToTown() => Location.Town.Transition((PlayerCharacter)_player);
 
         protected void Awake()
         {

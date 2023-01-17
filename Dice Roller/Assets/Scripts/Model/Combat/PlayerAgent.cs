@@ -1,5 +1,6 @@
 
 using System;
+using System.Diagnostics;
 using AdventureQuest.Character;
 
 namespace AdventureQuest.Combat
@@ -22,11 +23,14 @@ namespace AdventureQuest.Combat
             _onAction = onAction;
         }
 
-        public void Attack()
+        public void Attack() => SelectAction(new AttackAction(_manager.Player, _manager.Enemy));
+        public void Flee() => SelectAction(new FleeAction(_manager.Player, _manager.Enemy));
+
+        private void SelectAction(ICombatAction toPerform)
         {
-            UnityEngine.Debug.Assert(IsReadyForAction, "The PlayerAgent is not ready to take an action.");
+            Debug.Assert(IsReadyForAction, "The PlayerAgent is not ready to take an action.");
             if (_manager.NextToAct != _player) { return; }
-            _onAction.Invoke(new AttackAction(_manager.Player, _manager.Enemy));
+            _onAction.Invoke(toPerform);
         }
     }
 }

@@ -75,7 +75,10 @@ namespace AdventureQuest.Combat
                 ICombatant acting = _turnQueue.Dequeue();
                 _turnQueue.Enqueue(acting);
                 OnChange.Invoke(result);
-                StartNextRound();
+                if (!result.IsCombatOver)
+                {
+                    StartNextRound();
+                }
             });
         }
     }
