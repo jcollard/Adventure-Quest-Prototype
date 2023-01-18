@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using AdventureQuest.Character;
+using AdventureQuest.Equipment;
 
 namespace AdventureQuest.Combat
 {
@@ -26,6 +27,7 @@ namespace AdventureQuest.Combat
         public void Attack() => SelectAction(new AttackAction(_manager.Player, _manager.Enemy));
         public void Flee() => SelectAction(new FleeAction(_manager.Player, _manager.Enemy));
         public void Defend() => SelectAction(new DefendAction(_manager.Player));
+        public void UseHealthPotion() => SelectAction(new UseItemAction(_player, _player, new HealthPotion()));
 
         private void SelectAction(ICombatAction toPerform)
         {
