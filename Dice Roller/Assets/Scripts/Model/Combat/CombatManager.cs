@@ -27,12 +27,15 @@ namespace AdventureQuest.Combat
 
         public CombatResult InitializeCombat()
         {
-            CombatResult result = new CombatResult();
+            // TODO: Consider writing a method on ICombatant called Initialize
+            Enemy.Effects.Clear();
+            Player.Effects.Clear();
+            CombatResult result = new();
             _turnQueue.Clear();
             result.Add($"A {Enemy.Name} appears!");
             AbilityRoll initiativeRoll = AbilityRoll.Parse($"1d20 + {Ability.Agility}");
-            int playerRoll = initiativeRoll.Roll(Player);
-            int enemyRoll = initiativeRoll.Roll(Enemy);
+            int playerRoll = initiativeRoll.Roll(Player.CombatAbilities);
+            int enemyRoll = initiativeRoll.Roll(Enemy.CombatAbilities);
 
             // TODO: Consider using Agility to break ties AND if that is tied, flip a coin?
             if (playerRoll == enemyRoll)
@@ -71,12 +74,16 @@ namespace AdventureQuest.Combat
 
             agent.WaitForAction(this, (ICombatAction action) =>
             {
-                CombatResult result = action.PerformAction();
                 ICombatant acting = _turnQueue.Dequeue();
+                CombatResult result = action.PerformAction();
                 _turnQueue.Enqueue(acting);
                 OnChange.Invoke(result);
+                
                 if (!result.IsCombatOver)
                 {
+                    ICombatant nextToAct = _turnQueue.Peek();
+                    CombatResult tickResult = nextToAct.Tick();
+                    OnChange.Invoke(tickResult);
                     StartNextRound();
                 }
             });

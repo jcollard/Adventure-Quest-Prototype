@@ -41,6 +41,7 @@ namespace AdventureQuest.Combat.UI
         /// <param name="result">CombatResult to enqueue.</param>
         public void Enqueue(CombatResult result)
         {
+            if (result.Message == string.Empty) { return; } 
             foreach (char ch in result.Message.ToCharArray())
             {
                 _renderQueue.Enqueue(ch);

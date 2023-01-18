@@ -1,4 +1,4 @@
-using AdventureQuest.Entity;
+using System.Linq;
 
 namespace AdventureQuest.Combat
 {
@@ -15,7 +15,15 @@ namespace AdventureQuest.Combat
         {
             CombatResult result = new ();
             result.Add($"{Defender.Name} defends themselves.");
-            // TODO: Implement details of Defending.
+            
+            // TODO: This is pretty slow. We are looping through all effects twice O(N^2)
+            // Consider using a HashSet<ICombatEffect> instead of a List
+            foreach(ICombatEffect effect in Defender.Effects.Where(e => e is DefendBuff))
+            {
+                Defender.Effects.Remove(effect);
+            }
+            Defender.Effects.Add(new DefendBuff());
+
             return result;
         }
     }

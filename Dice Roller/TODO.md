@@ -2,21 +2,20 @@
 
 Primary Goal:  Implement a Combat System
 
+* Create "combat" system
+* Implement Defend
+  * Using a "buff" / "debuff" system on ICombatant
+* Implement a Combat Rounds / Timing system
+* Victory / Defeat conditions?
+* Implement Inventory view / Useable items
+
 * Fix typo for IHasPortrait (from IHasPortriat)
-* Reimplement CombatAgent using Coroutines rather than C# Tasks
 * Consider redesign of Combat scene to provide a sense of URGENCY!
 * Add Traits to Status Screen
 * Add Total Defense to Status Screen?
 * Implement Audio system that can withstand scene transitions
 * Nice to have: string extension for ".AsAbilityRoll()"
 * CombatantInspector/Editor
-* Add combat info output to Combat scene
-* Implement an Enemy type that implements the ICombat-ant interface
-* Implement a Combat Rounds / Timing system
-* Victory / Defeat conditions?
-* Implement Flee
-* Implement Defend
-* Implement Inventory view / Useable items
 * Code Smell: CombatantRenderer and TraitManifestRenderer both have lazy loaded
   sub properties using Property. Code is identical / copy and paste. We should
   consider how to abstract this.
@@ -27,24 +26,17 @@ Primary Goal:  Implement a Combat System
 3. Shop needs to be Serializable (Not sure if this is true anymore)
 4. Consider CharacterEquipmentManifest becoming EquipmentManifest and removing the character argument in the constructor
    * CharacterEquipmentManifest should not take a character, should just have
-     the character attached. Too easy to "equip" using another characters stats.
-5. IEquippable needs a better deserialization method. Potentially could write a
-   "InterfaceSerializationWrapper" which stores information about deserializing
-   the associated interface.
-6. Consider generalizing the CharacterInspectorEditor to work for anything that
+5. Consider generalizing the CharacterInspectorEditor to work for anything that
    implements an "AsJson" / "IObservable"
    * a UnityEditor drawer for ICharacter / IEquipment / IInventory
-7. Add in Hitpoints / other stats to character
-8. Create "combat" system
-9.  Add "forest" to the town hub
-10. Add an armor Shop
-11. Add "healer" to town?
-12. Add Potions? / Useable items?
-13. Need IEquipmentManifest to return IResults rather than bool
-14. Add drag and drop buy and sell to shop
-15. Add Item information to Status / Inventory. When clicking on item, should
+6.  Add an armor Shop
+7.  Add "healer" to town?
+8.  Add Potions? / Useable items?
+9.  Need IEquipmentManifest to return IResults rather than bool
+10. Add drag and drop buy and sell to shop
+11. Add Item information to Status / Inventory. When clicking on item, should
     get information about that item. Similar to shop.
-16. If possible, we would like to "fail fast" on scene load if a Location is not
+12. If possible, we would like to "fail fast" on scene load if a Location is not
     available in the Build settings
 
 # Potential Abstractions (Code Smells)

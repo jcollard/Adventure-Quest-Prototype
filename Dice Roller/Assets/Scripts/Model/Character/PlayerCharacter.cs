@@ -7,6 +7,7 @@ using AdventureQuest.Entity;
 using UnityEngine;
 using AdventureQuest.Equipment.Armor;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Combat;
 
 namespace AdventureQuest.Character
 {
@@ -19,7 +20,7 @@ namespace AdventureQuest.Character
         private string _equipmentJson;
         [field: SerializeField]
         private string _inventoryJson;
-        
+
         public PlayerCharacter(string name, Abilities abilities, TraitManifest traits, string portraitSpriteKey)
         {
             if (name == null || abilities == null || traits == null || portraitSpriteKey == null)
@@ -42,18 +43,19 @@ namespace AdventureQuest.Character
         [field: SerializeField]
         public Abilities Abilities { get; private set; }
         [field: SerializeField]
-        public TraitManifest Traits { get; private set;}
+        public TraitManifest Traits { get; private set; }
         public string AsJson => Encode(this);
         public IEquipmentManifest Equipment { get; private set; }
         public IInventory Inventory { get; private set; }
-        
-        public int Gold 
-        { 
-            get => _gold; 
-            set 
+        public List<ICombatEffect> Effects { get; private set; }
+
+        public int Gold
+        {
+            get => _gold;
+            set
             {
-                if (value < 0) 
-                {  
+                if (value < 0)
+                {
                     Debug.Assert(value >= 0, $"Attempted to set PlayerCharacter.Gold to a value less than 0. {value}");
                 }
                 _gold = Mathf.Max(value, 0);
@@ -110,7 +112,7 @@ namespace AdventureQuest.Character
                 // TODO: Validate loaded is in a legal state
                 return loaded;
             }
-            catch 
+            catch
             {
                 // TODO: Use correct exceptions / error reporting
                 throw new System.IO.InvalidDataException($"Could not load PlayerCharacter.");
@@ -121,7 +123,7 @@ namespace AdventureQuest.Character
         {
             if (Equipment == null || Inventory == null) { return; }
             _equipmentJson = JsonUtility.ToJson(Equipment);
-            _inventoryJson = JsonUtility.ToJson(Inventory);            
+            _inventoryJson = JsonUtility.ToJson(Inventory);
         }
 
         void ISerializationCallbackReceiver.OnAfterDeserialize()
@@ -131,7 +133,7 @@ namespace AdventureQuest.Character
 
         public override bool Equals(object obj)
         {
-            if(obj is PlayerCharacter other)
+            if (obj is PlayerCharacter other)
             {
                 return
                    _gold == other._gold &&
@@ -154,6 +156,7 @@ namespace AdventureQuest.Character
         {
             Inventory = _inventoryJson == null ? new Inventory($"{Name}'s Inventory") : JsonUtility.FromJson<Inventory>(_inventoryJson);
             Equipment = _equipmentJson == null ? new CharacterEquipmentManifest(this) : JsonUtility.FromJson<CharacterEquipmentManifest>(_equipmentJson);
+            Effects = new();
         }
     }
 }
