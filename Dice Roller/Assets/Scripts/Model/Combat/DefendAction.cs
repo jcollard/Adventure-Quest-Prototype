@@ -15,15 +15,7 @@ namespace AdventureQuest.Combat
         {
             CombatResult result = new ();
             result.Add($"{Defender.Name} defends themselves.");
-            
-            // TODO: This is pretty slow. We are looping through all effects twice O(N^2)
-            // Consider using a HashSet<ICombatEffect> instead of a List
-            foreach(ICombatEffect effect in Defender.Effects.Where(e => e is DefendBuff))
-            {
-                Defender.Effects.Remove(effect);
-            }
-            Defender.Effects.Add(new DefendBuff());
-
+            Defender.AddEffect(new DefendBuff());
             return result;
         }
     }

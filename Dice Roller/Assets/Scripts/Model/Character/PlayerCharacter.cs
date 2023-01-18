@@ -47,7 +47,7 @@ namespace AdventureQuest.Character
         public string AsJson => Encode(this);
         public IEquipmentManifest Equipment { get; private set; }
         public IInventory Inventory { get; private set; }
-        public List<ICombatEffect> Effects { get; private set; }
+        public HashSet<ICombatEffect> Effects { get; private set; }
 
         public int Gold
         {

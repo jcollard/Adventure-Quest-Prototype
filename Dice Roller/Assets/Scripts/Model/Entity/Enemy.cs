@@ -21,7 +21,7 @@ namespace AdventureQuest.Entity
         public Abilities Abilities { get; private set; }
         public TraitManifest Traits { get; private set; }
         public string PortraitSpriteKey { get; private set; }
-        public List<ICombatEffect> Effects { get; } = new ();
+        public HashSet<ICombatEffect> Effects { get; } = new ();
 
         public class Builder
         {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using AdventureQuest.Character;
 using AdventureQuest.Entity;
@@ -23,5 +24,9 @@ namespace AdventureQuest.Combat
         public int DefenseBonus => 5;
 
         public string EndMessage(ICombatant combatant) => $"{combatant.Name} stops defending.";
+
+        public override bool Equals(object obj) => obj is DefendBuff;
+
+        public override int GetHashCode() => HashCode.Combine(nameof(DefendBuff));
     }
 }

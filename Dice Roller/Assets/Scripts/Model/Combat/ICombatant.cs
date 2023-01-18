@@ -11,9 +11,20 @@ namespace AdventureQuest.Combat
         public string Name { get; }
         public int Defense { get; }
         public AbilityRoll AttackRoll { get; }
-        public List<ICombatEffect> Effects { get; }
+        public HashSet<ICombatEffect> Effects { get; }
         public Abilities CombatAbilities => Abilities.WithModifiers(Effects);
         public int CombatDefense => ICombatEffect.TotalDefenseBonus(Effects);
+        public void AddEffect(ICombatEffect toAdd)
+        {
+            // TODO: What happens if we do Effects.Add(toAdd) when something
+            // already exists. Does it cause it to replace what's in the set?
+            // If so, no need to perform this check.
+            if (Effects.Contains(toAdd))
+            {
+                Effects.Remove(toAdd);
+            }
+            Effects.Add(toAdd);
+        }
 
         public virtual CombatResult Tick()
         {

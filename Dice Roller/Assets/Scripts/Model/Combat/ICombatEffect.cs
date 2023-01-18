@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using AdventureQuest.Character;
 using AdventureQuest.Entity;
+using AdventureQuest.Utils;
 using System.Linq;
 
 namespace AdventureQuest.Combat
@@ -32,31 +33,14 @@ namespace AdventureQuest.Combat
             }
         }
 
-        public static int TotalDefenseBonus(List<ICombatEffect> effects) => effects.Sum(e => e.DefenseBonus);
+        public static int TotalDefenseBonus(HashSet<ICombatEffect> effects) => effects.Sum(e => e.DefenseBonus);
 
         /// <summary>
         /// Calculates the sum of all ability modifiers from the given list of effects.
         /// </summary>
         /// <param name="effects">A list of ICombatEffect to be used in the calculation.</param>
         /// <returns>A dictionary of Ability and int values representing the sum of all ability modifiers.</returns>
-        public static Dictionary<Ability, int> AbilityModifierSum(List<ICombatEffect> effects)
-        {
-            Dictionary<Ability, int> modifiers = new();
-            foreach (ICombatEffect effect in effects)
-            {
-                foreach (KeyValuePair<Ability, int> modifier in effect.AbilityModifiers)
-                {
-                    if (modifiers.ContainsKey(modifier.Key))
-                    {
-                        modifiers[modifier.Key] = modifier.Value;
-                    }
-                    else
-                    {
-                        modifiers[modifier.Key] += modifier.Value;
-                    }
-                }
-            }
-            return modifiers;
-        }
+        public static Dictionary<Ability, int> AbilityModifierSum(HashSet<ICombatEffect> effects) => effects.Select(e => e.AbilityModifiers).SumHistogram();
+        public static Dictionary<Trait, int> TraitModifierSum(HashSet<ICombatEffect> effects) => effects.Select(e => e.TraitModifiers).SumHistogram();
     }
 }

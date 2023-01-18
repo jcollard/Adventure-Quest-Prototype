@@ -29,7 +29,7 @@ namespace AdventureQuest.Character
         /// Creates a copy of this set of <see cref="Abilities"/> with the list
         /// of <see cref="ICombatEffect"/>s applied
         /// </summary>
-        public Abilities WithModifiers(List<ICombatEffect> toApply)
+        public Abilities WithModifiers(HashSet<ICombatEffect> toApply)
         {
             Dictionary<Ability, int> modifiers = ICombatEffect.AbilityModifierSum(toApply);
             List<AbilityScore> modifiedScores = new();
