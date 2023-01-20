@@ -1,8 +1,10 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using TMPro;
 using AdventureQuest.UI;
+using System.Collections.Generic;
 
 namespace AdventureQuest.Equipment
 {
@@ -18,6 +20,10 @@ namespace AdventureQuest.Equipment
         [SerializeField]
         private Transform _itemList;
         private Transform _canvas;
+        [SerializeField]
+        private bool _filterUseableItemsOnly = false;
+
+        public HashSet<System.Func<IItem, bool>> Filters { get; private set; } = new();
 
         [field: SerializeField]
         public UnityEvent<IItem> OnSelectItem { get; private set; }
@@ -39,18 +45,25 @@ namespace AdventureQuest.Equipment
                 _defaultController.OnChange.AddListener(Render);
             }
             _canvas = transform.GetComponentInParent<Canvas>().transform;
+
+            // TODO: Potentially rework to allow user to select filters in shop
+            // / status screen.
+            if (_filterUseableItemsOnly)
+            {
+                Filters.Add((item) => item is IUseable);
+                Render(_defaultController.Observed);
+            }
         }
         public void Render(IHasInventory hasInventory) => Render(hasInventory.Inventory);
 
         public void Render(IInventory inventory)
         {
-            Debug.Log("Invoking inventory renderer.");
             foreach (Transform child in _itemList)
             {
                 Destroy(child.gameObject);
             }
             _name.text = inventory.Name;
-            foreach (IItem item in inventory.Items)
+            foreach (IItem item in inventory.Filter(Filters))
             {
                 InventoryItemRenderer entry = Instantiate(_itemTemplate, _itemList);
                 entry.Render(item);
@@ -65,14 +78,15 @@ namespace AdventureQuest.Equipment
                 });
             }
         }
-        
+
         public void OnPointerEnter() => OnMouseEnter.Invoke();
         public void OnPointerEnter(PointerEventData eventData) => OnPointerEnter();
         public void OnPointerExit() => OnMouseExit.Invoke();
         public void OnPointerExit(PointerEventData eventData) => OnPointerExit();
 
-        protected void OnValidate() {
-            
+        protected void OnValidate()
+        {
+
         }
     }
 
