@@ -23,6 +23,7 @@ namespace AdventureQuest.UI.Character
             CharacterRenderer characterRenderer = GetComponentInChildren<CharacterRenderer>();
             character.OnChange.AddListener(ch => Observe(ch, _inventoryRenderer));
             character.OnChange.AddListener(characterRenderer.Render);
+            // TODO: Consider not using Awake to forward the render
             if (character.Observed != null)
             {
                 characterRenderer.Render(character.Observed);

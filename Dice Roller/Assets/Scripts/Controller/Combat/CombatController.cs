@@ -20,11 +20,11 @@ namespace AdventureQuest.Combat
         public void PlayerFlee() => _manager.PlayerAgent.Flee();
         public void PlayerDefend() => _manager.PlayerAgent.Defend();
 
-        public void PlayerUseItem(IItem item)
+        public void PlayerUseItemFromInventory(IItem item)
         {
             if (item is IUseable useable)
             {
-                _manager.PlayerAgent.UseItem(useable);
+                _manager.PlayerAgent.UseItemFromInventory(useable);
             }
             else
             {

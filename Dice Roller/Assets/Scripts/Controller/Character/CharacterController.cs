@@ -41,6 +41,8 @@ namespace AdventureQuest.Character
         {
 
             ICharacter player = _observable.Observed;
+            player.Inventory.Clear();
+            player.Inventory.Add(Armors.ChainHelmet);
             player.Inventory.Add(new HealthPotion());
         }
 

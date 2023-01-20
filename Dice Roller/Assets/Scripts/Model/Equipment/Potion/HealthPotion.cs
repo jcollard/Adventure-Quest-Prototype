@@ -11,6 +11,8 @@ namespace AdventureQuest.Equipment
         public string Description => "A health potion is a magical concoction that can restore a character's vitality, restoring some of their health.";
         public int Cost => 5;
         public string AsJson => UnityEngine.JsonUtility.ToJson(this);
+        public bool IsConsumedOnUse => true;
+
         public IItem Duplicate() => new HealthPotion();
 
         public string Use(ICombatant user)

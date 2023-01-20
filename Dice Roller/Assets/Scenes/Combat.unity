@@ -798,6 +798,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1543724420}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1487693615}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerUseItemFromInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AdventureQuest.Combat.CombatController, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6318936784008330385, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2676,6 +2728,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2457503565228427, guid: d4383c97a08d74a42ac4489e8fc2e25a, type: 3}
   m_PrefabInstance: {fileID: 1836863512}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1895466721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6158960189012264958, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+  m_PrefabInstance: {fileID: 292845684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4582a4b1bd52c4ebc6d26dbdd12810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1966344817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2978,7 +3041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <LoadFromStorageOnLoad>k__BackingField: 1
-  <Reinitialize>k__BackingField: 0
+  <Reinitialize>k__BackingField: 1
 --- !u!114 &2046999093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,6 +3073,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1250964698}
         m_TargetAssemblyTypeName: AdventureQuest.Character.ObservableCharacter, Scripts
         m_MethodName: set_Character
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1895466721}
+        m_TargetAssemblyTypeName: AdventureQuest.Equipment.ObservableInventory, Scripts
+        m_MethodName: set_Inventory
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

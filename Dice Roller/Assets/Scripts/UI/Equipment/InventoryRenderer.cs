@@ -10,7 +10,7 @@ namespace AdventureQuest.Equipment
     public class InventoryRenderer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField]
-        private InventoryObservable _defaultController;
+        private ObservableInventory _defaultController;
         [SerializeField]
         private TextMeshProUGUI _name;
         [SerializeField]
@@ -31,6 +31,9 @@ namespace AdventureQuest.Equipment
         // Start is called before the first frame update
         void Awake()
         {
+            // TODO: Consider not using Awake to forward the render
+            // Instead, it might make sense to have this be a lazy value that
+            // if it isn't loaded, loads on awake.
             if (_defaultController != null)
             {
                 _defaultController.OnChange.AddListener(Render);
@@ -41,6 +44,7 @@ namespace AdventureQuest.Equipment
 
         public void Render(IInventory inventory)
         {
+            Debug.Log("Invoking inventory renderer.");
             foreach (Transform child in _itemList)
             {
                 Destroy(child.gameObject);
@@ -66,6 +70,10 @@ namespace AdventureQuest.Equipment
         public void OnPointerEnter(PointerEventData eventData) => OnPointerEnter();
         public void OnPointerExit() => OnMouseExit.Invoke();
         public void OnPointerExit(PointerEventData eventData) => OnPointerExit();
+
+        protected void OnValidate() {
+            
+        }
     }
 
 }
