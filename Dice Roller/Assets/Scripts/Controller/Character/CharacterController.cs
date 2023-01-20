@@ -39,22 +39,9 @@ namespace AdventureQuest.Character
 
         private void ReinitializeCharacter()
         {
-            TraitManifest bobsManifest = new (
-                new TraitValue(Trait.Health, 100),
-                new TraitValue(Trait.Stamina, 3)
-            );
-            _observable.Observed = new PlayerCharacter("Bob", Abilities.Roll(), bobsManifest, "knight-1")
-            {
-                Gold = 50
-            };
-            _observable.Observed.Inventory.Clear();
-            _observable.Observed.Inventory.Add(Weapons.Dagger);
-            _observable.Observed.Inventory.Add(Weapons.Longsword);
-            _observable.Observed.Equipment.Equip(Armors.LeatherArmor, EquipmentSlot.Torso, _observable.Observed);
-            _observable.Observed.Equipment.Equip(Armors.ClothPants, EquipmentSlot.Legs, _observable.Observed);
-            _observable.Observed.Inventory.Add(Armors.LeatherBoots);
-            _observable.Observed.Inventory.Add(Armors.ChainHelmet);
 
+            ICharacter player = _observable.Observed;
+            player.Inventory.Add(new HealthPotion());
         }
 
     }

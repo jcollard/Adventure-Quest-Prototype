@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using AdventureQuest.Character;
 using AdventureQuest.Scene;
+using AdventureQuest.Equipment;
 
 namespace AdventureQuest.Combat
 {
@@ -14,11 +15,24 @@ namespace AdventureQuest.Combat
 
         [field: SerializeField]
         public UnityEvent<CombatResult> OnCombatEvent { get; private set; } = new();
-        
+
         public void PlayerAttack() => _manager.PlayerAgent.Attack();
         public void PlayerFlee() => _manager.PlayerAgent.Flee();
         public void PlayerDefend() => _manager.PlayerAgent.Defend();
-        public void PlayerUseHealthPotion() => _manager.PlayerAgent.UseHealthPotion();
+
+        public void PlayerUseItem(IItem item)
+        {
+            if (item is IUseable useable)
+            {
+                _manager.PlayerAgent.UseItem(useable);
+            }
+            else
+            {
+                CombatResult result = new();
+                result.Add($"{item.Name} cannot be used during combat.");
+                OnCombatEvent.Invoke(result);
+            }
+        }
 
         public void InitializeCombat(ICharacter player, ICombatant enemy)
         {

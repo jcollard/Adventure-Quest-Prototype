@@ -27,7 +27,11 @@ namespace AdventureQuest.Combat
         public void Attack() => SelectAction(new AttackAction(_manager.Player, _manager.Enemy));
         public void Flee() => SelectAction(new FleeAction(_manager.Player, _manager.Enemy));
         public void Defend() => SelectAction(new DefendAction(_manager.Player));
-        public void UseHealthPotion() => SelectAction(new UseItemAction(_player, _player, new HealthPotion()));
+        public void UseItem(IUseable usable)
+        {
+            // TODO: Some items should be consumables (i.e. they get removed from inventory or have a count in the inventory)
+            SelectAction(new UseItemAction(_player, _player, usable));
+        }
 
         private void SelectAction(ICombatAction toPerform)
         {
