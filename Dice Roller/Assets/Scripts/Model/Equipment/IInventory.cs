@@ -15,16 +15,10 @@ namespace AdventureQuest.Equipment
 
         public List<IItem> Filter(IEnumerable<Func<IItem, bool>> predicates)
         {
-            List<IItem> items = new();
-            foreach(IItem item in Items)
+            List<IItem> items = Items;
+            foreach(Func<IItem, bool> pred in predicates)
             {
-                foreach(Func<IItem, bool> pred in predicates)
-                {
-                    if(pred.Invoke(item))
-                    {
-                        items.Add(item);
-                    }
-                }
+                items.RemoveAll((item) => !pred.Invoke(item));
             }
             return items;
         }

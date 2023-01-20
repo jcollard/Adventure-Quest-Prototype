@@ -8,7 +8,7 @@ namespace AdventureQuest.Combat
         protected void Start()
         {
             //TODO: This is a hack. Plz fix me!
-            Observed = (ICombatant)Enemies.DarkKnight.Build();
+            Observed = (ICombatant)Enemies.StrawManOfDoom.Build();
         }
     }
 }

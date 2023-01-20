@@ -23,6 +23,15 @@ namespace AdventureQuest.Entity
             .TraitRange(Trait.Stamina, AbilityRoll.Parse("4d4 + 4"))
             .AttackRoll(AbilityRoll.Parse("1d12"))
             .DefenseRange(AbilityRoll.Parse($"2d3"));
+        
+        public static Enemy.Builder StrawManOfDoom = new Enemy.Builder("Straw Man of Doom", "straw-man")
+            .TraitRange(Trait.Health, AbilityRoll.Parse("1d8 + 5"))
+            .TraitRange(Trait.Stamina, AbilityRoll.Parse("4d4 + 4"))
+            .Abilities(
+                new Abilities.Builder().SetScore(Ability.Dexterity, 30).Build()
+            )
+            .AttackRoll(AbilityRoll.Parse("10d12"))
+            .DefenseRange(AbilityRoll.Parse($"2d3"));
 
     }
 }

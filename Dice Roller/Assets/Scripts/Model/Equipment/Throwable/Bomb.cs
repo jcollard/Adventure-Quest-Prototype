@@ -13,7 +13,8 @@ namespace AdventureQuest.Equipment
 
         public bool IsConsumedOnUse => true;
         public string ItemSpriteID => throw new System.NotImplementedException();
-        public string Name { get; }
+        [field: UnityEngine.SerializeField]
+        public string Name { get; private set; }
         public string Description => "This bomb is a small, round device with a bright red fuse. Once thrown, it will explode, dealing a moderate amount of damage to any enemies in the vicinity.";
         public int Cost => 10;
         public string AsJson => UnityEngine.JsonUtility.ToJson(this);

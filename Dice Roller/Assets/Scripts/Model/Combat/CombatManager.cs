@@ -79,7 +79,7 @@ namespace AdventureQuest.Combat
                 _turnQueue.Enqueue(acting);
                 OnChange.Invoke(result);
                 
-                if (!result.IsCombatOver)
+                if (!CheckEndOfCombat(result))
                 {
                     ICombatant nextToAct = _turnQueue.Peek();
                     CombatResult tickResult = nextToAct.Tick();
@@ -87,6 +87,26 @@ namespace AdventureQuest.Combat
                     StartNextRound();
                 }
             });
+        }
+
+        private bool CheckEndOfCombat(CombatResult result)
+        {
+            if(result.IsCombatOver) { return true; }
+            if (Player.Traits.Get(Trait.Health).Value <= 0)
+            {
+                CombatResult playerDeath = new() { IsCombatOver = true };
+                playerDeath.Add($"{Player.Name} dies!");
+                OnChange.Invoke(playerDeath);
+                return true;
+            }
+            if (Enemy.Traits.Get(Trait.Health).Value <= 0)
+            {
+                CombatResult enemyDeath = new() { IsCombatOver = true };
+                enemyDeath.Add($"{Enemy.Name} dies!");
+                OnChange.Invoke(enemyDeath);
+                return true;
+            }
+            return false;
         }
     }
 }
