@@ -44,6 +44,7 @@ namespace AdventureQuest.Character
             player.Inventory.Clear();
             player.Inventory.Add(Armors.ChainHelmet);
             player.Inventory.Add(new HealthPotion());
+            player.Inventory.Add(new Bomb("Fire Bomb"));
         }
 
     }

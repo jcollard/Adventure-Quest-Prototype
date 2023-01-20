@@ -39,11 +39,18 @@ namespace AdventureQuest.Combat
             }
         }
 
-        public void UseItem(IUseable usable)
+        public void ThrowItemFromInventory(IThrowable throwable, ICombatant target)
         {
-            // TODO: Some items should be consumables (i.e. they get removed from inventory or have a count in the inventory)
-            SelectAction(new UseItemAction(_player, _player, usable));
+            Debug.Assert(_player.Inventory.Contains(throwable), $"Player throw a {throwable.Name} because it is not in their inventory");
+            // UseItem(throwable);
+            SelectAction(new ThrowItemAction(_player, target, throwable));
+            if (throwable.IsConsumedOnUse)
+            {
+                _player.Inventory.Remove(throwable);
+            }
         }
+
+        public void UseItem(IUseable usable) => SelectAction(new UseItemAction(_player, _player, usable));
 
         private void SelectAction(ICombatAction toPerform)
         {

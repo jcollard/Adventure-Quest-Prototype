@@ -22,7 +22,11 @@ namespace AdventureQuest.Combat
 
         public void PlayerUseItemFromInventory(IItem item)
         {
-            if (item is IUseable useable)
+            if (item is IThrowable throwable)
+            {
+                _manager.PlayerAgent.ThrowItemFromInventory(throwable, _manager.Enemy);
+            }
+            else if (item is IUseable useable)
             {
                 _manager.PlayerAgent.UseItemFromInventory(useable);
             }

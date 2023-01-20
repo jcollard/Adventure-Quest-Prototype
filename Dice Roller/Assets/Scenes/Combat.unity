@@ -799,6 +799,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
+      propertyPath: _filterUseableItemsOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379135353957604442, guid: 83b9ad806df75154ba7b0d7298398bdb, type: 3}
       propertyPath: <OnSelectItem>k__BackingField.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
