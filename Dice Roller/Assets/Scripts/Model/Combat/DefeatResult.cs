@@ -3,14 +3,11 @@ using AdventureQuest.Equipment;
 
 namespace AdventureQuest.Combat
 {
-    public class VictoryResult : CombatResult
+    public class DefeatResult : CombatResult
     {
-        public VictoryResult(Loot loot) : base("Victory!")
+        public DefeatResult() : base("You Died!")
         {
             IsCombatOver = true;
-            Loot = loot;
         }
-
-        public Loot Loot { get; }
     }
 }

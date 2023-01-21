@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using AdventureQuest.Character;
 using AdventureQuest.Scene;
 using AdventureQuest.Equipment;
+using AdventureQuest.Entity;
 
 namespace AdventureQuest.Combat
 {
@@ -48,6 +49,12 @@ namespace AdventureQuest.Combat
         }
 
         public void ReturnToTown() => Location.Town.Transition((PlayerCharacter)_player);
+        public void Respawn()
+        {
+            _player.Traits.Get(Trait.Health).Value = _player.Traits.Get(Trait.Health).Max;
+            _player.Gold = 0;
+            Location.Town.Transition((PlayerCharacter)_player);
+        } 
 
         protected void Awake()
         {

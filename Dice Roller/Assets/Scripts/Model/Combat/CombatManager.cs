@@ -96,7 +96,7 @@ namespace AdventureQuest.Combat
 
             if (Player.Traits.Get(Trait.Health).Value <= 0)
             {
-                CombatResult playerDeath = new("You Died!") { IsCombatOver = true };
+                DefeatResult playerDeath = new() ;
                 playerDeath.Add($"{Player.Name} dies!");
                 OnChange.Invoke(playerDeath);
                 return true;
@@ -109,7 +109,7 @@ namespace AdventureQuest.Combat
                 {
                     loot = lootableEnemy.Loot;
                 }
-                VictoryResult enemyDeath = new(loot) { IsCombatOver = true };
+                VictoryResult enemyDeath = new(loot);
                 enemyDeath.Add($"{Enemy.Name} dies!");
                 Player.Gold += loot.Gold;
                 foreach (IItem item in loot.Items)
