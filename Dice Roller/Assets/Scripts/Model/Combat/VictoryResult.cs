@@ -5,14 +5,11 @@ namespace AdventureQuest.Combat
 {
     public class VictoryResult : CombatResult
     {
-        public VictoryResult(int gold) : this(gold, null) {}
-        public VictoryResult(int gold, IEnumerable<IItem> loot) : base("Victory!")
+        public VictoryResult(Loot loot) : base("Victory!")
         {
-            Gold = gold;
-            Loot = loot != null ? new(loot) : new();
+            Loot = loot;
         }
 
-        public int Gold { get; }
-        public List<IItem> Loot { get; }
+        public Loot Loot { get; }
     }
 }

@@ -1,5 +1,7 @@
 using AdventureQuest.Character;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Dice;
+using AdventureQuest.Equipment;
 
 namespace AdventureQuest.Entity
 {
@@ -8,6 +10,14 @@ namespace AdventureQuest.Entity
 
         public static Enemy.Builder Slime = new Enemy.Builder("Slime", "slime-0")
             .AddPortrait("slime-1")
+            .LootTable(
+                new LootTable.Builder()
+                .DropsItems(() => DicePool.Parse("1d4").Roll() == 4)
+                .GoldValue(DicePool.Parse("1d10"))
+                .NumberOfItems(DicePool.Parse("1d2"))
+                .AddItem(new HealthPotion())
+                .Build()
+            )
             .TraitRange(Trait.Health, AbilityRoll.Parse($"1d4 + {Ability.Constitution}"))
             .TraitRange(Trait.Stamina, AbilityRoll.Parse($"1d6 + {Ability.Strength}"))
             .AttackRollOneOf(

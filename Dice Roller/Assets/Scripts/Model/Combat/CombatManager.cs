@@ -104,10 +104,15 @@ namespace AdventureQuest.Combat
 
             if (Enemy.Traits.Get(Trait.Health).Value <= 0)
             {
-                List<IItem> loot = new() { new Bomb("Loot Bomb"), new HealthPotion(), Weapons.Dagger };
-                VictoryResult enemyDeath = new(10, loot) { IsCombatOver = true };
+                Loot loot = Loot.NoLoot;
+                if (Enemy is Entity.Enemy lootableEnemy)
+                {
+                    loot = lootableEnemy.Loot;
+                }
+                VictoryResult enemyDeath = new(loot) { IsCombatOver = true };
                 enemyDeath.Add($"{Enemy.Name} dies!");
-                foreach (IItem item in loot)
+                Player.Gold += loot.Gold;
+                foreach (IItem item in loot.Items)
                 {
                     Player.Inventory.Add(item);
                 }

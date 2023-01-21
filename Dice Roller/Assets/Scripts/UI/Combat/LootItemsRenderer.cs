@@ -17,7 +17,13 @@ namespace AdventureQuest.Combat.UI
 
             if (result is VictoryResult victoryResult)
             {
-                foreach(IItem item in victoryResult.Loot)
+                if (victoryResult.Loot.Gold > 0)
+                {
+                    InventoryItemRenderer goldItem = Instantiate(_itemTemplate, transform);
+                    goldItem.Render(new GoldItem(victoryResult.Loot.Gold));
+                }                
+
+                foreach(IItem item in victoryResult.Loot.Items)
                 {
                     InventoryItemRenderer itemRenderer = Instantiate(_itemTemplate, transform);
                     itemRenderer.Render(item);

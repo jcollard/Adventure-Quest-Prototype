@@ -4,6 +4,7 @@ using AdventureQuest.Character;
 using AdventureQuest.Character.Dice;
 using AdventureQuest.Combat;
 using AdventureQuest.Dice;
+using AdventureQuest.Equipment;
 using AdventureQuest.Utils;
 
 namespace AdventureQuest.Entity
@@ -21,8 +22,9 @@ namespace AdventureQuest.Entity
         public Abilities Abilities { get; private set; }
         public TraitManifest Traits { get; private set; }
         public string PortraitSpriteKey { get; private set; }
+        public Loot Loot { get; private set; }
         public HashSet<ICombatEffect> Effects { get; } = new ();
-
+        
         public class Builder
         {
             private string _name;
@@ -32,6 +34,7 @@ namespace AdventureQuest.Entity
             private Abilities _abilities = Character.Abilities.Roll();
             private Dictionary<Trait, AbilityRoll> _traits;
             private List<string> _portriatOptions;
+            private ILootTable _lootTable = new LootTable.Builder().GoldValue(DicePool.Parse("1d6")).Build();
 
             public Builder(string name, string portraitSpriteKey)
             {
@@ -48,6 +51,7 @@ namespace AdventureQuest.Entity
             /// </summary>
             public Builder Defense(int value) => SetRef(ref _defense, value);
             public Builder DefenseRange(AbilityRoll value) => SetRef(ref _defenseRoll, value);
+            public Builder LootTable(ILootTable value) => SetRef(ref _lootTable, value);
             public Builder AttackRoll(AbilityRoll value) => AttackRollOneOf(value);
 
             public Builder TraitRange(Trait trait, AbilityRoll roll) 
@@ -87,6 +91,7 @@ namespace AdventureQuest.Entity
                     Abilities = _abilities,
                     Traits = traitManifest,
                     PortraitSpriteKey = _portriatOptions.Random(),
+                    Loot = _lootTable.Roll()                    
                 };
 
             }
