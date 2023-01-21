@@ -41,6 +41,7 @@ namespace AdventureQuest.Character
         {
 
             ICharacter player = _observable.Observed;
+            player.Traits.Get(Trait.Health).Value = 25;
             player.Inventory.Clear();
             player.Inventory.Add(Armors.ChainHelmet);
             player.Inventory.Add(new HealthPotion());

@@ -9,7 +9,7 @@ namespace AdventureQuest.Combat.UI
     /// <summary>
     /// CombatLogRenderer is a class used to render combat log to a text mesh pro uGui text area.
     /// </summary>
-    public class CombatLogRenderer : MonoBehaviour
+    public class CombatLogRenderer : CombatResultRenderer
     {
         /// <summary>
         /// The TextMeshProUGUI instance used for output.
@@ -34,6 +34,8 @@ namespace AdventureQuest.Combat.UI
 
         [field: SerializeField]
         public UnityEvent OnLogComplete { get; private set; }
+
+        public override void Render(CombatResult result) => Enqueue(result);
 
         /// <summary>
         /// Enqueues the provided CombatResult to the render queue.

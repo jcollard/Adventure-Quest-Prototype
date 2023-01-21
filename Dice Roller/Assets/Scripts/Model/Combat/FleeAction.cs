@@ -18,7 +18,7 @@ namespace AdventureQuest.Combat
 
         public CombatResult PerformAction()
         {
-            CombatResult result = new();
+            CombatResult result = new("Fleeing");
             result.Add($"{Fleeing.Name} looks afraid and attempts to flee from {Enemy.Name}.");
             int fleeRoll = _escapeRoll.Roll(Fleeing);
             int catchRoll = _catchRoll.Roll(Enemy);
@@ -28,6 +28,7 @@ namespace AdventureQuest.Combat
             }
             else
             {
+                result.Title = "You Escaped!";
                 result.Add($"{Fleeing.Name} escapes.");
                 result.IsCombatOver = true;
             }

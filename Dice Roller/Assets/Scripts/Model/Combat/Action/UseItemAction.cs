@@ -17,7 +17,7 @@ namespace AdventureQuest.Combat
 
         public CombatResult PerformAction()
         {
-            CombatResult result = new ();
+            CombatResult result = new ("Use Item");
             result.Add(Item.Use(Target));            
             return result;
         }

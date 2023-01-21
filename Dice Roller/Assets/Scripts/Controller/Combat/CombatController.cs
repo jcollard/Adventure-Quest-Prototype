@@ -32,7 +32,7 @@ namespace AdventureQuest.Combat
             }
             else
             {
-                CombatResult result = new();
+                CombatResult result = new("Invalid Action");
                 result.Add($"{item.Name} cannot be used during combat.");
                 OnCombatEvent.Invoke(result);
             }

@@ -3,6 +3,7 @@ using AdventureQuest.Character;
 using AdventureQuest.Entity;
 using System.Diagnostics;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Equipment;
 
 namespace AdventureQuest.Combat
 {
@@ -30,7 +31,7 @@ namespace AdventureQuest.Combat
             // TODO: Consider writing a method on ICombatant called Initialize
             Enemy.Effects.Clear();
             Player.Effects.Clear();
-            CombatResult result = new();
+            CombatResult result = new("Combat Begins!");
             _turnQueue.Clear();
             result.Add($"A {Enemy.Name} appears!");
             AbilityRoll initiativeRoll = AbilityRoll.Parse($"1d20 + {Ability.Agility}");
@@ -78,7 +79,7 @@ namespace AdventureQuest.Combat
                 CombatResult result = action.PerformAction();
                 _turnQueue.Enqueue(acting);
                 OnChange.Invoke(result);
-                
+
                 if (!CheckEndOfCombat(result))
                 {
                     ICombatant nextToAct = _turnQueue.Peek();
@@ -91,18 +92,25 @@ namespace AdventureQuest.Combat
 
         private bool CheckEndOfCombat(CombatResult result)
         {
-            if(result.IsCombatOver) { return true; }
+            if (result.IsCombatOver) { return true; }
+
             if (Player.Traits.Get(Trait.Health).Value <= 0)
             {
-                CombatResult playerDeath = new() { IsCombatOver = true };
+                CombatResult playerDeath = new("You Died!") { IsCombatOver = true };
                 playerDeath.Add($"{Player.Name} dies!");
                 OnChange.Invoke(playerDeath);
                 return true;
             }
+
             if (Enemy.Traits.Get(Trait.Health).Value <= 0)
             {
-                CombatResult enemyDeath = new() { IsCombatOver = true };
+                List<IItem> loot = new() { new Bomb("Loot Bomb"), new HealthPotion(), Weapons.Dagger };
+                VictoryResult enemyDeath = new(10, loot) { IsCombatOver = true };
                 enemyDeath.Add($"{Enemy.Name} dies!");
+                foreach (IItem item in loot)
+                {
+                    Player.Inventory.Add(item);
+                }
                 OnChange.Invoke(enemyDeath);
                 return true;
             }

@@ -28,7 +28,7 @@ namespace AdventureQuest.Combat
 
         public virtual CombatResult Tick()
         {
-            CombatResult result = new();
+            CombatResult result = new("Time Passes");
             foreach (ICombatEffect effect in Effects.ToList())
             {
                 effect.Tick(this, result);
@@ -37,7 +37,7 @@ namespace AdventureQuest.Combat
         }
         public virtual CombatResult Attack(ICombatant other)
         {
-            CombatResult result = new();
+            CombatResult result = new("Attack!");
             result.Add($"{Name} attacks {other.Name}.");
             int aimResult = AbilityRoll.Parse($"1d20 + {Ability.Dexterity}").Roll(CombatAbilities);
             int dodgeResult = AbilityRoll.Parse($"1d20 + {Ability.Agility}").Roll(other.CombatAbilities);

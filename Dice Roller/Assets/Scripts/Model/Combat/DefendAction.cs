@@ -13,7 +13,7 @@ namespace AdventureQuest.Combat
 
         public CombatResult PerformAction()
         {
-            CombatResult result = new ();
+            CombatResult result = new ("Defend");
             result.Add($"{Defender.Name} defends themselves.");
             Defender.AddEffect(new DefendBuff());
             return result;
