@@ -3,11 +3,7 @@
 Primary Goal:  Implement a Combat System
 
 * Create "combat" system
-* Implement Defend
-  * Using a "buff" / "debuff" system on ICombatant
-* Implement a Combat Rounds / Timing system
 * Victory / Defeat conditions?
-* Implement Inventory view / Useable items
 
 * Fix typo for IHasPortrait (from IHasPortriat)
 * Consider redesign of Combat scene to provide a sense of URGENCY!

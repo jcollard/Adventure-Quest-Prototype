@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 2057
+    x: 2061
     y: 56
     width: 1551
     height: 960
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 98
+  controlID: 70
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 99
+  controlID: 71
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 100
+  controlID: 72
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 863
     height: 566
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 367
     height: 910
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -298,7 +298,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2378
+    x: 2382
     y: 86
     width: 861
     height: 545
@@ -390,7 +390,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2057
+    x: 2061
     y: 86
     width: 320
     height: 545
@@ -401,23 +401,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3eefffff
-      m_LastClickedID: -4290
-      m_ExpandedIDs: a6effffff8f5ffff2cfbffff32850000468500008c85000094850000a2850000
+      m_SelectedIDs: 621e0100
+      m_LastClickedID: 73314
+      m_ExpandedIDs: 9c1dffffb232ffffd432ffffe038ffff2874ffff4274ffffbcb2ffffd8b2ffff98b6ffffa8e0ffffcef6ffff2cfbffffea600000fe600000446100004c6100005a61000076c40000bcc40000dac40000e4c40000ecc40000fac40000a2e20000c0e20000d2e20000e0e20000ba190100621e0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: CharacterRenderer
+        m_OriginalName: CharacterRenderer
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -2368
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -447,8 +447,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2378
-    y: 86
+    x: -25343.201
+    y: -25576
     width: 861
     height: 545
   m_ViewDataDictionary: {fileID: 0}
@@ -707,9 +707,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 404.07736, y: 293.42264, z: 3.6344428}
+    m_Target: {x: 464.72217, y: 275.3202, z: 0.85775375}
     speed: 2
-    m_Value: {x: 404.07736, y: 293.42264, z: 3.6344428}
+    m_Value: {x: 464.72217, y: 275.3202, z: 0.85775375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -760,9 +760,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 338.59036
+    m_Target: 322.04553
     speed: 2
-    m_Value: 338.59036
+    m_Value: 322.04553
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -835,8 +835,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2057
-    y: 652
+    x: -25600
+    y: -25123.201
     width: 1183
     height: 323
   m_ViewDataDictionary: {fileID: 0}
@@ -856,22 +856,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UI/Combat
+    - Assets/Sprites/Monsters
     m_Globs: []
     m_OriginalText: combat
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/UI/Combat
+  - Assets/Sprites/Monsters
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\git\jcollard\Unity-2021-DiceRoller\Dice Roller
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 390}
-    m_SelectedIDs: 3a630000
-    m_LastClickedID: 25402
-    m_ExpandedIDs: 0000000006630000086300000a6300000c6300000e630000106300001263000000ca9a3b
+    scrollPos: {x: 0, y: 1}
+    m_SelectedIDs: 62630000
+    m_LastClickedID: 25442
+    m_ExpandedIDs: 0000000016630000186300001a6300001e630000206300002263000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -887,7 +887,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -899,7 +899,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006630000086300000a6300000c6300000e6300001063000012630000
+    m_ExpandedIDs: 0000000016630000186300001a6300001c6300001e6300002063000022630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c8640000ca640000ba640000cc640000fcd20000426c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2057
+    x: 2061
     y: 652
     width: 1183
     height: 323
@@ -1003,7 +1003,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3241
+    x: 3245
     y: 86
     width: 366
     height: 889
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 238
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1044,31 +1044,31 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3151
+    x: 3241
     y: 86
-    width: 456
-    height: 844
+    width: 366
+    height: 889
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 6423
-    splitterInitialOffset: 760
+    ID: 10643
+    splitterInitialOffset: 661
     currentActiveSplitter: -1
     realSizes:
-    - 693
-    - 81
+    - 594
+    - 225
     relativeSizes:
-    - 0.89534885
-    - 0.10465115
+    - 0.72527474
+    - 0.27472526
     minSizes:
     - 32
     - 32
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 774
+    lastTotalSize: 819
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1137,7 +1137,7 @@ MonoBehaviour:
       name: Untitled 2D Project
       fullName: Untitled 2D Project
       resultStatus: 1
-      duration: 0.4427911
+      duration: 0.1289144
       messages: 
       output: 
       stacktrace: 
@@ -1153,7 +1153,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: D:/git/jcollard/Unity-2021-DiceRoller/Dice Roller/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.4120862
+      duration: 0.0600769
       messages: 
       output: 
       stacktrace: 
@@ -1169,7 +1169,7 @@ MonoBehaviour:
       name: AdventureQuest
       fullName: AdventureQuest
       resultStatus: 1
-      duration: 0.4114857
+      duration: 0.0587435
       messages: 
       output: 
       stacktrace: 
@@ -1185,7 +1185,7 @@ MonoBehaviour:
       name: Character
       fullName: AdventureQuest.Character
       resultStatus: 1
-      duration: 0.1293452
+      duration: 0.1310028
       messages: 
       output: 
       stacktrace: 
@@ -1201,7 +1201,7 @@ MonoBehaviour:
       name: AbilitiesTest
       fullName: AdventureQuest.Character.AbilitiesTest
       resultStatus: 1
-      duration: 0.0871941
+      duration: 0.055275
       messages: 
       output: 
       stacktrace: 
@@ -1217,7 +1217,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.AbilitiesTest.TestEquality
       resultStatus: 1
-      duration: 0.0470413
+      duration: 0.0334674
       messages: 
       output: 
       stacktrace: 
@@ -1234,7 +1234,7 @@ MonoBehaviour:
       name: Equipment
       fullName: AdventureQuest.Character.Equipment
       resultStatus: 1
-      duration: 0.0203599
+      duration: 0.0446127
       messages: 
       output: 
       stacktrace: 
@@ -1250,7 +1250,7 @@ MonoBehaviour:
       name: CharacterEquipmentManifestTest
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest
       resultStatus: 1
-      duration: 0.0146041
+      duration: 0.0380969
       messages: 
       output: 
       stacktrace: 
@@ -1266,7 +1266,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquality
       resultStatus: 1
-      duration: 0.0017965
+      duration: 0.0185006
       messages: 
       output: 
       stacktrace: 
@@ -1283,7 +1283,7 @@ MonoBehaviour:
       name: TestEquipWeapon
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestEquipWeapon
       resultStatus: 1
-      duration: 0.0032434
+      duration: 0.0036588
       messages: 
       output: 
       stacktrace: 
@@ -1300,7 +1300,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization
       resultStatus: 1
-      duration: 0.0079967
+      duration: 0.0143448
       messages: 
       output: 
       stacktrace: 
@@ -1316,7 +1316,7 @@ MonoBehaviour:
       name: TestSerialization(LeftHand)
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(LeftHand)
       resultStatus: 1
-      duration: 0.0011164
+      duration: 0.0061449
       messages: 
       output: 
       stacktrace: 
@@ -1333,7 +1333,7 @@ MonoBehaviour:
       name: TestSerialization(RightHand)
       fullName: AdventureQuest.Character.Equipment.CharacterEquipmentManifestTest.TestSerialization(RightHand)
       resultStatus: 1
-      duration: 0.0004991
+      duration: 0.0005361
       messages: 
       output: 
       stacktrace: 
@@ -1350,7 +1350,7 @@ MonoBehaviour:
       name: LocationTest
       fullName: AdventureQuest.Character.LocationTest
       resultStatus: 1
-      duration: 0.006161
+      duration: 0.0089304
       messages: 
       output: 
       stacktrace: 
@@ -1366,7 +1366,7 @@ MonoBehaviour:
       name: TestLocationScenesExist
       fullName: AdventureQuest.Character.LocationTest.TestLocationScenesExist
       resultStatus: 1
-      duration: 0.0012498
+      duration: 0.0024864
       messages: 
       output: 
       stacktrace: 
@@ -1383,7 +1383,7 @@ MonoBehaviour:
       name: PlayerCharacterTest
       fullName: AdventureQuest.Character.PlayerCharacterTest
       resultStatus: 1
-      duration: 0.0099252
+      duration: 0.0172783
       messages: 
       output: 
       stacktrace: 
@@ -1399,7 +1399,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Character.PlayerCharacterTest.TestEquality
       resultStatus: 1
-      duration: 0.0025891
+      duration: 0.0059945
       messages: 
       output: 
       stacktrace: 
@@ -1416,7 +1416,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Character.PlayerCharacterTest.TestSerialization
       resultStatus: 1
-      duration: 0.0016139
+      duration: 0.0055654
       messages: 
       output: 
       stacktrace: 
@@ -1433,7 +1433,7 @@ MonoBehaviour:
       name: Data
       fullName: AdventureQuest.Data
       resultStatus: 1
-      duration: 0.0137541
+      duration: 0.0134335
       messages: 
       output: 
       stacktrace: 
@@ -1449,7 +1449,7 @@ MonoBehaviour:
       name: HistogramTest
       fullName: AdventureQuest.Data.HistogramTest
       resultStatus: 1
-      duration: 0.0092877
+      duration: 0.0082791
       messages: 
       output: 
       stacktrace: 
@@ -1465,7 +1465,7 @@ MonoBehaviour:
       name: TestChanceOf
       fullName: AdventureQuest.Data.HistogramTest.TestChanceOf
       resultStatus: 1
-      duration: 0.0026792
+      duration: 0.0026059
       messages: 
       output: 
       stacktrace: 
@@ -1482,7 +1482,7 @@ MonoBehaviour:
       name: TestCount
       fullName: AdventureQuest.Data.HistogramTest.TestCount
       resultStatus: 1
-      duration: 0.0013856
+      duration: 0.0014055
       messages: 
       output: 
       stacktrace: 
@@ -1499,7 +1499,7 @@ MonoBehaviour:
       name: TestMax
       fullName: AdventureQuest.Data.HistogramTest.TestMax
       resultStatus: 1
-      duration: 0.0022374
+      duration: 0.0016248
       messages: 
       output: 
       stacktrace: 
@@ -1516,7 +1516,7 @@ MonoBehaviour:
       name: TestMin
       fullName: AdventureQuest.Data.HistogramTest.TestMin
       resultStatus: 1
-      duration: 0.0015329
+      duration: 0.0012941
       messages: 
       output: 
       stacktrace: 
@@ -1533,7 +1533,7 @@ MonoBehaviour:
       name: Dice
       fullName: AdventureQuest.Dice
       resultStatus: 1
-      duration: 0.2292543
+      duration: 0.263707
       messages: 
       output: 
       stacktrace: 
@@ -1549,7 +1549,7 @@ MonoBehaviour:
       name: DiceGroupTest
       fullName: AdventureQuest.Dice.DiceGroupTest
       resultStatus: 1
-      duration: 0.0154861
+      duration: 0.0155793
       messages: 
       output: 
       stacktrace: 
@@ -1565,7 +1565,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DiceGroupTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0003919
+      duration: 0.000395
       messages: 
       output: 
       stacktrace: 
@@ -1582,7 +1582,7 @@ MonoBehaviour:
       name: TestParse1D20
       fullName: AdventureQuest.Dice.DiceGroupTest.TestParse1D20
       resultStatus: 1
-      duration: 0.0092787
+      duration: 0.0091898
       messages: 
       output: 
       stacktrace: 
@@ -1599,7 +1599,7 @@ MonoBehaviour:
       name: TestParse3D6
       fullName: AdventureQuest.Dice.DiceGroupTest.TestParse3D6
       resultStatus: 1
-      duration: 0.0047964
+      duration: 0.0050245
       messages: 
       output: 
       stacktrace: 
@@ -1616,7 +1616,7 @@ MonoBehaviour:
       name: DicePoolTest
       fullName: AdventureQuest.Dice.DicePoolTest
       resultStatus: 1
-      duration: 0.1567863
+      duration: 0.1911756
       messages: 
       output: 
       stacktrace: 
@@ -1632,7 +1632,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DicePoolTest.TestIsParseable
       resultStatus: 1
-      duration: 0.000513
+      duration: 0.0004974
       messages: 
       output: 
       stacktrace: 
@@ -1649,7 +1649,7 @@ MonoBehaviour:
       name: TestParse1D20
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse1D20
       resultStatus: 1
-      duration: 0.0401177
+      duration: 0.0610441
       messages: 
       output: 
       stacktrace: 
@@ -1666,7 +1666,7 @@ MonoBehaviour:
       name: TestParse2D4Plus1D6
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse2D4Plus1D6
       resultStatus: 1
-      duration: 0.0674235
+      duration: 0.057629
       messages: 
       output: 
       stacktrace: 
@@ -1683,7 +1683,7 @@ MonoBehaviour:
       name: TestParse3D6Plus1D4Plus3D8
       fullName: AdventureQuest.Dice.DicePoolTest.TestParse3D6Plus1D4Plus3D8
       resultStatus: 1
-      duration: 0.0429668
+      duration: 0.0656566
       messages: 
       output: 
       stacktrace: 
@@ -1700,7 +1700,7 @@ MonoBehaviour:
       name: DieTest
       fullName: AdventureQuest.Dice.DieTest
       resultStatus: 1
-      duration: 0.0402619
+      duration: 0.0398761
       messages: 
       output: 
       stacktrace: 
@@ -1716,7 +1716,7 @@ MonoBehaviour:
       name: TestConstruct12SidedDie
       fullName: AdventureQuest.Dice.DieTest.TestConstruct12SidedDie
       resultStatus: 1
-      duration: 0.0063807
+      duration: 0.0059793
       messages: 
       output: 
       stacktrace: 
@@ -1733,7 +1733,7 @@ MonoBehaviour:
       name: TestConstruct6SidedDie
       fullName: AdventureQuest.Dice.DieTest.TestConstruct6SidedDie
       resultStatus: 1
-      duration: 0.0092981
+      duration: 0.0132879
       messages: 
       output: 
       stacktrace: 
@@ -1750,7 +1750,7 @@ MonoBehaviour:
       name: TestDieMinimumSize
       fullName: AdventureQuest.Dice.DieTest.TestDieMinimumSize
       resultStatus: 1
-      duration: 0.0137328
+      duration: 0.0029383
       messages: 
       output: 
       stacktrace: 
@@ -1767,7 +1767,7 @@ MonoBehaviour:
       name: TestEdgeCaseParse
       fullName: AdventureQuest.Dice.DieTest.TestEdgeCaseParse
       resultStatus: 1
-      duration: 0.0008967
+      duration: 0.000931
       messages: 
       output: 
       stacktrace: 
@@ -1784,7 +1784,7 @@ MonoBehaviour:
       name: TestIsParseable
       fullName: AdventureQuest.Dice.DieTest.TestIsParseable
       resultStatus: 1
-      duration: 0.0002903
+      duration: 0.0003704
       messages: 
       output: 
       stacktrace: 
@@ -1801,7 +1801,7 @@ MonoBehaviour:
       name: TestParseFormatException
       fullName: AdventureQuest.Dice.DieTest.TestParseFormatException
       resultStatus: 1
-      duration: 0.0005369
+      duration: 0.0005505
       messages: 
       output: 
       stacktrace: 
@@ -1818,7 +1818,7 @@ MonoBehaviour:
       name: TestSimpleParse
       fullName: AdventureQuest.Dice.DieTest.TestSimpleParse
       resultStatus: 1
-      duration: 0.0002762
+      duration: 0.0002974
       messages: 
       output: 
       stacktrace: 
@@ -1835,7 +1835,7 @@ MonoBehaviour:
       name: RollModifierTest
       fullName: AdventureQuest.Dice.RollModifierTest
       resultStatus: 1
-      duration: 0.0110289
+      duration: 0.0116528
       messages: 
       output: 
       stacktrace: 
@@ -1851,7 +1851,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers
       resultStatus: 1
-      duration: 0.0043399
+      duration: 0.0053359
       messages: 
       output: 
       stacktrace: 
@@ -1867,7 +1867,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Strength)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Strength)
       resultStatus: 1
-      duration: 0.0007639
+      duration: 0.0018142
       messages: 
       output: 
       stacktrace: 
@@ -1884,7 +1884,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Dexterity)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Dexterity)
       resultStatus: 1
-      duration: 0.000418
+      duration: 0.0004587
       messages: 
       output: 
       stacktrace: 
@@ -1901,7 +1901,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Constitution)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Constitution)
       resultStatus: 1
-      duration: 0.0003753
+      duration: 0.0003887
       messages: 
       output: 
       stacktrace: 
@@ -1918,7 +1918,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Diplomacy)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Diplomacy)
       resultStatus: 1
-      duration: 0.0003734
+      duration: 0.0003761
       messages: 
       output: 
       stacktrace: 
@@ -1935,7 +1935,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Intelligence)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Intelligence)
       resultStatus: 1
-      duration: 0.0003727
+      duration: 0.0003821
       messages: 
       output: 
       stacktrace: 
@@ -1952,7 +1952,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Perception)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Perception)
       resultStatus: 1
-      duration: 0.0004007
+      duration: 0.0003838
       messages: 
       output: 
       stacktrace: 
@@ -1969,7 +1969,7 @@ MonoBehaviour:
       name: TestAllAbilityModifiers(Agility)
       fullName: AdventureQuest.Dice.RollModifierTest.TestAllAbilityModifiers(Agility)
       resultStatus: 1
-      duration: 0.0005448
+      duration: 0.0003875
       messages: 
       output: 
       stacktrace: 
@@ -1986,7 +1986,7 @@ MonoBehaviour:
       name: TestSimpleModifiers
       fullName: AdventureQuest.Dice.RollModifierTest.TestSimpleModifiers
       resultStatus: 1
-      duration: 0.000672
+      duration: 0.0003421
       messages: 
       output: 
       stacktrace: 
@@ -2003,7 +2003,7 @@ MonoBehaviour:
       name: Entity
       fullName: AdventureQuest.Entity
       resultStatus: 1
-      duration: 0.0192081
+      duration: 0.0086012
       messages: 
       output: 
       stacktrace: 
@@ -2019,7 +2019,7 @@ MonoBehaviour:
       name: TraitManifestTest
       fullName: AdventureQuest.Entity.TraitManifestTest
       resultStatus: 1
-      duration: 0.0105783
+      duration: 0.0021371
       messages: 
       output: 
       stacktrace: 
@@ -2035,7 +2035,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Entity.TraitManifestTest.TestEquality
       resultStatus: 1
-      duration: 0.0015648
+      duration: 0.0009569
       messages: 
       output: 
       stacktrace: 
@@ -2052,7 +2052,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Entity.TraitManifestTest.TestSerialization
       resultStatus: 1
-      duration: 0.0005483
+      duration: 0.0004487
       messages: 
       output: 
       stacktrace: 
@@ -2069,7 +2069,7 @@ MonoBehaviour:
       name: Equipment
       fullName: AdventureQuest.Equipment
       resultStatus: 1
-      duration: 0.0189019
+      duration: 0.0579546
       messages: 
       output: 
       stacktrace: 
@@ -2085,7 +2085,7 @@ MonoBehaviour:
       name: Armor
       fullName: AdventureQuest.Equipment.Armor
       resultStatus: 1
-      duration: 0.0069303
+      duration: 0.0071945
       messages: 
       output: 
       stacktrace: 
@@ -2101,7 +2101,7 @@ MonoBehaviour:
       name: ArmorTest
       fullName: AdventureQuest.Equipment.Armor.ArmorTest
       resultStatus: 1
-      duration: 0.0066934
+      duration: 0.0068438
       messages: 
       output: 
       stacktrace: 
@@ -2117,7 +2117,7 @@ MonoBehaviour:
       name: TestEquality
       fullName: AdventureQuest.Equipment.Armor.ArmorTest.TestEquality
       resultStatus: 1
-      duration: 0.0014872
+      duration: 0.0016443
       messages: 
       output: 
       stacktrace: 
@@ -2134,7 +2134,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Equipment.Armor.ArmorTest.TestSerialization
       resultStatus: 1
-      duration: 0.0004091
+      duration: 0.0004145
       messages: 
       output: 
       stacktrace: 
@@ -2151,7 +2151,7 @@ MonoBehaviour:
       name: InventoryTest
       fullName: AdventureQuest.Equipment.InventoryTest
       resultStatus: 1
-      duration: 0.0071463
+      duration: 0.0523787
       messages: 
       output: 
       stacktrace: 
@@ -2162,12 +2162,29 @@ MonoBehaviour:
       categories: []
       parentId: 1039
       parentUniqueId: Tests.dll/AdventureQuest/[Tests][AdventureQuest.Equipment][suite]
+    - id: 1005
+      uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestAddRemove]
+      name: TestAddRemove
+      fullName: AdventureQuest.Equipment.InventoryTest.TestAddRemove
+      resultStatus: 1
+      duration: 0.0301379
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
     - id: 1002
       uniqueId: Tests.dll/AdventureQuest/Equipment/InventoryTest/[Tests][AdventureQuest.Equipment.InventoryTest.TestEquality]
       name: TestEquality
       fullName: AdventureQuest.Equipment.InventoryTest.TestEquality
       resultStatus: 1
-      duration: 0.0003917
+      duration: 0.0006528
       messages: 
       output: 
       stacktrace: 
@@ -2184,7 +2201,7 @@ MonoBehaviour:
       name: TestSerialization
       fullName: AdventureQuest.Equipment.InventoryTest.TestSerialization
       resultStatus: 1
-      duration: 0.000884
+      duration: 0.0013907
       messages: 
       output: 
       stacktrace: 
@@ -2196,15 +2213,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/AdventureQuest/Equipment/[Tests][AdventureQuest.Equipment.InventoryTest][suite]
-    m_ResultText: 'TestAllAbilityModifiers (0.004s)
-
-      Test''s ability additive
-      modifiers.'
+    m_ResultText: TestAddRemove (0.030s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3d3d2fe1
-      m_LastClickedID: -516997827
+      scrollPos: {x: 0, y: 210}
+      m_SelectedIDs: 450f5071
+      m_LastClickedID: 1901072197
       m_ExpandedIDs: d8a1b0861ffc8289e622df8cdb12b49dec9a87a26593f7a48e258eb15feec0ba0d0e6acd63bf45d53d3d2fe1e557abf7bc75bf00f66fb511991f8f17b985554eecc11252524433658128b07383cb6274f9493a7affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
