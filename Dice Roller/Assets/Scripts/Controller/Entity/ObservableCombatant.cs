@@ -1,6 +1,5 @@
 using AdventureQuest.Controller;
 using AdventureQuest.Entity;
-using AdventureQuest.Equipment;
 
 namespace AdventureQuest.Combat
 {
@@ -8,9 +7,8 @@ namespace AdventureQuest.Combat
     {
         protected void Start()
         {
-            //TODO: This is a hack. Plz fix me!
-            Enemy enemy = Enemies.Slime.Build();
-            Observed = (ICombatant)enemy;
+            ICombatant enemy = Encounters.Forest.Build();
+            Observed = enemy;
         }
     }
 }
