@@ -14,6 +14,7 @@ namespace AdventureQuest.Character
     [Serializable]
     public class PlayerCharacter : ICharacter, ISerializationCallbackReceiver
     {
+        public static PlayerCharacter NewCharacter => new ("New Character", Abilities.Roll(), TraitManifest.Default, "knight-1");
         [field: SerializeField]
         private int _gold;
         [field: SerializeField]

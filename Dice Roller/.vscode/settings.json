@@ -56,5 +56,8 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
-    }
+    },
+    "cSpell.words": [
+        "interactable"
+    ]
 }
