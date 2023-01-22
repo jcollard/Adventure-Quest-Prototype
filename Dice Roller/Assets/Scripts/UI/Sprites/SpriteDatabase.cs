@@ -31,6 +31,7 @@ namespace AdventureQuest.UI
         private List<SpriteEntry> _entries;
         public int Count => _entries.Count;
         public List<string> Keys => Database.Keys.ToList();
+        public SpriteEntry Get(IHasPortriat hasPortriat) => Get(hasPortriat.PortraitSpriteKey);
         public SpriteEntry Get(string key) => Database[key];
         public SpriteEntry Get(int ix) => _entries[ix];
     }

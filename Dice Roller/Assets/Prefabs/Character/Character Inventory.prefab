@@ -3260,7 +3260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8332d377d5947a448943b67b85962ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultController: {fileID: 0}
+  _defaultController: {fileID: 6158960189012264958}
   _name: {fileID: 7895725329423764581}
   _itemTemplate: {fileID: 3427041635638448624, guid: 6fa011989840bcb47a71308eff417339, type: 3}
   _itemList: {fileID: 990457421862806923}
@@ -3281,6 +3281,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1647666745629516468, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
   m_PrefabInstance: {fileID: 1973561712807282495}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6158960189012264958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5627945112163696833, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}
+  m_PrefabInstance: {fileID: 1973561712807282495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985246527773877581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4582a4b1bd52c4ebc6d26dbdd12810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7895725329423764581 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8570420122247433050, guid: b4d97d82bb722fa4f8e2f2356141f91c, type: 3}

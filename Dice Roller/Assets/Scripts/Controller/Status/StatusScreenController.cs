@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using AdventureQuest.Scene;
+
 
 namespace AdventureQuest.Character
 {
@@ -10,8 +11,9 @@ namespace AdventureQuest.Character
     {
         public void CloseStatusScreen()
         {
-            gameObject.GetComponent<CharacterController>().StoreCharacter();
-            SceneManager.LoadScene("Town");
+            // TODO: Return to the screen prior to this one rather than the town scene.
+            PlayerCharacter character = (PlayerCharacter)gameObject.GetComponent<CharacterController>().PlayerCharacter;
+            Location.Town.Transition(character);
         }
     }
 }

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using AdventureQuest.Equipment;
 using AdventureQuest.Character.Dice;
+using AdventureQuest.Entity;
 
 namespace AdventureQuest.Character
 {
@@ -22,7 +23,7 @@ namespace AdventureQuest.Character
                 .SetScore(Ability.Perception, 6)
                 .SetScore(Ability.Strength, 7)
                 .Build();
-            character = new ("TestyTesterson", abilities, "TestPortrait");
+            character = new ("TestyTesterson", abilities, TraitManifest.Default, "TestPortrait");
             character.Inventory.Add(Weapons.Dagger);
             character.Inventory.Add(Weapons.ShortSword);
             character.Inventory.Add(Weapons.Longsword);
@@ -37,7 +38,7 @@ namespace AdventureQuest.Character
             Assert.AreEqual(character, loaded);
 
             Abilities abilitiesOther = Abilities.Roll();
-            PlayerCharacter characterOther = new ("Jim Davis", abilities, "TestPortrait");
+            PlayerCharacter characterOther = new ("Jim Davis", abilities, TraitManifest.Default, "TestPortrait");
             characterOther.Inventory.Add(Weapons.BattleAxe);
             characterOther.Equipment.Equip(Weapons.Longsword, EquipmentSlot.LeftHand, character);
             serialized = PlayerCharacter.Encode(characterOther);
@@ -57,14 +58,14 @@ namespace AdventureQuest.Character
                 .SetScore(Ability.Perception, 6)
                 .SetScore(Ability.Strength, 7)
                 .Build();
-            PlayerCharacter characterDiffName = new ("TestyTesterson2", abilitiesIdentical, "TestPortrait");
+            PlayerCharacter characterDiffName = new ("TestyTesterson2", abilitiesIdentical, TraitManifest.Default, "TestPortrait");
             characterDiffName.Inventory.Add(Weapons.Dagger);
             characterDiffName.Inventory.Add(Weapons.ShortSword);
             characterDiffName.Inventory.Add(Weapons.Longsword);
             characterDiffName.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, character);
             Assert.AreNotEqual(character, characterDiffName);
 
-            PlayerCharacter characterIdentical = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
+            PlayerCharacter characterIdentical = new ("TestyTesterson", abilitiesIdentical, TraitManifest.Default, "TestPortrait");
             characterIdentical.Inventory.Add(Weapons.Dagger);
             characterIdentical.Inventory.Add(Weapons.ShortSword);
             characterIdentical.Inventory.Add(Weapons.Longsword);
@@ -83,20 +84,20 @@ namespace AdventureQuest.Character
                 .SetScore(Ability.Perception, 6)
                 .SetScore(Ability.Strength, 7)
                 .Build();
-            PlayerCharacter characterOtherNotEqual = new ("TestyTesterson", abilitiesOtherNotEqual, "TestPortrait");
+            PlayerCharacter characterOtherNotEqual = new ("TestyTesterson", abilitiesOtherNotEqual, TraitManifest.Default, "TestPortrait");
             characterOtherNotEqual.Inventory.Add(Weapons.Dagger);
             characterOtherNotEqual.Inventory.Add(Weapons.ShortSword);
             characterOtherNotEqual.Inventory.Add(Weapons.Longsword);
             characterOtherNotEqual.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, characterOtherNotEqual);
             Assert.AreNotEqual(character, characterOtherNotEqual);
 
-            PlayerCharacter characterInventoryDiff = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
+            PlayerCharacter characterInventoryDiff = new ("TestyTesterson", abilitiesIdentical, TraitManifest.Default, "TestPortrait");
             characterInventoryDiff.Inventory.Add(Weapons.ShortSword);
             characterInventoryDiff.Inventory.Add(Weapons.Longsword);
             characterInventoryDiff.Equipment.Equip(Weapons.Dagger, EquipmentSlot.RightHand, characterInventoryDiff);
             Assert.AreNotEqual(character, characterInventoryDiff);
 
-            PlayerCharacter characterEquipmentDiff = new ("TestyTesterson", abilitiesIdentical, "TestPortrait");
+            PlayerCharacter characterEquipmentDiff = new ("TestyTesterson", abilitiesIdentical, TraitManifest.Default, "TestPortrait");
             characterEquipmentDiff.Inventory.Add(Weapons.Dagger);
             characterEquipmentDiff.Inventory.Add(Weapons.ShortSword);
             characterEquipmentDiff.Inventory.Add(Weapons.Longsword);

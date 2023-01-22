@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6582860798161015710}
   - component: {fileID: 3049482099680436975}
   - component: {fileID: 8337381019934980183}
+  - component: {fileID: 5627945112163696833}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8332d377d5947a448943b67b85962ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultController: {fileID: 0}
+  _defaultController: {fileID: 5627945112163696833}
   _name: {fileID: 8570420122247433050}
   _itemTemplate: {fileID: 3427041635638448624, guid: 6fa011989840bcb47a71308eff417339, type: 3}
   _itemList: {fileID: 1647666745629516468}
@@ -153,6 +154,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   <OnMouseExit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5627945112163696833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643589103420613234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4582a4b1bd52c4ebc6d26dbdd12810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <OnChange>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &7463327031172794442

@@ -33,7 +33,7 @@ namespace AdventureQuest.Equipment
         }
         public IResult Remove(IItem toRemove)
         {
-            if (!_items.Remove(toRemove)) { IResult.Failure($"You don't have a {toRemove.Name}."); }
+            if (!_items.Remove(toRemove)) { return IResult.Failure($"You don't have a {toRemove.Name}."); }
             OnChange?.Invoke(this);
             return IResult.Success();
         }

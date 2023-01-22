@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using AdventureQuest.Dice;
 using UnityEngine;
 using AdventureQuest.Utils;
+using AdventureQuest.Combat;
 
 namespace AdventureQuest.Character
 {
@@ -24,9 +25,25 @@ namespace AdventureQuest.Character
         public AbilityScore Score(Ability ability) => _abilities[ability];
         public static Ability[] Types => (Ability[])System.Enum.GetValues(typeof(Ability));
 
+        /// <summary>
+        /// Creates a copy of this set of <see cref="Abilities"/> with the list
+        /// of <see cref="ICombatEffect"/>s applied
+        /// </summary>
+        public Abilities WithModifiers(HashSet<ICombatEffect> toApply)
+        {
+            Dictionary<Ability, int> modifiers = ICombatEffect.AbilityModifierSum(toApply);
+            List<AbilityScore> modifiedScores = new();
+            foreach (AbilityScore score in _abilities.Values)
+            {
+                int modifier = modifiers.ContainsKey(score.Ability) ? modifiers[score.Ability] : 0;
+                modifiedScores.Add(new AbilityScore(score.Ability, score.Score + modifier));
+            }
+            return new Abilities(modifiedScores);
+        }
+
         public static Abilities Roll()
         {
-            Builder builder = new ();
+            Builder builder = new();
             DicePool pool = DicePool.Parse("3d6");
             foreach (Ability ability in Types)
             {
@@ -35,7 +52,7 @@ namespace AdventureQuest.Character
             return builder.Build();
         }
 
-        public void OnBeforeSerialize(){}
+        public void OnBeforeSerialize() { }
 
         public void OnAfterDeserialize()
         {
@@ -48,7 +65,7 @@ namespace AdventureQuest.Character
             if (scores == null) { throw new System.ArgumentNullException("Cannot to set Scores to null list."); }
             Total = 0;
             TotalModifiers = 0;
-            _abilities = new ();
+            _abilities = new();
             _abilityScores = scores;
             foreach (AbilityScore score in scores)
             {

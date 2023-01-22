@@ -1,10 +1,38 @@
 using AdventureQuest.Equipment.Armor;
+using AdventureQuest.Result;
 using NUnit.Framework;
 namespace AdventureQuest.Equipment
 {
     [TestFixture]
     public class InventoryTest
     {
+
+        [Test, Timeout(5000)]
+        public void TestAddRemove()
+        {
+            Inventory inventory = new ("Test Inventory");
+            Assert.AreEqual(0, inventory.Items.Count);
+
+            IItem potion = new HealthPotion();
+            Assert.That(inventory.Items.Contains(potion) == false);
+
+            IResult result = inventory.Add(potion);
+            Assert.That(result is Success);
+            Assert.AreEqual(1, inventory.Items.Count);
+            Assert.That(inventory.Items.Contains(potion));
+
+            result = inventory.Remove(potion);
+            Assert.That(result is Success);
+            Assert.AreEqual(0, inventory.Items.Count);
+            Assert.That(inventory.Items.Contains(potion) == false);
+
+            result = inventory.Remove(potion);
+            Assert.That(result is Failure);
+            Assert.AreEqual(0, inventory.Items.Count);
+            Assert.That(inventory.Items.Contains(potion) == false);
+
+        }
+
         [Test, Timeout(5000)]
         public void TestEquality()
         {

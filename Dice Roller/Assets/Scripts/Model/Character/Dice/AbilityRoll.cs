@@ -18,6 +18,7 @@ namespace AdventureQuest.Character.Dice
         public RollModifier Modifier { get; private set; }
         public string DiceNotation { get => ToString(); }
 
+        public int Roll(IHasAbilities hasAbilities) => Roll(hasAbilities.Abilities);
         public int Roll(Abilities abilities) => BaseRoll.Roll() + Modifier.ModifyWith(abilities);
 
         public static AbilityRoll Parse(string diceNotation)

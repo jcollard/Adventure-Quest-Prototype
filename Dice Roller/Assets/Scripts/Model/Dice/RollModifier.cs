@@ -43,7 +43,7 @@ namespace AdventureQuest.Dice
             int total = Modifier;
             foreach (Ability ability in AbilityModifiers)
             {
-                total += abilities.Score(ability).Score;
+                total += abilities.Score(ability).Modifier;
             }
             return total;
         }

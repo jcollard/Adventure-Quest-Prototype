@@ -23,6 +23,12 @@ namespace AdventureQuest.UI.Character
             CharacterRenderer characterRenderer = GetComponentInChildren<CharacterRenderer>();
             character.OnChange.AddListener(ch => Observe(ch, _inventoryRenderer));
             character.OnChange.AddListener(characterRenderer.Render);
+            // TODO: Consider not using Awake to forward the render
+            if (character.Observed != null)
+            {
+                characterRenderer.Render(character.Observed);
+                _inventoryRenderer.Render(character.Observed);
+            }
         }
 
         public void AddItem(IItem toAdd, EquipmentSlot _) => AddItem(toAdd);
@@ -54,5 +60,4 @@ namespace AdventureQuest.UI.Character
         public void OnPointerEnter(PointerEventData eventData) => ((IPointerEnterHandler)_inventoryRenderer).OnPointerEnter(eventData);
         public void OnPointerExit(PointerEventData eventData) => ((IPointerExitHandler)_inventoryRenderer).OnPointerExit(eventData);
     }
-
 }

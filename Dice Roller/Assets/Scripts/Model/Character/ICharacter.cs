@@ -1,10 +1,10 @@
 using AdventureQuest.Equipment;
+using AdventureQuest.Combat;
+
 namespace AdventureQuest.Character
 {
-    public interface ICharacter : IHasInventory, IHasEquipment, IHasAbilities, IObservable<ICharacter>
+    public interface ICharacter : IHasInventory, IHasEquipment, ICombatant, IObservable<ICharacter>
     {
-        public string Name { get; }
-        public string PortraitSpriteKey { get; }
         public int Gold { get; set; }
         public string AsJson { get; }
 

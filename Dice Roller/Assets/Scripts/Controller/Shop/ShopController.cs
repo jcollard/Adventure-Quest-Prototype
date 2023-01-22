@@ -5,7 +5,7 @@ using AdventureQuest.Character.Dice;
 using AdventureQuest.Character;
 using UnityEngine.Events;
 using AdventureQuest.Result;
-using UnityEngine.SceneManagement;
+using AdventureQuest.Scene;
 
 namespace AdventureQuest.Shop
 {
@@ -70,7 +70,7 @@ namespace AdventureQuest.Shop
             shopInventory.Add(Weapons.ShortSword);
             shopInventory.Add(Weapons.Longsword);
             shopInventory.Add(Weapons.BattleAxe);
-            Shop shop = new Shop("Wilfred's Weapons", shopInventory);
+            Shop shop = new ("Wilfred's Weapons", shopInventory);
 
             Shop.Observed = shop;
         }
@@ -94,12 +94,8 @@ namespace AdventureQuest.Shop
             SendMessage(result);
         }
 
-        public void ExitShop(string targetScene)
-        {
-            // TODO: Consider storing a PlayerCharacter rather than a Character
-            PlayerCharacter.Store((PlayerCharacter)Character.Observed);
-            SceneManager.LoadScene(targetScene);
-        }
+        // TODO: Consider storing a PlayerCharacter rather than a Character
+        public void ExitShop(string targetScene) => Location.Town.Transition((PlayerCharacter)Character.Observed);
 
         private void SendMessage(IResult result)
         {

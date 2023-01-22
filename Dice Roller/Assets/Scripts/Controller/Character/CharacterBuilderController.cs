@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using AdventureQuest.Equipment;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+using AdventureQuest.Scene;
+using AdventureQuest.Entity;
 
 namespace AdventureQuest.Character
 {
@@ -75,12 +76,14 @@ namespace AdventureQuest.Character
                 OnError.Invoke("You must name your character.");
                 return;
             }
-            PlayerCharacter character = new (Name, Abilities, PortraitSpriteKey);
+            TraitManifest manifest = new (
+                new TraitValue(Entity.Trait.Health, 25),
+                new TraitValue(Entity.Trait.Stamina, 10)
+            );
+            PlayerCharacter character = new (Name, Abilities, manifest, PortraitSpriteKey);
             character.Gold = 50;
             character.Inventory.Add(Weapons.Dagger);
-            PlayerCharacter.Store(character);
-            // TODO: Consider loading scene without "stringly" types
-            SceneManager.LoadScene("Town");
+            Location.Town.Transition(character);
         }
 
         protected void Start()
