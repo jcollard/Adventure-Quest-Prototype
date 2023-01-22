@@ -7,8 +7,7 @@ namespace AdventureQuest.Combat
     {
         protected void Start()
         {
-            ICombatant enemy = Encounters.Forest.Build();
-            Observed = enemy;
+            Observed = Encounters.CurrentEncounterBuilder.Build();
         }
     }
 }

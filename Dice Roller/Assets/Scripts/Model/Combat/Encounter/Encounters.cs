@@ -8,12 +8,19 @@ namespace AdventureQuest.Combat
 {
     public static class Encounters
     {
-        public static readonly EncounterBuilder Forest = new EncounterBuilder()
-            .AddEnemy(Enemies.Slime, 3)
-            .AddEnemy(Enemies.DarkKnight);
-
-        public static readonly EncounterBuilder Cemetary = new EncounterBuilder()
+        public static EncounterBuilder CurrentEncounterBuilder { get; set; } = Forest;
+        public static readonly EncounterBuilder Forest = new EncounterBuilder("forest")
+            .AddEnemy(Enemies.Slime, 4)
             .AddEnemy(Enemies.DarkKnight)
-            .AddEnemy(Enemies.StrawManOfDoom);
+            .AddEnemy(Enemies.DragonHawk)
+            .AddEnemy(Enemies.Mimic)
+            .AddEnemy(Enemies.FlamingSnowman);
+
+        public static readonly EncounterBuilder Cemetery = new EncounterBuilder("cemetery")
+            .AddEnemy(Enemies.DarkKnight)
+            .AddEnemy(Enemies.StrawManOfDoom)
+            .AddEnemy(Enemies.EarthKing)
+            .AddEnemy(Enemies.Behemoth);
+
     }
 }

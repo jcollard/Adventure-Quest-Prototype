@@ -63,3 +63,13 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 21300000, guid: 274a085aca327f24f9a88e4ead4c8f53, type: 3}
   - <Name>k__BackingField: straw-man
     <Sprite>k__BackingField: {fileID: 21300000, guid: e16eecdca867f894a8e9cb6e4a206df6, type: 3}
+  - <Name>k__BackingField: dragon-hawk
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 7abe1681ee5d7e9488cff54e37c3d27c, type: 3}
+  - <Name>k__BackingField: behemoth
+    <Sprite>k__BackingField: {fileID: 21300000, guid: b5fb57f611eac9444a9b4e3c08e42026, type: 3}
+  - <Name>k__BackingField: mimic
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 72ebe914111239441a79042253babb96, type: 3}
+  - <Name>k__BackingField: earth-king
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 5d59501626ea15f4f8a7b1cf0e8e03e3, type: 3}
+  - <Name>k__BackingField: flaming-snowman
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 9817a02539241b347b94a4ac94838709, type: 3}

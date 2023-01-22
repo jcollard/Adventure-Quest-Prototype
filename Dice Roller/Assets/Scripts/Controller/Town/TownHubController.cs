@@ -4,6 +4,7 @@ using AdventureQuest.Character;
 using UnityEngine;
 using AdventureQuest.Scene;
 using AdventureQuest.Shop;
+using AdventureQuest.Combat;
 
 namespace AdventureQuest.Town
 {
@@ -29,10 +30,22 @@ namespace AdventureQuest.Town
             Location.Shop.Transition(_character);
         }
 
+        
+
 
         public void StatusScreen() => Location.Status.Transition(_character);
 
-        public void LookForTrouble() => Location.Combat.Transition(_character);
+        public void EnterCemetery()
+        { 
+            Encounters.CurrentEncounterBuilder = Encounters.Cemetery;
+            Location.Combat.Transition(_character);
+        }
+
+        public void EnterForest()
+        {
+            Encounters.CurrentEncounterBuilder = Encounters.Forest;
+            Location.Combat.Transition(_character);
+        }
 
         protected void Awake()
         {

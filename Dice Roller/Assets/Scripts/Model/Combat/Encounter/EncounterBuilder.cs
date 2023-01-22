@@ -9,6 +9,14 @@ namespace AdventureQuest.Combat
     public class EncounterBuilder
     {
         private List<Enemy.Builder> _possibleEnemies = new();
+        
+
+        public EncounterBuilder(string backgroundImageId)
+        {
+            BackgroundImageId = backgroundImageId;
+        }
+
+        public string BackgroundImageId { get; }
 
         public EncounterBuilder AddEnemy(Enemy.Builder enemy, int count)
         {

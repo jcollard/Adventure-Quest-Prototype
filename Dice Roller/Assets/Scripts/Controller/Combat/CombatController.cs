@@ -5,11 +5,17 @@ using AdventureQuest.Character;
 using AdventureQuest.Scene;
 using AdventureQuest.Equipment;
 using AdventureQuest.Entity;
+using UnityEngine.UI;
+using AdventureQuest.UI;
 
 namespace AdventureQuest.Combat
 {
     public class CombatController : MonoBehaviour
     {
+        [SerializeField]
+        private Image _backgroundImage;
+        [SerializeField]
+        private SpriteDatabase _backgroundImageDatabase;
         private CombatManager _manager;
         private ICharacter _player;
         private ICombatant _enemy;
@@ -64,6 +70,7 @@ namespace AdventureQuest.Combat
             Debug.Assert(enemy != null, "Could not locate CombatantController in children.");
             character.OnChange.AddListener(InitPlayer);
             enemy.OnChange.AddListener(InitEnemy);
+            _backgroundImage.sprite = _backgroundImageDatabase.Get(Encounters.CurrentEncounterBuilder.BackgroundImageId).Sprite;
         }
 
         private void InitPlayer(ICharacter player)
