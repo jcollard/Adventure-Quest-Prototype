@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AdventureQuest.Character;
 using UnityEngine;
 using AdventureQuest.Scene;
+using AdventureQuest.Shop;
 
 namespace AdventureQuest.Town
 {
@@ -11,7 +12,23 @@ namespace AdventureQuest.Town
     {
         private PlayerCharacter _character;
         
-        public void EnterShop() => Location.Shop.Transition(_character);
+        public void EnterWeaponShop() 
+        {
+            Shops.CurrentShop = Shops.WilfredsWeapons;
+            Location.Shop.Transition(_character);
+        }
+        public void EnterArmorShop()
+        {
+            Shops.CurrentShop = Shops.AbdulsArmor;
+            Location.Shop.Transition(_character);
+        }
+
+        public void EnterAlchemyShop()
+        {
+            Shops.CurrentShop = Shops.AlchemyShop;
+            Location.Shop.Transition(_character);
+        }
+
 
         public void StatusScreen() => Location.Status.Transition(_character);
 

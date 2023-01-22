@@ -64,15 +64,7 @@ namespace AdventureQuest.Shop
 
         protected void Start()
         {
-            
-            IInventory shopInventory = new Inventory("Wilfred's Weapons");
-            shopInventory.Add(Weapons.Dagger);
-            shopInventory.Add(Weapons.ShortSword);
-            shopInventory.Add(Weapons.Longsword);
-            shopInventory.Add(Weapons.BattleAxe);
-            Shop shop = new ("Wilfred's Weapons", shopInventory);
-
-            Shop.Observed = shop;
+            Shop.Observed = Shops.CurrentShop;
         }
 
         public void Purchase()
